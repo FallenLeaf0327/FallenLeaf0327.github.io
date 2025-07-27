@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search> 
+  
+  
+    
+    <entry>
+      <title>Hello My Blog~</title>
+      <link href="/project/2025/07/27/Hello%20My%20Blog~/"/>
+      <url>/project/2025/07/27/Hello%20My%20Blog~/</url>
+      
+        <content type="html"><![CDATA[<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">print</span>(<span class="string">&quot;Hello World!&quot;</span>)</span><br></pre></td></tr></table></figure><blockquote><p>[!Note] test<br>It’s a test.</p></blockquote>]]></content>
+      
+      
+      <categories>
+          
+          <category> Others </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Others </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+  
+  
+</search>
