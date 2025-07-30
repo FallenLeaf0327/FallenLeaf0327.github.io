@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: dark)"><meta name="generator" content="Hexo 7.3.0">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/uploads/favicon-32x32-leaf.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/uploads/favicon-16x16-leaf.png">
+  <link rel="mask-icon" href="/uploads/custom_logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha256-dABdfBfUoC8vJUBOwGVdm8L9qlMWaHTIfXt+7GnZCIo=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"fallenleaf0327.github.io","root":"/","images":"/images","scheme":"Gemini","darkmode":true,"version":"8.23.2","exturl":false,"sidebar":{"position":"left","width_expanded":320,"width_dual_column":240,"display":"post","padding":18,"offset":12},"hljswrap":true,"codeblock":{"theme":{"light":"atom-one-light","dark":"atom-one-dark"},"prism":{"light":"prism","dark":"prism-dark"},"copy_button":{"enable":true,"style":"mac"},"fold":{"enable":true,"height":70},"language":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"duration":200,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"}}</script><script src="/js/config.js" defer></script>
+
+    <meta name="description" content="VJudge    CodeForces 算法 欧拉序 线段树">
+<meta property="og:type" content="article">
+<meta property="og:title" content="CodeForces 1192B">
+<meta property="og:url" content="https://fallenleaf0327.github.io/2025/07/13/CodeForces-1192B/index.html">
+<meta property="og:site_name" content="FallenLeaf&#39;s Blog">
+<meta property="og:description" content="VJudge    CodeForces 算法 欧拉序 线段树">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2025-07-13T07:21:58.000Z">
+<meta property="article:modified_time" content="2025-07-30T02:54:40.632Z">
+<meta property="article:author" content="FallenLeaf">
+<meta property="article:tag" content="CodeForces">
+<meta property="article:tag" content="欧拉序">
+<meta property="article:tag" content="SegmentTree">
+<meta name="twitter:card" content="summary">
+
+
+<link rel="canonical" href="https://fallenleaf0327.github.io/2025/07/13/CodeForces-1192B/">
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"en","comments":true,"permalink":"https://fallenleaf0327.github.io/2025/07/13/CodeForces-1192B/","path":"2025/07/13/CodeForces-1192B/","title":"CodeForces 1192B"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>CodeForces 1192B | FallenLeaf's Blog</title>
+  
+
+
+
+
+
+
+
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous" defer></script>
+<script src="/js/utils.js" defer></script><script src="/js/motion.js" defer></script><script src="/js/sidebar.js" defer></script><script src="/js/next-boot.js" defer></script>
+
+  
+
+
+
+
+
+
+  
+
+
+
+
+  
+
+  <script class="next-config" data-name="enableMath" type="application/json">true</script><script class="next-config" data-name="mathjax" type="application/json">{"enable":true,"tags":"none","js":{"url":"https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.2/es5/tex-mml-chtml.js","integrity":"sha256-MASABpB4tYktI2Oitl4t+78w/lyA+D7b/s9GEP0JOGI="}}</script>
+<script src="/js/third-party/math/mathjax.js" defer></script>
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <div class="column">
+      <header class="header" itemscope itemtype="http://schema.org/WPHeader"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="Toggle navigation bar" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">FallenLeaf's Blog</p>
+      <i class="logo-line"></i>
+    </a>
+      <img class="custom-logo-image" src="/uploads/Avatar.jpg" alt="FallenLeaf's Blog">
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger" aria-label="Search" role="button">
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>Home</a></li><li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>About</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>Tags</a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>Categories</a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>Archives</a></li>
+  </ul>
+</nav>
+
+
+
+
+</header>
+        
+  
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          Table of Contents
+        </li>
+        <li class="sidebar-nav-overview">
+          Overview
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%AE%97%E6%B3%95"><span class="nav-number">1.</span> <span class="nav-text">算法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%80%9D%E8%B7%AF"><span class="nav-number">2.</span> <span class="nav-text">思路</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BB%A3%E7%A0%81"><span class="nav-number">3.</span> <span class="nav-text">代码</span></a></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">FallenLeaf</p>
+  <div class="site-description" itemprop="description">New beginning, New future.</div>
+</div>
+<div class="site-state-wrap animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">14</span>
+          <span class="site-state-item-name">posts</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+          <a href="/categories/">
+        <span class="site-state-item-count">3</span>
+        <span class="site-state-item-name">categories</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+          <a href="/tags/">
+        <span class="site-state-item-count">10</span>
+        <span class="site-state-item-name">tags</span></a>
+      </div>
+  </nav>
+</div>
+
+        </div>
+      </div>
+    </div>
+
+    
+  </aside>
+
+
+    </div>
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="en">
+    <link itemprop="mainEntityOfPage" href="https://fallenleaf0327.github.io/2025/07/13/CodeForces-1192B/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="FallenLeaf">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="FallenLeaf's Blog">
+      <meta itemprop="description" content="New beginning, New future.">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="CodeForces 1192B | FallenLeaf's Blog">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          CodeForces 1192B
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+
+      <time title="Created: 2025-07-13 15:21:58" itemprop="dateCreated datePublished" datetime="2025-07-13T15:21:58+08:00">2025-07-13</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">Edited on</span>
+      <time title="Modified: 2025-07-30 10:54:40" itemprop="dateModified" datetime="2025-07-30T10:54:40+08:00">2025-07-30</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">In</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/Solution/" itemprop="url" rel="index"><span itemprop="name">Solution</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody"><p><a target="_blank" rel="noopener" href="https://vjudge.net/problem/CodeForces-1192B#author=GPT_zh">VJudge</a>    <a target="_blank" rel="noopener" href="https://codeforces.com/problemset/problem/1192/B">CodeForces</a></p>
+<h2 id="算法"><a href="#算法" class="headerlink" title="算法"></a>算法</h2><ul>
+<li>欧拉序</li>
+<li>线段树</li>
+</ul>
+<span id="more"></span>
+
+<h2 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h2><p>对于这道题考虑使用欧拉序的性质：</p>
+<ul>
+<li>对于树上的每一个子树，在欧拉序上都有一个区间与之对应。</li>
+<li>对于 $(u, v)$ 的最近公共祖先，在欧拉序上表现为区间 $[pos_u, pos_v]$ 内深度最浅的节点。</li>
+</ul>
+<p>所以可以将原树转化为欧拉序，将树上问题转化为序列上的区间问题，就可以使用线段树解决。</p>
+<p>由于题目要求树的直径，所以用线段树查找区间最值，找到点 $(u, v)$ 的最近公共祖先 $lca$，则 $dist(u, v)$ 可以表示为：</p>
+<p>$$<br>\large<br>dist(u,v) &#x3D; dep_u + dep_v - 2 \cdot dep_{lca}<br>$$</p>
+<p>而直径就是 $\max{dist(u, v)}$。</p>
+<p>所以原题目的问题就转化为：在欧拉序上找一个三元组 $(u, lca, v)$，满足如下条件：</p>
+<ul>
+<li>$dep_u + dep_v - 2 \cdot dep_{lca}$ 最大。</li>
+<li>$lca$ 为区间 $[pos_u, pos_v]$ 内深度最小的节点。</li>
+</ul>
+<p>而第二个条件可以由第一个条件限制，所以可以忽略。</p>
+<p>由上面两个限制条件我们可以得到线段树需要维护的数据：</p>
+<ul>
+<li>$max$：区间最大值。</li>
+<li>$min$：区间最小值。</li>
+<li>$left\ mid$（以下简称 $LM$）：三元组 $(u, lca, v)$ 中 $dep_u - 2 \cdot dep_{lca}$ 的最大值。</li>
+<li>$mid\ right$（以下简称 $RM$）：三元组 $(u, lca, v)$ 中 $dep_v - 2 \cdot dep_{lca}$ 的最大值。</li>
+<li>$left\ mid\ right$（以下简称 $LMR$）：三元组 $(u, lca, v)$ 中 $dep_u + dep_v - 2 \cdot dep_{lca}$ 的最大值。</li>
+</ul>
+<p>接下来考虑如何转移 （即为 <strong>push_up(int k)</strong> 函数）。<br>对于 $max$ 和 $min$ 来说转移很简单，即为：<br>$$<br>\large<br>\begin{aligned}<br>max_k &amp;&#x3D; \max(max_{lc}, max_{rc}) \<br>min_k &amp;&#x3D; \min(min_{lc}, min_{rc}) \<br>\end{aligned}<br>$$<br>而对于 $LM$ 而言，可以从三个方向转移：<br>$$<br>\large<br>LM &#x3D; \max(LM_{lc}, LM_{rc}, max_{lc} - 2 \cdot min_{rc})<br>$$<br>对于 $MR$ 同理由：<br>$$<br>\large<br>MR &#x3D; \max(MR_{lc}, MR_{rc}, -2 \cdot min_{lc} + max_{rc})<br>$$<br>最后合并成 $LMR$：<br>$$<br>\large<br>LMR &#x3D; \max(LMR_{lc}, LMR_{rc}, LM_{lc} + max_{rc}, max_{lc} + MR_{rc})<br>$$</p>
+<h2 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h2><figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> OnlineJudge</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">constexpr</span> <span class="type">int</span> N = <span class="number">1e5</span> + <span class="number">5</span>;</span><br><span class="line">std::vector&lt;<span class="type">int</span>&gt; euler_seq&#123;<span class="number">-1</span>&#125;;</span><br><span class="line"><span class="type">int</span> in[N], out[N], num = <span class="number">0</span>;</span><br><span class="line"><span class="type">int</span> head[N], cnt = <span class="number">0</span>;</span><br><span class="line"><span class="type">int</span> n, q, u, v, fa[N];</span><br><span class="line"><span class="type">long</span> <span class="type">long</span> W, d, w, last = <span class="number">0ll</span>, dist[N];</span><br><span class="line">std::vector&lt;std::tuple&lt;<span class="type">int</span>, <span class="type">int</span>, <span class="type">long</span> <span class="type">long</span>&gt;&gt; input_edges;</span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">Edge</span> &#123;</span><br><span class="line"> <span class="keyword">public</span>:</span><br><span class="line">  <span class="type">int</span> to, next;</span><br><span class="line">  <span class="type">long</span> <span class="type">long</span> w;</span><br><span class="line"></span><br><span class="line">&#125; edges[N &lt;&lt; <span class="number">4</span>];</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">add_edge</span><span class="params">(<span class="type">int</span> u, <span class="type">int</span> v, <span class="type">long</span> <span class="type">long</span> w)</span> </span>&#123;</span><br><span class="line">  edges[cnt].to = v;</span><br><span class="line">  edges[cnt].w = w;</span><br><span class="line">  edges[cnt].next = head[u];</span><br><span class="line">  head[u] = cnt++;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">SegmentTree</span> &#123;</span><br><span class="line"> <span class="keyword">private</span>:</span><br><span class="line">  <span class="keyword">class</span> <span class="title class_">Values</span> &#123;</span><br><span class="line">    <span class="keyword">public</span>:</span><br><span class="line">    <span class="comment">// ! 对 lazy 要初始化（虽然在 build 里面写了，但不知道为什么有些还是没有初始化）</span></span><br><span class="line">    <span class="type">long</span> <span class="type">long</span> max = <span class="number">0</span>, min = <span class="number">0</span>, left_mid = <span class="number">0</span>, mid_right = <span class="number">0</span>, left_mid_right = <span class="number">0</span>, lazy = <span class="number">0</span>;</span><br><span class="line">  &#125;;</span><br><span class="line"> </span><br><span class="line">  <span class="keyword">class</span> <span class="title class_">NodeInfo</span> &#123;</span><br><span class="line">   <span class="keyword">public</span>:</span><br><span class="line">    <span class="type">int</span> left = <span class="number">0</span>, right = <span class="number">0</span>;</span><br><span class="line">    Values val;</span><br><span class="line">  &#125;;</span><br><span class="line">  </span><br><span class="line">  <span class="keyword">public</span>:</span><br><span class="line">  NodeInfo tr[N &lt;&lt; <span class="number">2</span>];</span><br><span class="line">  </span><br><span class="line">  <span class="function">Values <span class="title">merge_tags</span><span class="params">(Values a, Values b)</span> </span>&#123;</span><br><span class="line">    Values retval;</span><br><span class="line">    </span><br><span class="line">    retval.max = std::<span class="built_in">max</span>(a.max, b.max);</span><br><span class="line">    retval.min = std::<span class="built_in">min</span>(a.min, b.min);</span><br><span class="line">    retval.left_mid = std::<span class="built_in">max</span>(&#123;a.left_mid, b.left_mid, a.max + <span class="number">-2</span> * b.min&#125;);</span><br><span class="line">    retval.mid_right = std::<span class="built_in">max</span>(&#123;a.mid_right, b.mid_right, <span class="number">-2</span> * a.min + b.max&#125;);</span><br><span class="line">    retval.left_mid_right = std::<span class="built_in">max</span>(&#123;a.left_mid_right, b.left_mid_right, a.left_mid + b.max, a.max + b.mid_right&#125;);</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">return</span> retval;</span><br><span class="line">  &#125;</span><br><span class="line">  </span><br><span class="line">  <span class="function"><span class="type">void</span> <span class="title">modify_tags</span><span class="params">(Values&amp; root, <span class="type">long</span> <span class="type">long</span> value)</span> </span>&#123;</span><br><span class="line">    root.lazy += value;</span><br><span class="line">    root.max += value;</span><br><span class="line">    root.min += value;</span><br><span class="line">    root.left_mid -= value;</span><br><span class="line">    root.mid_right -= value;</span><br><span class="line">  &#125;</span><br><span class="line">  </span><br><span class="line">  <span class="function"><span class="type">void</span> <span class="title">push_up</span><span class="params">(<span class="type">int</span> k)</span> </span>&#123;</span><br><span class="line">    Values lc = tr[k &lt;&lt; <span class="number">1</span>].val, rc = tr[k &lt;&lt; <span class="number">1</span> | <span class="number">1</span>].val;</span><br><span class="line">    </span><br><span class="line">    <span class="type">int</span> temp = tr[k].val.lazy;</span><br><span class="line">    tr[k].val = <span class="built_in">merge_tags</span>(lc, rc);</span><br><span class="line">    tr[k].val.lazy = temp;</span><br><span class="line">  &#125;</span><br><span class="line">  </span><br><span class="line">  <span class="function"><span class="type">void</span> <span class="title">push_down</span><span class="params">(<span class="type">int</span> k)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (tr[k].val.lazy == <span class="number">0</span>) &#123;</span><br><span class="line">      <span class="keyword">return</span> <span class="built_in">void</span>();</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="built_in">modify_tags</span>(tr[k &lt;&lt; <span class="number">1</span>].val, tr[k].val.lazy);</span><br><span class="line">    <span class="built_in">modify_tags</span>(tr[k &lt;&lt; <span class="number">1</span> | <span class="number">1</span>].val, tr[k].val.lazy);</span><br><span class="line">    </span><br><span class="line">    tr[k].val.lazy = <span class="number">0</span>;</span><br><span class="line">  &#125;</span><br><span class="line">  </span><br><span class="line">  <span class="function"><span class="type">void</span> <span class="title">build_tree</span><span class="params">(<span class="type">int</span> k, <span class="type">int</span> l, <span class="type">int</span> r)</span> </span>&#123;</span><br><span class="line">    tr[k].left = l;</span><br><span class="line">    tr[k].right = r;</span><br><span class="line">    tr[k].val.lazy = <span class="number">0</span>;</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">if</span> (tr[k].left == tr[k].right) &#123;</span><br><span class="line">      tr[k].val.max = tr[k].val.min = dist[euler_seq[l]];</span><br><span class="line">      tr[k].val.left_mid = tr[k].val.mid_right = -dist[euler_seq[l]];</span><br><span class="line">      tr[k].val.left_mid_right = <span class="number">0</span>;</span><br><span class="line">      </span><br><span class="line">      <span class="meta">#<span class="keyword">ifndef</span> OnlineJudge</span></span><br><span class="line">      std::cout &lt;&lt; <span class="string">&quot;BUILD:\n&quot;</span>;</span><br><span class="line">      std::cout &lt;&lt; k &lt;&lt; <span class="string">&quot; &quot;</span> &lt;&lt; tr[k].left &lt;&lt; <span class="string">&quot; &quot;</span> &lt;&lt; tr[k].right &lt;&lt; <span class="string">&quot; &quot;</span>;</span><br><span class="line">      std::cout &lt;&lt; tr[k].val.max &lt;&lt; <span class="string">&quot; &quot;</span> &lt;&lt; tr[k].val.min &lt;&lt; <span class="string">&quot; &quot;</span> &lt;&lt; tr[k].val.left_mid &lt;&lt; <span class="string">&quot; &quot;</span>;</span><br><span class="line">      std::cout &lt;&lt; tr[k].val.mid_right &lt;&lt; <span class="string">&#x27; &#x27;</span> &lt;&lt; tr[k].val.left_mid_right &lt;&lt; <span class="string">&quot; &quot;</span> &lt;&lt; tr[k].val.lazy &lt;&lt; <span class="string">&#x27;\n&#x27;</span>;</span><br><span class="line">      <span class="meta">#<span class="keyword">endif</span></span></span><br><span class="line">      </span><br><span class="line">      <span class="keyword">return</span> <span class="built_in">void</span>();</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="type">int</span> mid = (tr[k].left + tr[k].right) &gt;&gt; <span class="number">1</span>;</span><br><span class="line">    <span class="type">int</span> lc = k &lt;&lt; <span class="number">1</span>, rc = k &lt;&lt; <span class="number">1</span> | <span class="number">1</span>;</span><br><span class="line">    </span><br><span class="line">    <span class="built_in">build_tree</span>(lc, l, mid);</span><br><span class="line">    <span class="built_in">build_tree</span>(rc, mid + <span class="number">1</span>, r);</span><br><span class="line">    </span><br><span class="line">    <span class="built_in">push_up</span>(k);</span><br><span class="line">    </span><br><span class="line">    <span class="meta">#<span class="keyword">ifndef</span> OnlineJudge</span></span><br><span class="line">    std::cout &lt;&lt; <span class="string">&quot;BUILD:\n&quot;</span>;</span><br><span class="line">    std::cout &lt;&lt; k &lt;&lt; <span class="string">&quot; &quot;</span> &lt;&lt; tr[k].left &lt;&lt; <span class="string">&quot; &quot;</span> &lt;&lt; tr[k].right &lt;&lt; <span class="string">&quot; &quot;</span>;</span><br><span class="line">    std::cout &lt;&lt; tr[k].val.max &lt;&lt; <span class="string">&quot; &quot;</span> &lt;&lt; tr[k].val.min &lt;&lt; <span class="string">&quot; &quot;</span> &lt;&lt; tr[k].val.left_mid &lt;&lt; <span class="string">&quot; &quot;</span>;</span><br><span class="line">    std::cout &lt;&lt; tr[k].val.mid_right &lt;&lt; <span class="string">&#x27; &#x27;</span> &lt;&lt; tr[k].val.left_mid_right &lt;&lt; <span class="string">&quot; &quot;</span> &lt;&lt; tr[k].val.lazy &lt;&lt; <span class="string">&#x27;\n&#x27;</span>;</span><br><span class="line">    <span class="meta">#<span class="keyword">endif</span></span></span><br><span class="line">  &#125;</span><br><span class="line">  </span><br><span class="line">  <span class="function"><span class="type">void</span> <span class="title">modify</span><span class="params">(<span class="type">int</span> k, <span class="type">int</span> l, <span class="type">int</span> r, <span class="type">long</span> <span class="type">long</span> value)</span> </span>&#123;</span><br><span class="line">    <span class="meta">#<span class="keyword">ifndef</span> OnlineJudge</span></span><br><span class="line">    std::cout &lt;&lt; <span class="string">&quot;MODIFY:\n&quot;</span>;</span><br><span class="line">    std::cout &lt;&lt; k &lt;&lt; <span class="string">&quot; &quot;</span> &lt;&lt; tr[k].left &lt;&lt; <span class="string">&quot; &quot;</span> &lt;&lt; tr[k].right &lt;&lt; <span class="string">&quot; &quot;</span>;</span><br><span class="line">    std::cout &lt;&lt; tr[k].val.max &lt;&lt; <span class="string">&quot; &quot;</span> &lt;&lt; tr[k].val.min &lt;&lt; <span class="string">&quot; &quot;</span> &lt;&lt; tr[k].val.left_mid &lt;&lt; <span class="string">&quot; &quot;</span>;</span><br><span class="line">    std::cout &lt;&lt; tr[k].val.mid_right &lt;&lt; <span class="string">&#x27; &#x27;</span> &lt;&lt; tr[k].val.left_mid_right &lt;&lt; <span class="string">&quot; &quot;</span> &lt;&lt; tr[k].val.lazy &lt;&lt; <span class="string">&#x27;\n&#x27;</span>;</span><br><span class="line">    <span class="meta">#<span class="keyword">endif</span></span></span><br><span class="line">    </span><br><span class="line">    <span class="keyword">if</span> (tr[k].left &gt;= l &amp;&amp; tr[k].right &lt;= r) &#123;</span><br><span class="line">      <span class="built_in">modify_tags</span>(tr[k].val, value);</span><br><span class="line">      <span class="keyword">return</span> <span class="built_in">void</span>();</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="built_in">push_down</span>(k);</span><br><span class="line">    </span><br><span class="line">    <span class="type">int</span> mid = (tr[k].left + tr[k].right) &gt;&gt; <span class="number">1</span>;</span><br><span class="line">    <span class="type">int</span> lc = k &lt;&lt; <span class="number">1</span>, rc = k &lt;&lt; <span class="number">1</span> | <span class="number">1</span>;</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">if</span> (r &lt;= mid) &#123;</span><br><span class="line">      <span class="built_in">modify</span>(lc, l, r, value);</span><br><span class="line">    &#125; <span class="keyword">else</span> <span class="keyword">if</span> (l &gt; mid) &#123;</span><br><span class="line">      <span class="built_in">modify</span>(rc, l, r, value);</span><br><span class="line">    &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">      <span class="built_in">modify</span>(lc, l, mid, value);</span><br><span class="line">      <span class="built_in">modify</span>(rc, mid + <span class="number">1</span>, r, value);</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="built_in">push_up</span>(k);</span><br><span class="line">  &#125;</span><br><span class="line">  </span><br><span class="line">  <span class="function">Values <span class="title">query</span><span class="params">(<span class="type">int</span> k, <span class="type">int</span> l, <span class="type">int</span> r)</span> </span>&#123;</span><br><span class="line">    <span class="meta">#<span class="keyword">ifndef</span> OnlineJudge</span></span><br><span class="line">    std::cout &lt;&lt; <span class="string">&quot;QUERY:\n&quot;</span>;</span><br><span class="line">    std::cout &lt;&lt; k &lt;&lt; <span class="string">&quot; &quot;</span> &lt;&lt; tr[k].left &lt;&lt; <span class="string">&quot; &quot;</span> &lt;&lt; tr[k].right &lt;&lt; <span class="string">&quot; &quot;</span>;</span><br><span class="line">    std::cout &lt;&lt; tr[k].val.max &lt;&lt; <span class="string">&quot; &quot;</span> &lt;&lt; tr[k].val.min &lt;&lt; <span class="string">&quot; &quot;</span> &lt;&lt; tr[k].val.left_mid &lt;&lt; <span class="string">&quot; &quot;</span>;</span><br><span class="line">    std::cout &lt;&lt; tr[k].val.mid_right &lt;&lt; <span class="string">&#x27; &#x27;</span> &lt;&lt; tr[k].val.left_mid_right &lt;&lt; <span class="string">&quot; &quot;</span> &lt;&lt; tr[k].val.lazy &lt;&lt; <span class="string">&#x27;\n&#x27;</span>;</span><br><span class="line">    <span class="meta">#<span class="keyword">endif</span></span></span><br><span class="line">    </span><br><span class="line">    <span class="keyword">if</span> (tr[k].left &gt;= l &amp;&amp; tr[k].right &lt;= r) &#123;</span><br><span class="line">      <span class="keyword">return</span> tr[k].val;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="built_in">push_down</span>(k);</span><br><span class="line">    </span><br><span class="line">    <span class="type">int</span> mid = (tr[k].left + tr[k].right) &gt;&gt; <span class="number">1</span>;</span><br><span class="line">    <span class="type">int</span> lc = k &lt;&lt; <span class="number">1</span>, rc = k &lt;&lt; <span class="number">1</span> | <span class="number">1</span>;</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">if</span> (r &lt;= mid) &#123;</span><br><span class="line">      <span class="keyword">return</span> <span class="built_in">query</span>(lc, l, r);</span><br><span class="line">    &#125; <span class="keyword">else</span> <span class="keyword">if</span> (l &gt; mid) &#123;</span><br><span class="line">      <span class="keyword">return</span> <span class="built_in">query</span>(rc, l, r);</span><br><span class="line">    &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">      <span class="keyword">return</span> <span class="built_in">merge_tags</span>(<span class="built_in">query</span>(lc, l, mid), <span class="built_in">query</span>(rc, mid + <span class="number">1</span>, r));</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125; data;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">dfs</span><span class="params">(<span class="type">int</span> u, <span class="type">int</span> father)</span> </span>&#123;</span><br><span class="line">  euler_seq.<span class="built_in">emplace_back</span>(u);</span><br><span class="line">  in[u] = euler_seq.<span class="built_in">size</span>() - <span class="number">1</span>;</span><br><span class="line">  </span><br><span class="line">  <span class="keyword">for</span> (<span class="type">int</span> i = head[u]; ~i; i = edges[i].next) &#123;</span><br><span class="line">    <span class="type">int</span> v = edges[i].to;</span><br><span class="line">    <span class="keyword">if</span> (v == father) <span class="keyword">continue</span>;</span><br><span class="line"></span><br><span class="line">    fa[v] = u;</span><br><span class="line">    dist[v] = dist[u] + edges[i].w;</span><br><span class="line">    <span class="built_in">dfs</span>(v, u);</span><br><span class="line">    euler_seq.<span class="built_in">emplace_back</span>(u);</span><br><span class="line">  &#125;</span><br><span class="line">  </span><br><span class="line">  out[u] = euler_seq.<span class="built_in">size</span>() - <span class="number">1</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">  std::ios::<span class="built_in">sync_with_stdio</span>(<span class="literal">false</span>);</span><br><span class="line">  std::cin.<span class="built_in">tie</span>(<span class="literal">nullptr</span>);</span><br><span class="line">  std::cout.<span class="built_in">tie</span>(<span class="literal">nullptr</span>);</span><br><span class="line">  </span><br><span class="line">  std::<span class="built_in">memset</span>(head, <span class="number">-1</span>, <span class="built_in">sizeof</span>(head));</span><br><span class="line">  </span><br><span class="line">  std::cin &gt;&gt; n &gt;&gt; q &gt;&gt; W;</span><br><span class="line">  </span><br><span class="line">  <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">1</span>; i &lt; n; i ++) &#123;</span><br><span class="line">    std::cin &gt;&gt; u &gt;&gt; v &gt;&gt; w;</span><br><span class="line">    </span><br><span class="line">    <span class="built_in">add_edge</span>(u, v, w);</span><br><span class="line">    <span class="built_in">add_edge</span>(v, u, w);</span><br><span class="line">    input_edges.<span class="built_in">emplace_back</span>(u, v, w);</span><br><span class="line">  &#125;</span><br><span class="line">  </span><br><span class="line">  <span class="built_in">dfs</span>(<span class="number">1</span>, <span class="number">1</span>);</span><br><span class="line">  </span><br><span class="line">  <span class="comment">// ! 注意调换顺序，保证前面一个点是后面一个点的父亲</span></span><br><span class="line">  <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; n - <span class="number">1</span>; i ++) &#123;</span><br><span class="line">    <span class="keyword">if</span> (fa[std::<span class="built_in">get</span>&lt;<span class="number">0</span>&gt;(input_edges[i])] == std::<span class="built_in">get</span>&lt;<span class="number">1</span>&gt;(input_edges[i])) &#123;</span><br><span class="line">      std::<span class="built_in">swap</span>(std::<span class="built_in">get</span>&lt;<span class="number">0</span>&gt;(input_edges[i]), std::<span class="built_in">get</span>&lt;<span class="number">1</span>&gt;(input_edges[i]));</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">  </span><br><span class="line">  data.<span class="built_in">build_tree</span>(<span class="number">1</span>, <span class="number">1</span>, euler_seq.<span class="built_in">size</span>() - <span class="number">1</span>);</span><br><span class="line">  </span><br><span class="line">  <span class="meta">#<span class="keyword">ifndef</span> OnlineJudge</span></span><br><span class="line">  std::cout &lt;&lt; data.<span class="built_in">query</span>(<span class="number">1</span>, <span class="number">1</span>, euler_seq.<span class="built_in">size</span>() - <span class="number">1</span>).left_mid_right &lt;&lt; <span class="string">&#x27;\n&#x27;</span>;</span><br><span class="line">  <span class="keyword">for</span> (<span class="keyword">auto</span>&amp;&amp; [u, v, w] : input_edges) &#123;</span><br><span class="line">    std::cout &lt;&lt; u &lt;&lt; <span class="string">&#x27; &#x27;</span> &lt;&lt; v &lt;&lt; <span class="string">&#x27; &#x27;</span> &lt;&lt; w &lt;&lt; <span class="string">&#x27;\n&#x27;</span>;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="meta">#<span class="keyword">endif</span></span></span><br><span class="line">  </span><br><span class="line">  last = <span class="number">0</span>;</span><br><span class="line">  <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">1</span>; i &lt;= q; i ++) &#123;</span><br><span class="line">    std::cin &gt;&gt; d &gt;&gt; w;</span><br><span class="line">    d = (d + last) % (n - <span class="number">1</span>);</span><br><span class="line">    w = (w + last) % W;</span><br><span class="line">    </span><br><span class="line">    <span class="comment">// ! 对于边 (u, v, w)，满足 fa[v] == u，则修改后的 w&#x27; 只对 v 的子树有影响，所以只更新 v 的子树即可。</span></span><br><span class="line">    data.<span class="built_in">modify</span>(<span class="number">1</span>, in[std::<span class="built_in">get</span>&lt;<span class="number">1</span>&gt;(input_edges[d])], out[std::<span class="built_in">get</span>&lt;<span class="number">1</span>&gt;(input_edges[d])], w - std::<span class="built_in">get</span>&lt;<span class="number">2</span>&gt;(input_edges[d]));</span><br><span class="line">    <span class="comment">// ! 记得将边的信息更新</span></span><br><span class="line">    std::<span class="built_in">get</span>&lt;<span class="number">2</span>&gt;(input_edges[d]) = w;</span><br><span class="line">    last = data.<span class="built_in">query</span>(<span class="number">1</span>, <span class="number">1</span>, euler_seq.<span class="built_in">size</span>() - <span class="number">1</span>).left_mid_right;</span><br><span class="line">    </span><br><span class="line">    std::cout &lt;&lt; last &lt;&lt; <span class="string">&#x27;\n&#x27;</span>;</span><br><span class="line">  &#125;</span><br><span class="line">  </span><br><span class="line">  <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/CodeForces/" rel="tag"># CodeForces</a>
+              <a href="/tags/%E6%AC%A7%E6%8B%89%E5%BA%8F/" rel="tag"># 欧拉序</a>
+              <a href="/tags/SegmentTree/" rel="tag"># SegmentTree</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2025/07/12/SPOJ-GSS3/" rel="prev" title="SPOJ GSS3">
+                  <i class="fa fa-angle-left"></i> SPOJ GSS3
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/2025/07/17/OI%E9%9B%86%E8%AE%AD-Day1/" rel="next" title="OI集训 Day1">
+                  OI集训 Day1 <i class="fa fa-angle-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+  <div class="copyright">
+    &copy; 
+    <span itemprop="copyrightYear">2025</span>
+    <span class="with-love">
+      <i class="fa fa-heart"></i>
+    </span>
+    <span class="author" itemprop="copyrightHolder">FallenLeaf</span>
+  </div>
+  <div class="powered-by">Powered by <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/" rel="noopener" target="_blank">NexT.Gemini</a>
+  </div>
+
+    </div>
+  </footer>
+
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+  <div class="sidebar-dimmer"></div>
+  <div class="back-to-top" role="button" aria-label="Back to top">
+    <i class="fa fa-arrow-up fa-lg"></i>
+    <span>0%</span>
+  </div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+</body>
+</html>
