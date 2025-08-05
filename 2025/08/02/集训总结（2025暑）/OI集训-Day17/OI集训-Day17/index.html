@@ -1,471 +1,739 @@
+
+
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="zh-CN" data-default-color-scheme=auto>
+
+
+
 <head>
   <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width">
-<meta name="theme-color" content="#222" media="(prefers-color-scheme: light)">
-<meta name="theme-color" content="#222" media="(prefers-color-scheme: dark)"><meta name="generator" content="Hexo 7.3.0">
 
-  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="/uploads/favicon-32x32-leaf.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="/uploads/favicon-16x16-leaf.png">
-  <link rel="mask-icon" href="/uploads/custom_logo.svg" color="#222">
+  <link rel="apple-touch-icon" sizes="76x76" href="/uploads/custom_logo.png">
+  <link rel="icon" href="/uploads/custom_logo.png">
+  
 
-<link rel="stylesheet" href="/css/main.css">
-
-
-
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha256-dABdfBfUoC8vJUBOwGVdm8L9qlMWaHTIfXt+7GnZCIo=" crossorigin="anonymous">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
-
-<script class="next-config" data-name="main" type="application/json">{"hostname":"fallenleaf0327.github.io","root":"/","images":"/images","scheme":"Gemini","darkmode":true,"version":"8.23.2","exturl":false,"sidebar":{"position":"left","width_expanded":320,"width_dual_column":240,"display":"post","padding":18,"offset":12},"hljswrap":true,"codeblock":{"theme":{"light":"atom-one-light","dark":"atom-one-dark"},"prism":{"light":"prism","dark":"prism-dark"},"copy_button":{"enable":true,"style":"flat"},"fold":{"enable":true,"height":500},"language":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"duration":200,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.json","localsearch":{"enable":true,"top_n_per_article":10,"unescape":true,"preload":false}}</script><script src="/js/config.js" defer></script>
-
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="author" content="FallenLeaf">
+  <meta name="keywords" content="">
+  
     <meta name="description" content="Content：博弈论 Date：2025.8.2">
-<meta property="og:type" content="article">
-<meta property="og:title" content="OI集训 Day17">
-<meta property="og:url" content="https://fallenleaf0327.github.io/2025/08/02/%E9%9B%86%E8%AE%AD%E6%80%BB%E7%BB%93%EF%BC%882025%E6%9A%91%EF%BC%89/OI%E9%9B%86%E8%AE%AD-Day17/OI%E9%9B%86%E8%AE%AD-Day17/index.html">
-<meta property="og:site_name" content="FallenLeaf&#39;s Blog">
-<meta property="og:description" content="Content：博弈论 Date：2025.8.2">
-<meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2025-08-01T16:00:00.000Z">
-<meta property="article:modified_time" content="2025-08-05T01:42:30.735Z">
-<meta property="article:author" content="FallenLeaf">
-<meta property="article:tag" content="集训">
-<meta name="twitter:card" content="summary">
-
-
-<link rel="canonical" href="https://fallenleaf0327.github.io/2025/08/02/%E9%9B%86%E8%AE%AD%E6%80%BB%E7%BB%93%EF%BC%882025%E6%9A%91%EF%BC%89/OI%E9%9B%86%E8%AE%AD-Day17/OI%E9%9B%86%E8%AE%AD-Day17/">
-
-
-<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://fallenleaf0327.github.io/2025/08/02/%E9%9B%86%E8%AE%AD%E6%80%BB%E7%BB%93%EF%BC%882025%E6%9A%91%EF%BC%89/OI%E9%9B%86%E8%AE%AD-Day17/OI%E9%9B%86%E8%AE%AD-Day17/","path":"2025/08/02/集训总结（2025暑）/OI集训-Day17/OI集训-Day17/","title":"OI集训 Day17"}</script>
-
-<script class="next-config" data-name="calendar" type="application/json">""</script>
-<title>OI集训 Day17 | FallenLeaf's Blog</title>
   
-
-  <script src="/js/third-party/analytics/baidu-analytics.js" defer></script>
-  <script async src="https://hm.baidu.com/hm.js?fc11c8ca35c8a5b57cc025dde92e6c08"></script>
-
-
-
-
-
-
-
   
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous" defer></script>
-<script src="/js/utils.js" defer></script><script src="/js/motion.js" defer></script><script src="/js/sidebar.js" defer></script><script src="/js/next-boot.js" defer></script>
+  
+  <title>OI集训 Day17 - FallenLeaf&#39;s Blog</title>
 
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/hexo-generator-searchdb/1.5.0/search.js" integrity="sha256-xFC6PJ82SL9b3WkGjFavNiA9gm5z6UBxWPiu4CYjptg=" crossorigin="anonymous" defer></script>
-<script src="/js/third-party/search/local-search.js" defer></script>
-
+  <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
 
 
+  <link  rel="stylesheet" href="https://lib.baomitu.com/github-markdown-css/4.0.0/github-markdown.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/hint.css/2.7.0/hint.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/KaTeX/0.16.2/katex.min.css" />
 
 
 
+<!-- 主题依赖的图标库，不要自行修改 -->
+<!-- Do not modify the link that theme dependent icons -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/c/font_1749284_5i9bdhy70f8.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/c/font_1736178_k526ubmyhba.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+
+  <link id="highlight-css" rel="stylesheet" href="/css/highlight.css" />
+  
+    <link id="highlight-css-dark" rel="stylesheet" href="/css/highlight-dark.css" />
   
 
 
 
 
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    Fluid.ctx = Object.assign({}, Fluid.ctx)
+    var CONFIG = {"hostname":"fallenleaf0327.github.io","root":"/","version":"1.9.8","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":"#"},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":true,"follow_dnt":true,"baidu":"fc11c8ca35c8a5b57cc025dde92e6c08","google":{"measurement_id":null},"tencent":{"sid":null,"cid":null},"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false},"umami":{"src":null,"website_id":null,"domains":null,"start_time":"2024-01-01T00:00:00.000Z","token":null,"api_server":null}},"search_path":"/local-search.xml","include_content_in_search":true};
+
+    if (CONFIG.web_analytics.follow_dnt) {
+      var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
+      Fluid.ctx.dnt = dntVal && (dntVal.startsWith('1') || dntVal.startsWith('yes') || dntVal.startsWith('on'));
+    }
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
   
 
-  <script class="next-config" data-name="enableMath" type="application/json">true</script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.css" integrity="sha256-UF1fgpAiu3tPJN/uCqEUHNe7pnr+QR0SQDNfgglgtcM=" crossorigin="anonymous">
+  
+    <!-- Baidu Analytics -->
+    <script async>
+      if (!Fluid.ctx.dnt) {
+        var _hmt = _hmt || [];
+        (function() {
+          var hm = document.createElement("script");
+          hm.src = "https://hm.baidu.com/hm.js?fc11c8ca35c8a5b57cc025dde92e6c08";
+          var s = document.getElementsByTagName("script")[0];
+          s.parentNode.insertBefore(hm, s);
+        })();
+      }
+    </script>
+  
+
+  
+
+  
+
+  
+
+  
 
 
 
-  <noscript>
-    <link rel="stylesheet" href="/css/noscript.css">
-  </noscript>
-</head>
+  
+<meta name="generator" content="Hexo 7.3.0"></head>
 
-<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
-  <div class="headband"></div>
 
-  <main class="main">
-    <div class="column">
-      <header class="header" itemscope itemtype="http://schema.org/WPHeader"><div class="site-brand-container">
-  <div class="site-nav-toggle">
-    <div class="toggle" aria-label="切换导航栏" role="button">
-        <span class="toggle-line"></span>
-        <span class="toggle-line"></span>
-        <span class="toggle-line"></span>
-    </div>
-  </div>
+<body>
+  
 
-  <div class="site-meta">
+  <header>
+    
 
-    <a href="/" class="brand" rel="start">
-      <i class="logo-line"></i>
-      <p class="site-title">FallenLeaf's Blog</p>
-      <i class="logo-line"></i>
+<div class="header-inner" style="height: 70vh;">
+  <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand" href="/">
+      <strong>FallenLeaf&#39;s Blog</strong>
     </a>
-  </div>
 
-  <div class="site-nav-right">
-    <div class="toggle popup-trigger" aria-label="搜索" role="button">
-        <i class="fa fa-search fa-fw fa-lg"></i>
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/" target="_self">
+                <i class="iconfont icon-home-fill"></i>
+                <span>首页</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/" target="_self">
+                <i class="iconfont icon-archive-fill"></i>
+                <span>归档</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/" target="_self">
+                <i class="iconfont icon-category-fill"></i>
+                <span>分类</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/" target="_self">
+                <i class="iconfont icon-tags-fill"></i>
+                <span>标签</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/" target="_self">
+                <i class="iconfont icon-user-fill"></i>
+                <span>关于</span>
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
+              <i class="iconfont icon-search"></i>
+            </a>
+          </li>
+          
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" target="_self" href="javascript:;" aria-label="Color Toggle">
+              <i class="iconfont icon-dark" id="color-toggle-icon"></i>
+            </a>
+          </li>
+        
+      </ul>
     </div>
   </div>
-</div>
-
-
-
-<nav class="site-nav">
-  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li><li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签<span class="badge">10</span></a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类<span class="badge">3</span></a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">28</span></a></li>
-      <li class="menu-item menu-item-search">
-        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
-        </a>
-      </li>
-  </ul>
 </nav>
 
+  
 
-
-  <div class="search-pop-overlay">
-    <div class="popup search-popup">
-      <div class="search-header">
-        <span class="search-icon">
-          <i class="fa fa-search"></i>
-        </span>
-        <div class="search-input-container">
-          <input autocomplete="off" autocapitalize="off" maxlength="80"
-                placeholder="搜索..." spellcheck="false"
-                type="search" class="search-input">
+<div id="banner" class="banner" parallax=true
+     style="background: url('/img/default.png') no-repeat center center; background-size: cover;">
+  <div class="full-bg-img">
+    <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+      <div class="banner-text text-center fade-in-up">
+        <div class="h2">
+          
+            <span id="subtitle" data-typed-text="OI集训 Day17"></span>
+          
         </div>
-        <span class="popup-btn-close" role="button">
-          <i class="fa fa-times-circle"></i>
-        </span>
-      </div>
-      <div class="search-result-container">
-        <div class="search-result-icon">
-          <i class="fa fa-spinner fa-pulse fa-5x"></i>
-        </div>
-      </div>
-    </div>
-  </div>
 
-</header>
         
-  
-  <aside class="sidebar">
-
-    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
-      <ul class="sidebar-nav">
-        <li class="sidebar-nav-toc">
-          文章目录
-        </li>
-        <li class="sidebar-nav-overview">
-          站点概览
-        </li>
-      </ul>
-
-      <div class="sidebar-panel-container">
-        <!--noindex-->
-        <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link"><span class="nav-text">课堂内容</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#SG-%E5%87%BD%E6%95%B0"><span class="nav-text">SG 函数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%BB%8F%E5%85%B8%E6%A8%A1%E5%9E%8B"><span class="nav-text">经典模型</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%8F%96%E7%9F%B3%E5%AD%90%E6%B8%B8%E6%88%8F"><span class="nav-text">取石子游戏</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E9%A2%98%E7%9B%AE%E6%8F%8F%E8%BF%B0"><span class="nav-text">题目描述</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%A7%A3%E6%B3%95"><span class="nav-text">解法</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%98%B6%E6%A2%AF%E5%8F%96%E7%9F%B3%E5%AD%90%E6%B8%B8%E6%88%8F"><span class="nav-text">阶梯取石子游戏</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E9%A2%98%E7%9B%AE%E6%8F%8F%E8%BF%B0-2"><span class="nav-text">题目描述</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%80%9D%E8%B7%AF"><span class="nav-text">思路</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%A0%91%E7%8A%B6%E5%8F%96%E7%9F%B3%E5%AD%90%E6%B8%B8%E6%88%8F"><span class="nav-text">树状取石子游戏</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E9%A2%98%E7%9B%AE%E6%8F%8F%E8%BF%B0-3"><span class="nav-text">题目描述</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%80%9D%E8%B7%AF-2"><span class="nav-text">思路</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Bash-%E5%8D%9A%E5%BC%88"><span class="nav-text">Bash 博弈</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E9%A2%98%E7%9B%AE%E6%8F%8F%E8%BF%B0-4"><span class="nav-text">题目描述</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%80%9D%E8%B7%AF-3"><span class="nav-text">思路</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-%E5%8A%A8%E6%80%81%E5%87%8F%E6%B3%95%E6%B8%B8%E6%88%8F"><span class="nav-text">1-动态减法游戏</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E9%A2%98%E7%9B%AE%E6%8F%8F%E8%BF%B0-5"><span class="nav-text">题目描述</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%80%9D%E8%B7%AF-4"><span class="nav-text">思路</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-%E5%8A%A8%E6%80%81%E5%87%8F%E6%B3%95%E6%B8%B8%E6%88%8F"><span class="nav-text">2-动态减法游戏</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E9%A2%98%E7%9B%AE%E6%8F%8F%E8%BF%B0-6"><span class="nav-text">题目描述</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%80%9D%E8%B7%AF-5"><span class="nav-text">思路</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#k-%E5%8A%A8%E6%80%81%E5%87%8F%E6%B3%95%E6%B8%B8%E6%88%8F"><span class="nav-text">k-动态减法游戏</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E9%A2%98%E7%9B%AE%E6%8F%8F%E8%BF%B0-7"><span class="nav-text">题目描述</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%80%9D%E8%B7%AF-6"><span class="nav-text">思路</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#NimK-%E6%B8%B8%E6%88%8F"><span class="nav-text">NimK 游戏</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E9%A2%98%E7%9B%AE%E5%A4%A7%E6%84%8F"><span class="nav-text">题目大意</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%80%9D%E8%B7%AF-7"><span class="nav-text">思路</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Anti-Nim-%E6%B8%B8%E6%88%8F"><span class="nav-text">Anti-Nim 游戏</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E9%A2%98%E7%9B%AE%E5%A4%A7%E6%84%8F-2"><span class="nav-text">题目大意</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%80%9D%E8%B7%AF-8"><span class="nav-text">思路</span></a></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link"><span class="nav-text">例题</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#AGC017-D-Game-On-Tree"><span class="nav-text">AGC017-D Game On Tree</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%80%9D%E8%B7%AF-9"><span class="nav-text">思路</span></a></li></ol></li></ol></li></ol></div>
-        </div>
-        <!--/noindex-->
-
-        <div class="site-overview-wrap sidebar-panel">
-          <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
-    <img class="site-author-image" itemprop="image" alt="FallenLeaf"
-      src="/uploads/Avatar.jpg">
-  <p class="site-author-name" itemprop="name">FallenLeaf</p>
-  <div class="site-description" itemprop="description">New beginning, New future.</div>
-</div>
-<div class="site-state-wrap animated">
-  <nav class="site-state">
-      <div class="site-state-item site-state-posts">
-        <a href="/archives/">
-          <span class="site-state-item-count">28</span>
-          <span class="site-state-item-name">日志</span>
-        </a>
-      </div>
-      <div class="site-state-item site-state-categories">
-          <a href="/categories/">
-        <span class="site-state-item-count">3</span>
-        <span class="site-state-item-name">分类</span></a>
-      </div>
-      <div class="site-state-item site-state-tags">
-          <a href="/tags/">
-        <span class="site-state-item-count">10</span>
-        <span class="site-state-item-name">标签</span></a>
-      </div>
-  </nav>
-</div>
-  <div class="links-of-author animated">
-      <span class="links-of-author-item">
-        <a href="https://github.com/FallenLeaf0327" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;FallenLeaf0327" rel="noopener me" target="_blank"><i class="fab fa-github fa-fw"></i></a>
+          
+  <div class="mt-3">
+    
+    
+      <span class="post-meta">
+        <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+        <time datetime="2025-08-02 00:00" pubdate>
+          2025年8月2日 凌晨
+        </time>
       </span>
-      <span class="links-of-author-item">
-        <a href="mailto:FallenLeaf_0327@qq.com" title="E-Mail → mailto:FallenLeaf_0327@qq.com" rel="noopener me" target="_blank"><i class="fa fa-envelope fa-fw"></i></a>
-      </span>
+    
   </div>
 
-        </div>
-      </div>
-    </div>
+  <div class="mt-1">
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-chart"></i>
+        
+          1k 字
+        
+      </span>
+    
 
     
-  </aside>
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-clock-fill"></i>
+        
+        
+        
+          9 分钟
+        
+      </span>
+    
+
+    
+    
+  </div>
 
 
+        
+      </div>
+
+      
     </div>
-
-    <div class="main-inner post posts-expand">
-
-
-  
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://fallenleaf0327.github.io/2025/08/02/%E9%9B%86%E8%AE%AD%E6%80%BB%E7%BB%93%EF%BC%882025%E6%9A%91%EF%BC%89/OI%E9%9B%86%E8%AE%AD-Day17/OI%E9%9B%86%E8%AE%AD-Day17/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/uploads/Avatar.jpg">
-      <meta itemprop="name" content="FallenLeaf">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="FallenLeaf's Blog">
-      <meta itemprop="description" content="New beginning, New future.">
-    </span>
-
-    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="OI集训 Day17 | FallenLeaf's Blog">
-      <meta itemprop="description" content="">
-    </span>
-      <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-          OI集训 Day17
-        </h1>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">发表于</span>
-
-      <time title="创建时间：2025-08-02 00:00:00" itemprop="dateCreated datePublished" datetime="2025-08-02T00:00:00+08:00">2025-08-02</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar-check"></i>
-      </span>
-      <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2025-08-05 09:42:30" itemprop="dateModified" datetime="2025-08-05T09:42:30+08:00">2025-08-05</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">分类于</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/%E9%9B%86%E8%AE%AD%E6%80%BB%E7%BB%93%EF%BC%882025%E6%9A%91%EF%BC%89/" itemprop="url" rel="index"><span itemprop="name">集训总结（2025暑）</span></a>
-        </span>
-    </span>
-
-  
-    <span class="post-meta-break"></span>
-    <span class="post-meta-item" title="本文字数">
-      <span class="post-meta-item-icon">
-        <i class="far fa-file-word"></i>
-      </span>
-      <span class="post-meta-item-text">本文字数：</span>
-      <span>1k</span>
-    </span>
-    <span class="post-meta-item" title="阅读时长">
-      <span class="post-meta-item-icon">
-        <i class="far fa-clock"></i>
-      </span>
-      <span class="post-meta-item-text">阅读时长 &asymp;</span>
-      <span>4 分钟</span>
-    </span>
+  </div>
 </div>
 
-        </div>
-      </header>
+</div>
 
+  </header>
+
+  <main>
     
-    
-    
-    <div class="post-body" itemprop="articleBody"><p><strong>Content</strong>：博弈论<br>
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+
+    </div>
+
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div id="board">
+          <article class="post-content mx-auto">
+            <h1 id="seo-header">OI集训 Day17</h1>
+            
+              <p id="updated-time" class="note note-info" style="">
+                
+                  
+                    本文最后更新于 2025年8月5日 上午
+                  
+                
+              </p>
+            
+            
+              <div class="markdown-body">
+                
+                <p><strong>Content</strong>：博弈论<br>
 <strong>Date</strong>：2025.8.2</p>
 <span id="more"></span>
-<h1>课堂内容</h1>
-<h2 id="SG-函数">SG 函数</h2>
+<h1 id="课堂内容"><a class="markdownIt-Anchor" href="#课堂内容"></a> 课堂内容</h1>
+<h2 id="sg-函数"><a class="markdownIt-Anchor" href="#sg-函数"></a> SG 函数</h2>
 <p>表示当前游戏局面的函数，后手必胜当且仅当 SG 函数为 0。</p>
 <p>多个游戏的组合的 SG 函数为每个游戏的 SG 函数的 <strong>异或和</strong>。</p>
-<h2 id="经典模型">经典模型</h2>
-<h3 id="取石子游戏">取石子游戏</h3>
-<h4 id="题目描述">题目描述</h4>
-<p>有 $n$ 堆石子，A、B 轮流取，每次从任意一堆中取出至少一个石子，不能取的输，问谁赢。</p>
-<h4 id="解法">解法</h4>
-<p>一堆大小为 $n$ 的 SG 函数为 $n$，根据 SG 函数的性质，可以发现整个游戏的 SG 函数为 $\displaystyle \bigotimes_{i=1}^n SG_i$。</p>
-<h3 id="阶梯取石子游戏">阶梯取石子游戏</h3>
-<h4 id="题目描述-2">题目描述</h4>
-<p>有 $n$ 堆石子放在台阶上，A、B 轮流取，每次从任意一堆中取出至少一个石子，放到下一个台阶上（如果在第 1 个台阶，则扔掉），不能取的输，问谁赢。</p>
-<h3 id="思路">思路</h3>
+<h2 id="经典模型"><a class="markdownIt-Anchor" href="#经典模型"></a> 经典模型</h2>
+<h3 id="取石子游戏"><a class="markdownIt-Anchor" href="#取石子游戏"></a> 取石子游戏</h3>
+<h4 id="题目描述"><a class="markdownIt-Anchor" href="#题目描述"></a> 题目描述</h4>
+<p>有 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>n</mi></mrow><annotation encoding="application/x-tex">n</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathnormal">n</span></span></span></span> 堆石子，A、B 轮流取，每次从任意一堆中取出至少一个石子，不能取的输，问谁赢。</p>
+<h4 id="解法"><a class="markdownIt-Anchor" href="#解法"></a> 解法</h4>
+<p>一堆大小为 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>n</mi></mrow><annotation encoding="application/x-tex">n</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathnormal">n</span></span></span></span> 的 SG 函数为 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>n</mi></mrow><annotation encoding="application/x-tex">n</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathnormal">n</span></span></span></span>，根据 SG 函数的性质，可以发现整个游戏的 SG 函数为 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mstyle scriptlevel="0" displaystyle="true"><munderover><mo>⨂</mo><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mi>n</mi></munderover><mi>S</mi><msub><mi>G</mi><mi>i</mi></msub></mstyle></mrow><annotation encoding="application/x-tex">\displaystyle \bigotimes_{i=1}^n SG_i</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:2.929066em;vertical-align:-1.277669em;"></span><span class="mop op-limits"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.6513970000000002em;"><span style="top:-1.872331em;margin-left:0em;"><span class="pstrut" style="height:3.05em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">i</span><span class="mrel mtight">=</span><span class="mord mtight">1</span></span></span></span><span style="top:-3.050005em;"><span class="pstrut" style="height:3.05em;"></span><span><span class="mop op-symbol large-op">⨂</span></span></span><span style="top:-4.3000050000000005em;margin-left:0em;"><span class="pstrut" style="height:3.05em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">n</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:1.277669em;"><span></span></span></span></span></span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathnormal" style="margin-right:0.05764em;">S</span><span class="mord"><span class="mord mathnormal">G</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.31166399999999994em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">i</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span>。</p>
+<h3 id="阶梯取石子游戏"><a class="markdownIt-Anchor" href="#阶梯取石子游戏"></a> 阶梯取石子游戏</h3>
+<h4 id="题目描述-2"><a class="markdownIt-Anchor" href="#题目描述-2"></a> 题目描述</h4>
+<p>有 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>n</mi></mrow><annotation encoding="application/x-tex">n</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathnormal">n</span></span></span></span> 堆石子放在台阶上，A、B 轮流取，每次从任意一堆中取出至少一个石子，放到下一个台阶上（如果在第 1 个台阶，则扔掉），不能取的输，问谁赢。</p>
+<h3 id="思路"><a class="markdownIt-Anchor" href="#思路"></a> 思路</h3>
 <p>可以发现最后的答案之和奇数层的石子有关，所以整个游戏的 SG 函数为所有奇数层 SG 函数的异或和。</p>
-<h3 id="树状取石子游戏">树状取石子游戏</h3>
-<h4 id="题目描述-3">题目描述</h4>
-<p>在一颗大小为 $n$ 的树上有 $n$ 堆石子，A、B 轮流取，每次从任意一堆中取出至少一个石子，移动到他的父亲节点（如果在 1 号节点，则扔掉），不能取的输，问谁赢。</p>
-<h4 id="思路-2">思路</h4>
+<h3 id="树状取石子游戏"><a class="markdownIt-Anchor" href="#树状取石子游戏"></a> 树状取石子游戏</h3>
+<h4 id="题目描述-3"><a class="markdownIt-Anchor" href="#题目描述-3"></a> 题目描述</h4>
+<p>在一颗大小为 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>n</mi></mrow><annotation encoding="application/x-tex">n</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathnormal">n</span></span></span></span> 的树上有 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>n</mi></mrow><annotation encoding="application/x-tex">n</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathnormal">n</span></span></span></span> 堆石子，A、B 轮流取，每次从任意一堆中取出至少一个石子，移动到他的父亲节点（如果在 1 号节点，则扔掉），不能取的输，问谁赢。</p>
+<h4 id="思路-2"><a class="markdownIt-Anchor" href="#思路-2"></a> 思路</h4>
 <p>跟上面的其实是一样的，只不过这里的答案只跟奇数层的节点的 SG 函数的异或和有关。</p>
-<h3 id="Bash-博弈">Bash 博弈</h3>
-<h4 id="题目描述-4">题目描述</h4>
-<p>有 $n$ 堆石子，A、B 轮流取，每次从任意一堆中取出至少一个石子，至多取 $m$ 个，不能取的输，问谁赢。</p>
-<h4 id="思路-3">思路</h4>
-<p>每个石子堆的 SG 函数为 $n \bmod (m+1)$，异或起来即可。</p>
-<h3 id="1-动态减法游戏">1-动态减法游戏</h3>
-<h4 id="题目描述-5">题目描述</h4>
-<p>有一个正整数 $n$，A、B 轮流在上面减去一个数，第一个人至多减 $n-1$，后面每个人减的数不超过上一次的，最先吧这个数减到 0 的人获胜。问最后谁赢。</p>
-<h4 id="思路-4">思路</h4>
-<p>先手每次都可以取原数的 $lowbit$<s>（人类智慧）</s>，所以后手必胜当且仅当 $n = 2^k$。</p>
-<h3 id="2-动态减法游戏">2-动态减法游戏</h3>
-<h4 id="题目描述-6">题目描述</h4>
-<p>有一个正整数 $n$，A、B 轮流在上面减去一个数，第一个人至多减 $n-1$，后面每个人减的数不超过上一次的 <strong>两倍</strong> ，最先吧这个数减到 0 的人获胜。问最后谁赢。</p>
-<h4 id="思路-5">思路</h4>
-<p>对原数进行斐波那契分解，先手每次取最低位的 1 <s>（人类智慧 $\times$ 2)</s>，所以后手必胜当且仅当 $n$ 为斐波那契数。</p>
-<h3 id="k-动态减法游戏">k-动态减法游戏</h3>
-<h4 id="题目描述-7">题目描述</h4>
-<p>有一个正整数 $n$，A、B 轮流在上面减去一个数，第一个人至多减 $n-1$，后面每个人减的数不超过上一次的 <strong>$k$ 倍</strong>，最先吧这个数减到 0 的人获胜。问最后谁赢。</p>
-<h4 id="思路-6">思路</h4>
-<p>只需要一种满足任何表示方法中最低非零位的值的 $k$ 倍小于次低非<br>
+<h3 id="bash-博弈"><a class="markdownIt-Anchor" href="#bash-博弈"></a> Bash 博弈</h3>
+<h4 id="题目描述-4"><a class="markdownIt-Anchor" href="#题目描述-4"></a> 题目描述</h4>
+<p>有 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>n</mi></mrow><annotation encoding="application/x-tex">n</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathnormal">n</span></span></span></span> 堆石子，A、B 轮流取，每次从任意一堆中取出至少一个石子，至多取 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>m</mi></mrow><annotation encoding="application/x-tex">m</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathnormal">m</span></span></span></span> 个，不能取的输，问谁赢。</p>
+<h4 id="思路-3"><a class="markdownIt-Anchor" href="#思路-3"></a> 思路</h4>
+<p>每个石子堆的 SG 函数为 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>n</mi><mtext> </mtext><mo lspace="0.22em" rspace="0.22em"><mrow><mi mathvariant="normal">m</mi><mi mathvariant="normal">o</mi><mi mathvariant="normal">d</mi></mrow></mo><mtext> </mtext><mo stretchy="false">(</mo><mi>m</mi><mo>+</mo><mn>1</mn><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">n \bmod (m+1)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.69444em;vertical-align:0em;"></span><span class="mord mathnormal">n</span><span class="mspace" style="margin-right:0.05555555555555555em;"></span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin"><span class="mord"><span class="mord mathrm">m</span><span class="mord mathrm">o</span><span class="mord mathrm">d</span></span></span><span class="mspace" style="margin-right:0.05555555555555555em;"></span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">(</span><span class="mord mathnormal">m</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord">1</span><span class="mclose">)</span></span></span></span>，异或起来即可。</p>
+<h3 id="1-动态减法游戏"><a class="markdownIt-Anchor" href="#1-动态减法游戏"></a> 1-动态减法游戏</h3>
+<h4 id="题目描述-5"><a class="markdownIt-Anchor" href="#题目描述-5"></a> 题目描述</h4>
+<p>有一个正整数 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>n</mi></mrow><annotation encoding="application/x-tex">n</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathnormal">n</span></span></span></span>，A、B 轮流在上面减去一个数，第一个人至多减 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>n</mi><mo>−</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">n-1</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.66666em;vertical-align:-0.08333em;"></span><span class="mord mathnormal">n</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">1</span></span></span></span>，后面每个人减的数不超过上一次的，最先吧这个数减到 0 的人获胜。问最后谁赢。</p>
+<h4 id="思路-4"><a class="markdownIt-Anchor" href="#思路-4"></a> 思路</h4>
+<p>先手每次都可以取原数的 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>l</mi><mi>o</mi><mi>w</mi><mi>b</mi><mi>i</mi><mi>t</mi></mrow><annotation encoding="application/x-tex">lowbit</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.69444em;vertical-align:0em;"></span><span class="mord mathnormal" style="margin-right:0.01968em;">l</span><span class="mord mathnormal">o</span><span class="mord mathnormal" style="margin-right:0.02691em;">w</span><span class="mord mathnormal">b</span><span class="mord mathnormal">i</span><span class="mord mathnormal">t</span></span></span></span><s>（人类智慧）</s>，所以后手必胜当且仅当 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>n</mi><mo>=</mo><msup><mn>2</mn><mi>k</mi></msup></mrow><annotation encoding="application/x-tex">n = 2^k</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathnormal">n</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.849108em;vertical-align:0em;"></span><span class="mord"><span class="mord">2</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.849108em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight" style="margin-right:0.03148em;">k</span></span></span></span></span></span></span></span></span></span></span>。</p>
+<h3 id="2-动态减法游戏"><a class="markdownIt-Anchor" href="#2-动态减法游戏"></a> 2-动态减法游戏</h3>
+<h4 id="题目描述-6"><a class="markdownIt-Anchor" href="#题目描述-6"></a> 题目描述</h4>
+<p>有一个正整数 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>n</mi></mrow><annotation encoding="application/x-tex">n</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathnormal">n</span></span></span></span>，A、B 轮流在上面减去一个数，第一个人至多减 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>n</mi><mo>−</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">n-1</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.66666em;vertical-align:-0.08333em;"></span><span class="mord mathnormal">n</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">1</span></span></span></span>，后面每个人减的数不超过上一次的 <strong>两倍</strong> ，最先吧这个数减到 0 的人获胜。问最后谁赢。</p>
+<h4 id="思路-5"><a class="markdownIt-Anchor" href="#思路-5"></a> 思路</h4>
+<p>对原数进行斐波那契分解，先手每次取最低位的 1 <s>（人类智慧 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>×</mo></mrow><annotation encoding="application/x-tex">\times</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.66666em;vertical-align:-0.08333em;"></span><span class="mord">×</span></span></span></span> 2)</s>，所以后手必胜当且仅当 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>n</mi></mrow><annotation encoding="application/x-tex">n</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathnormal">n</span></span></span></span> 为斐波那契数。</p>
+<h3 id="k-动态减法游戏"><a class="markdownIt-Anchor" href="#k-动态减法游戏"></a> k-动态减法游戏</h3>
+<h4 id="题目描述-7"><a class="markdownIt-Anchor" href="#题目描述-7"></a> 题目描述</h4>
+<p>有一个正整数 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>n</mi></mrow><annotation encoding="application/x-tex">n</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathnormal">n</span></span></span></span>，A、B 轮流在上面减去一个数，第一个人至多减 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>n</mi><mo>−</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">n-1</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.66666em;vertical-align:-0.08333em;"></span><span class="mord mathnormal">n</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">1</span></span></span></span>，后面每个人减的数不超过上一次的 <strong><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>k</mi></mrow><annotation encoding="application/x-tex">k</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.69444em;vertical-align:0em;"></span><span class="mord mathnormal" style="margin-right:0.03148em;">k</span></span></span></span> 倍</strong>，最先吧这个数减到 0 的人获胜。问最后谁赢。</p>
+<h4 id="思路-6"><a class="markdownIt-Anchor" href="#思路-6"></a> 思路</h4>
+<p>只需要一种满足任何表示方法中最低非零位的值的 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>k</mi></mrow><annotation encoding="application/x-tex">k</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.69444em;vertical-align:0em;"></span><span class="mord mathnormal" style="margin-right:0.03148em;">k</span></span></span></span> 倍小于次低非<br>
 零位。<br>
-每次将新加入的数设为前面的数能表示的最大值 $+1$ 即可 <s>（人类智慧 $\times$ 3）</s>。</p>
-<h3 id="NimK-游戏">NimK 游戏</h3>
-<h4 id="题目大意">题目大意</h4>
-<p>有 $n$ 堆石头，A、B 轮流取，每次从至多 $k$ 堆中取出至少一个石头，不能取的输，问最后谁赢。</p>
-<h4 id="思路-7">思路</h4>
-<p>求 SG 函数在 $k+1$ 进制下的不进位加法。</p>
-<h3 id="Anti-Nim-游戏">Anti-Nim 游戏</h3>
-<h4 id="题目大意-2">题目大意</h4>
+每次将新加入的数设为前面的数能表示的最大值 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>+</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">+1</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.72777em;vertical-align:-0.08333em;"></span><span class="mord">+</span><span class="mord">1</span></span></span></span> 即可 <s>（人类智慧 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>×</mo></mrow><annotation encoding="application/x-tex">\times</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.66666em;vertical-align:-0.08333em;"></span><span class="mord">×</span></span></span></span> 3）</s>。</p>
+<h3 id="nimk-游戏"><a class="markdownIt-Anchor" href="#nimk-游戏"></a> NimK 游戏</h3>
+<h4 id="题目大意"><a class="markdownIt-Anchor" href="#题目大意"></a> 题目大意</h4>
+<p>有 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>n</mi></mrow><annotation encoding="application/x-tex">n</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathnormal">n</span></span></span></span> 堆石头，A、B 轮流取，每次从至多 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>k</mi></mrow><annotation encoding="application/x-tex">k</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.69444em;vertical-align:0em;"></span><span class="mord mathnormal" style="margin-right:0.03148em;">k</span></span></span></span> 堆中取出至少一个石头，不能取的输，问最后谁赢。</p>
+<h4 id="思路-7"><a class="markdownIt-Anchor" href="#思路-7"></a> 思路</h4>
+<p>求 SG 函数在 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>k</mi><mo>+</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">k+1</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.77777em;vertical-align:-0.08333em;"></span><span class="mord mathnormal" style="margin-right:0.03148em;">k</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">1</span></span></span></span> 进制下的不进位加法。</p>
+<h3 id="anti-nim-游戏"><a class="markdownIt-Anchor" href="#anti-nim-游戏"></a> Anti-Nim 游戏</h3>
+<h4 id="题目大意-2"><a class="markdownIt-Anchor" href="#题目大意-2"></a> 题目大意</h4>
 <p>同 <em>普通取石子游戏规则</em>，但是不能操作的人胜利。</p>
-<h4 id="思路-8">思路</h4>
+<h4 id="思路-8"><a class="markdownIt-Anchor" href="#思路-8"></a> 思路</h4>
 <p>先手必胜的条件为：</p>
 <ol>
 <li>SG 函数的和为 0 且所有游戏的 SG 函数的值均不大于 1；</li>
 <li>SG 函数的和不等于 0 且至少一个游戏的 SG 函数值大于 1。</li>
 </ol>
-<h1>例题</h1>
-<h2 id="AGC017-D-Game-On-Tree"><a target="_blank" rel="noopener" href="https://atcoder.jp/contests/agc017/tasks/agc017_d?lang=en">AGC017-D</a> Game On Tree</h2>
-<h3 id="思路-9">思路</h3>
-<p>对于每一个子树，其 SG 函数为所有子节点的 SG 函数加上一条边的状态，即 $\displaystyle SG_u = \bigotimes_{v \in son(u)} (SG_v + 1)$。</p>
+<h1 id="例题"><a class="markdownIt-Anchor" href="#例题"></a> 例题</h1>
+<h2 id="agc017-d"><a class="markdownIt-Anchor" href="#agc017-d"></a> <a target="_blank" rel="noopener" href="https://atcoder.jp/contests/agc017/tasks/agc017_d?lang=en">AGC017-D</a> Game On Tree</h2>
+<h3 id="思路-9"><a class="markdownIt-Anchor" href="#思路-9"></a> 思路</h3>
+<p>对于每一个子树，其 SG 函数为所有子节点的 SG 函数加上一条边的状态，即 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mstyle scriptlevel="0" displaystyle="true"><mi>S</mi><msub><mi>G</mi><mi>u</mi></msub><mo>=</mo><munder><mo>⨂</mo><mrow><mi>v</mi><mo>∈</mo><mi>s</mi><mi>o</mi><mi>n</mi><mo stretchy="false">(</mo><mi>u</mi><mo stretchy="false">)</mo></mrow></munder><mo stretchy="false">(</mo><mi>S</mi><msub><mi>G</mi><mi>v</mi></msub><mo>+</mo><mn>1</mn><mo stretchy="false">)</mo></mstyle></mrow><annotation encoding="application/x-tex">\displaystyle SG_u = \bigotimes_{v \in son(u)} (SG_v + 1)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.83333em;vertical-align:-0.15em;"></span><span class="mord mathnormal" style="margin-right:0.05764em;">S</span><span class="mord"><span class="mord mathnormal">G</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.151392em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">u</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:2.5660100000000003em;vertical-align:-1.516005em;"></span><span class="mop op-limits"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.050005em;"><span style="top:-1.808995em;margin-left:0em;"><span class="pstrut" style="height:3.05em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight" style="margin-right:0.03588em;">v</span><span class="mrel mtight">∈</span><span class="mord mathnormal mtight">s</span><span class="mord mathnormal mtight">o</span><span class="mord mathnormal mtight">n</span><span class="mopen mtight">(</span><span class="mord mathnormal mtight">u</span><span class="mclose mtight">)</span></span></span></span><span style="top:-3.0500049999999996em;"><span class="pstrut" style="height:3.05em;"></span><span><span class="mop op-symbol large-op">⨂</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:1.516005em;"><span></span></span></span></span></span><span class="mopen">(</span><span class="mord mathnormal" style="margin-right:0.05764em;">S</span><span class="mord"><span class="mord mathnormal">G</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.151392em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight" style="margin-right:0.03588em;">v</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord">1</span><span class="mclose">)</span></span></span></span>。</p>
 <p>提交记录：<a target="_blank" rel="noopener" href="https://atcoder.jp/contests/agc017/submissions/68096299">link</a></p>
 
-    </div>
+                
+              </div>
+            
+            <hr/>
+            <div>
+              <div class="post-metas my-3">
+  
+    <div class="post-meta mr-3 d-flex align-items-center">
+      <i class="iconfont icon-category"></i>
+      
 
+<span class="category-chains">
+  
+  
     
-    
-    
-
-    <footer class="post-footer">
-          
-
-<div class="post-copyright">
-<ul>
-  <li class="post-copyright-author">
-      <strong>本文作者： </strong>FallenLeaf
-  </li>
-  <li class="post-copyright-link">
-      <strong>本文链接：</strong>
-      <a href="https://fallenleaf0327.github.io/2025/08/02/%E9%9B%86%E8%AE%AD%E6%80%BB%E7%BB%93%EF%BC%882025%E6%9A%91%EF%BC%89/OI%E9%9B%86%E8%AE%AD-Day17/OI%E9%9B%86%E8%AE%AD-Day17/" title="OI集训 Day17">https://fallenleaf0327.github.io/2025/08/02/集训总结（2025暑）/OI集训-Day17/OI集训-Day17/</a>
-  </li>
-  <li class="post-copyright-license">
-      <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
-  </li>
-</ul>
-</div>
-
-          <div class="post-tags">
-              <a href="/tags/%E9%9B%86%E8%AE%AD/" rel="tag"><i class="fa fa-tag"></i> 集训</a>
-          </div>
-
+      <span class="category-chain">
         
+  <a href="/categories/%E9%9B%86%E8%AE%AD%E6%80%BB%E7%BB%93%EF%BC%882025%E6%9A%91%EF%BC%89/" class="category-chain-item">集训总结（2025暑）</a>
+  
+  
 
-          <div class="post-nav">
-            <div class="post-nav-item">
-                <a href="/2025/08/01/%E9%9B%86%E8%AE%AD%E6%80%BB%E7%BB%93%EF%BC%882025%E6%9A%91%EF%BC%89/OI%E9%9B%86%E8%AE%AD-Day16/OI%E9%9B%86%E8%AE%AD-Day16/" rel="prev" title="OI集训 Day16">
-                  <i class="fa fa-angle-left"></i> OI集训 Day16
-                </a>
-            </div>
-            <div class="post-nav-item">
-                <a href="/2025/08/04/%E9%9B%86%E8%AE%AD%E6%80%BB%E7%BB%93%EF%BC%882025%E6%9A%91%EF%BC%89/OI%E9%9B%86%E8%AE%AD-Day18/OI%E9%9B%86%E8%AE%AD-Day18/" rel="next" title="OI集训 Day18">
-                  OI集训 Day18 <i class="fa fa-angle-right"></i>
-                </a>
-            </div>
-          </div>
-    </footer>
-  </article>
-</div>
-
-
-
-
-
-
-</div>
-  </main>
-
-  <footer class="footer">
-    <div class="footer-inner">
-
-  <div class="copyright">
-    &copy; 
-    <span itemprop="copyrightYear">2025</span>
-    <span class="with-love">
-      <i class="fa fa-heart"></i>
-    </span>
-    <span class="author" itemprop="copyrightHolder">FallenLeaf</span>
-  </div>
-<div class="wordcount">
-  <span class="post-meta-item">
-    <span class="post-meta-item-icon">
-      <i class="fa fa-chart-line"></i>
-    </span>
-      <span>站点总字数：</span>
-    <span title="站点总字数">27k</span>
-  </span>
-  <span class="post-meta-item">
-    <span class="post-meta-item-icon">
-      <i class="fa fa-coffee"></i>
-    </span>
-      <span>站点阅读时长 &asymp;</span>
-    <span title="站点阅读时长">1:37</span>
-  </span>
-</div>
-  <div class="powered-by">由 <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/" rel="noopener" target="_blank">NexT.Gemini</a> 强力驱动
-  </div>
+      </span>
+    
+  
+</span>
 
     </div>
-  </footer>
+  
+  
+    <div class="post-meta">
+      <i class="iconfont icon-tags"></i>
+      
+        <a href="/tags/%E9%9B%86%E8%AE%AD/" class="print-no-link">#集训</a>
+      
+    </div>
+  
+</div>
+
+
+              
+  
+
+  <div class="license-box my-3">
+    <div class="license-title">
+      <div>OI集训 Day17</div>
+      <div>https://fallenleaf0327.github.io/2025/08/02/集训总结（2025暑）/OI集训-Day17/OI集训-Day17/</div>
+    </div>
+    <div class="license-meta">
+      
+        <div class="license-meta-item">
+          <div>作者</div>
+          <div>FallenLeaf</div>
+        </div>
+      
+      
+        <div class="license-meta-item license-meta-date">
+          <div>发布于</div>
+          <div>2025年8月2日</div>
+        </div>
+      
+      
+      
+        <div class="license-meta-item">
+          <div>许可协议</div>
+          <div>
+            
+              
+              
+                <a class="print-no-link" target="_blank" href="https://creativecommons.org/licenses/by/4.0/">
+                  <span class="hint--top hint--rounded" aria-label="BY - 署名">
+                    <i class="iconfont icon-cc-by"></i>
+                  </span>
+                </a>
+              
+            
+          </div>
+        </div>
+      
+    </div>
+    <div class="license-icon iconfont"></div>
+  </div>
+
+
+
+              
+                <div class="post-prevnext my-3">
+                  <article class="post-prev col-6">
+                    
+                    
+                      <a href="/2025/08/04/%E9%9B%86%E8%AE%AD%E6%80%BB%E7%BB%93%EF%BC%882025%E6%9A%91%EF%BC%89/OI%E9%9B%86%E8%AE%AD-Day19/OI%E9%9B%86%E8%AE%AD-Day19/" title="OI集训 Day19">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">OI集训 Day19</span>
+                        <span class="visible-mobile">上一篇</span>
+                      </a>
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/2025/08/01/%E9%9B%86%E8%AE%AD%E6%80%BB%E7%BB%93%EF%BC%882025%E6%9A%91%EF%BC%89/OI%E9%9B%86%E8%AE%AD-Day16/OI%E9%9B%86%E8%AE%AD-Day16/" title="OI集训 Day16">
+                        <span class="hidden-mobile">OI集训 Day16</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+          </article>
+        </div>
+      </div>
+    </div>
+
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+  <aside class="sidebar" style="margin-left: -1rem">
+    <div id="toc">
+  <p class="toc-header">
+    <i class="iconfont icon-list"></i>
+    <span>目录</span>
+  </p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+
+
+  </aside>
+
+
+    </div>
+  </div>
+</div>
+
+
+
+
 
   
-  <div class="toggle sidebar-toggle" role="button">
-    <span class="toggle-line"></span>
-    <span class="toggle-line"></span>
-    <span class="toggle-line"></span>
-  </div>
-  <div class="sidebar-dimmer"></div>
-  <div class="back-to-top" role="button" aria-label="返回顶部">
-    <i class="fa fa-arrow-up fa-lg"></i>
-    <span>0%</span>
-  </div>
-  <div class="reading-progress-bar"></div>
 
-<noscript>
-  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
-</noscript>
 
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+  
+  
+
+
+
+
+
+
+
+
+    
+
+    
+      <a id="scroll-top-button" aria-label="TOP" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v" for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+
+    
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+  
+    <div class="footer-content">
+       <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a>
+    </div>
+  
+  
+  
+</div>
+
+  </footer>
+
+  <!-- Scripts -->
+  
+  <script  src="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://lib.baomitu.com/jquery/3.6.4/jquery.min.js" ></script>
+<script  src="https://lib.baomitu.com/twitter-bootstrap/4.6.1/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+
+  <script  src="https://lib.baomitu.com/typed.js/2.0.12/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var subtitle = document.getElementById('subtitle');
+      if (!subtitle || !typing) {
+        return;
+      }
+      var text = subtitle.getAttribute('data-typed-text');
+      
+        typing(text);
+      
+    })(window, document);
+  </script>
+
+
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/tocbot/4.20.1/tocbot.min.js', function() {
+    var toc = jQuery('#toc');
+    if (toc.length === 0 || !window.tocbot) { return; }
+    var boardCtn = jQuery('#board-ctn');
+    var boardTop = boardCtn.offset().top;
+
+    window.tocbot.init(Object.assign({
+      tocSelector     : '#toc-body',
+      contentSelector : '.markdown-body',
+      linkClass       : 'tocbot-link',
+      activeLinkClass : 'tocbot-active-link',
+      listClass       : 'tocbot-list',
+      isCollapsedClass: 'tocbot-is-collapsed',
+      collapsibleClass: 'tocbot-is-collapsible',
+      scrollSmooth    : true,
+      includeTitleTags: true,
+      headingsOffset  : -boardTop,
+    }, CONFIG.toc));
+    if (toc.find('.toc-list-item').length > 0) {
+      toc.css('visibility', 'visible');
+    }
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('tocbot' in window) {
+        tocbot.refresh();
+        var toc = jQuery('#toc');
+        if (toc.length === 0 || !tocbot) {
+          return;
+        }
+        if (toc.find('.toc-list-item').length > 0) {
+          toc.css('visibility', 'visible');
+        }
+      }
+    });
+  });
+</script>
+
+
+  <script src=https://lib.baomitu.com/clipboard.js/2.0.11/clipboard.min.js></script>
+
+  <script>Fluid.plugins.codeWidget();</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/anchor-js/5.0.0/anchor.min.js', function() {
+    window.anchors.options = {
+      placement: CONFIG.anchorjs.placement,
+      visible  : CONFIG.anchorjs.visible
+    };
+    if (CONFIG.anchorjs.icon) {
+      window.anchors.options.icon = CONFIG.anchorjs.icon;
+    }
+    var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+    var res = [];
+    for (var item of el) {
+      res.push('.markdown-body > ' + item.trim());
+    }
+    if (CONFIG.anchorjs.placement === 'left') {
+      window.anchors.options.class = 'anchorjs-link-left';
+    }
+    window.anchors.add(res.join(', '));
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('anchors' in window) {
+        anchors.removeAll();
+        var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+        var res = [];
+        for (var item of el) {
+          res.push('.markdown-body > ' + item.trim());
+        }
+        if (CONFIG.anchorjs.placement === 'left') {
+          anchors.options.class = 'anchorjs-link-left';
+        }
+        anchors.add(res.join(', '));
+      }
+    });
+  });
+</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.js', function() {
+    Fluid.plugins.fancyBox();
+  });
+</script>
+
+
+  <script>Fluid.plugins.imageCaption();</script>
+
+  <script  src="/js/local-search.js" ></script>
+
+
+
+
+
+<!-- 主题的启动项，将它保持在最底部 -->
+<!-- the boot of the theme, keep it at the bottom -->
+<script  src="/js/boot.js" ></script>
+
+
+  
+
+  <noscript>
+    <div class="noscript-warning">博客在允许 JavaScript 运行的环境下浏览效果更佳</div>
+  </noscript>
 </body>
 </html>
