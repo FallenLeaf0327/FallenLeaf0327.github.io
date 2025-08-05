@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: dark)"><meta name="generator" content="Hexo 7.3.0">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/uploads/favicon-32x32-leaf.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/uploads/favicon-16x16-leaf.png">
+  <link rel="mask-icon" href="/uploads/custom_logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha256-dABdfBfUoC8vJUBOwGVdm8L9qlMWaHTIfXt+7GnZCIo=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"fallenleaf0327.github.io","root":"/","images":"/images","scheme":"Gemini","darkmode":true,"version":"8.23.2","exturl":false,"sidebar":{"position":"left","width_expanded":320,"width_dual_column":240,"display":"post","padding":18,"offset":12},"hljswrap":true,"codeblock":{"theme":{"light":"atom-one-light","dark":"atom-one-dark"},"prism":{"light":"prism","dark":"prism-dark"},"copy_button":{"enable":true,"style":"flat"},"fold":{"enable":true,"height":500},"language":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"duration":200,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.json","localsearch":{"enable":true,"top_n_per_article":10,"unescape":true,"preload":false}}</script><script src="/js/config.js" defer></script>
+
+    <meta name="description" content="Content: Problem on Tree Date：2025.7.21">
+<meta property="og:type" content="article">
+<meta property="og:title" content="OI集训 Day5">
+<meta property="og:url" content="https://fallenleaf0327.github.io/2025/07/21/%E9%9B%86%E8%AE%AD%E6%80%BB%E7%BB%93%EF%BC%882025%E6%9A%91%EF%BC%89/OI%E9%9B%86%E8%AE%AD-Day5/OI%E9%9B%86%E8%AE%AD-Day5/index.html">
+<meta property="og:site_name" content="FallenLeaf&#39;s Blog">
+<meta property="og:description" content="Content: Problem on Tree Date：2025.7.21">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2025-07-20T16:00:00.000Z">
+<meta property="article:modified_time" content="2025-08-05T01:40:34.867Z">
+<meta property="article:author" content="FallenLeaf">
+<meta property="article:tag" content="集训">
+<meta name="twitter:card" content="summary">
+
+
+<link rel="canonical" href="https://fallenleaf0327.github.io/2025/07/21/%E9%9B%86%E8%AE%AD%E6%80%BB%E7%BB%93%EF%BC%882025%E6%9A%91%EF%BC%89/OI%E9%9B%86%E8%AE%AD-Day5/OI%E9%9B%86%E8%AE%AD-Day5/">
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://fallenleaf0327.github.io/2025/07/21/%E9%9B%86%E8%AE%AD%E6%80%BB%E7%BB%93%EF%BC%882025%E6%9A%91%EF%BC%89/OI%E9%9B%86%E8%AE%AD-Day5/OI%E9%9B%86%E8%AE%AD-Day5/","path":"2025/07/21/集训总结（2025暑）/OI集训-Day5/OI集训-Day5/","title":"OI集训 Day5"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>OI集训 Day5 | FallenLeaf's Blog</title>
+  
+
+  <script src="/js/third-party/analytics/baidu-analytics.js" defer></script>
+  <script async src="https://hm.baidu.com/hm.js?fc11c8ca35c8a5b57cc025dde92e6c08"></script>
+
+
+
+
+
+
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous" defer></script>
+<script src="/js/utils.js" defer></script><script src="/js/motion.js" defer></script><script src="/js/sidebar.js" defer></script><script src="/js/next-boot.js" defer></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/hexo-generator-searchdb/1.5.0/search.js" integrity="sha256-xFC6PJ82SL9b3WkGjFavNiA9gm5z6UBxWPiu4CYjptg=" crossorigin="anonymous" defer></script>
+<script src="/js/third-party/search/local-search.js" defer></script>
+
+
+
+
+
+
+
+  
+
+
+
+
+  
+
+  <script class="next-config" data-name="enableMath" type="application/json">true</script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.css" integrity="sha256-UF1fgpAiu3tPJN/uCqEUHNe7pnr+QR0SQDNfgglgtcM=" crossorigin="anonymous">
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <div class="column">
+      <header class="header" itemscope itemtype="http://schema.org/WPHeader"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">FallenLeaf's Blog</p>
+      <i class="logo-line"></i>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger" aria-label="搜索" role="button">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li><li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签<span class="badge">10</span></a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类<span class="badge">3</span></a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">28</span></a></li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+      <div class="search-header">
+        <span class="search-icon">
+          <i class="fa fa-search"></i>
+        </span>
+        <div class="search-input-container">
+          <input autocomplete="off" autocapitalize="off" maxlength="80"
+                placeholder="搜索..." spellcheck="false"
+                type="search" class="search-input">
+        </div>
+        <span class="popup-btn-close" role="button">
+          <i class="fa fa-times-circle"></i>
+        </span>
+      </div>
+      <div class="search-result-container">
+        <div class="search-result-icon">
+          <i class="fa fa-spinner fa-pulse fa-5x"></i>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</header>
+        
+  
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%A6%82%E8%A7%88"><span class="nav-text">概览</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%85%B7%E4%BD%93%E5%86%85%E5%AE%B9"><span class="nav-text">具体内容</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%A0%91%E7%9A%84%E9%87%8D%E5%BF%83"><span class="nav-text">树的重心</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%AE%9A%E4%B9%89"><span class="nav-text">定义</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%A0%91%E7%9A%84%E9%87%8D%E5%BF%83"><span class="nav-text">树的重心</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%80%A7%E8%B4%A8"><span class="nav-text">性质</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%A0%91%E7%9A%84%E9%87%8D%E5%BF%83%E7%9A%84%E6%80%A7%E8%B4%A8"><span class="nav-text">树的重心的性质</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E4%BE%8B%E9%A2%98"><span class="nav-text">例题</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E9%A2%98%E7%9B%AE%E5%A4%A7%E6%84%8F%EF%BC%9A"><span class="nav-text">题目大意：</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%A0%91%E4%B8%8A%E5%90%AF%E5%8F%91%E5%BC%8F%E5%90%88%E5%B9%B6"><span class="nav-text">树上启发式合并</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E7%AE%97%E6%B3%95%E5%86%85%E5%AE%B9"><span class="nav-text">算法内容</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E4%BE%8B%E9%A2%98-2"><span class="nav-text">例题</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E9%A2%98%E7%9B%AE%E6%8F%8F%E8%BF%B0"><span class="nav-text">题目描述</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%A0%91%E9%93%BE%E5%89%96%E5%88%86"><span class="nav-text">树链剖分</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E7%AE%97%E6%B3%95%E6%AD%A5%E9%AA%A4"><span class="nav-text">算法步骤</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E4%BE%8B%E9%A2%98-3"><span class="nav-text">例题</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%B7%A6%E5%81%8F%E6%A0%91"><span class="nav-text">左偏树</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%AE%9A%E4%B9%89-2"><span class="nav-text">定义</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%93%8D%E4%BD%9C"><span class="nav-text">操作</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#%E5%90%88%E5%B9%B6"><span class="nav-text">合并</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E5%88%A0%E9%99%A4"><span class="nav-text">删除</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E4%BE%8B%E9%A2%98-4"><span class="nav-text">例题</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%82%B9%E5%88%86%E6%B2%BB"><span class="nav-text">点分治</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%80%9D%E6%83%B3"><span class="nav-text">思想</span></a></li></ol></li></ol></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="FallenLeaf"
+      src="/uploads/Avatar.jpg">
+  <p class="site-author-name" itemprop="name">FallenLeaf</p>
+  <div class="site-description" itemprop="description">New beginning, New future.</div>
+</div>
+<div class="site-state-wrap animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">28</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+          <a href="/categories/">
+        <span class="site-state-item-count">3</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+          <a href="/tags/">
+        <span class="site-state-item-count">10</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author animated">
+      <span class="links-of-author-item">
+        <a href="https://github.com/FallenLeaf0327" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;FallenLeaf0327" rel="noopener me" target="_blank"><i class="fab fa-github fa-fw"></i></a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="mailto:FallenLeaf_0327@qq.com" title="E-Mail → mailto:FallenLeaf_0327@qq.com" rel="noopener me" target="_blank"><i class="fa fa-envelope fa-fw"></i></a>
+      </span>
+  </div>
+
+        </div>
+      </div>
+    </div>
+
+    
+  </aside>
+
+
+    </div>
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://fallenleaf0327.github.io/2025/07/21/%E9%9B%86%E8%AE%AD%E6%80%BB%E7%BB%93%EF%BC%882025%E6%9A%91%EF%BC%89/OI%E9%9B%86%E8%AE%AD-Day5/OI%E9%9B%86%E8%AE%AD-Day5/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/uploads/Avatar.jpg">
+      <meta itemprop="name" content="FallenLeaf">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="FallenLeaf's Blog">
+      <meta itemprop="description" content="New beginning, New future.">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="OI集训 Day5 | FallenLeaf's Blog">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          OI集训 Day5
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2025-07-21 00:00:00" itemprop="dateCreated datePublished" datetime="2025-07-21T00:00:00+08:00">2025-07-21</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2025-08-05 09:40:34" itemprop="dateModified" datetime="2025-08-05T09:40:34+08:00">2025-08-05</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E9%9B%86%E8%AE%AD%E6%80%BB%E7%BB%93%EF%BC%882025%E6%9A%91%EF%BC%89/" itemprop="url" rel="index"><span itemprop="name">集训总结（2025暑）</span></a>
+        </span>
+    </span>
+
+  
+    <span class="post-meta-break"></span>
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>3k</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>11 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody"><p><strong>Content</strong>: Problem on Tree<br>
+<strong>Date</strong>：2025.7.21</p>
+<span id="more"></span>
+<h2 id="概览">概览</h2>
+<ul>
+<li>树的重心</li>
+<li>树上启发式合并</li>
+<li>树链剖分</li>
+<li>左偏树</li>
+<li>点分治</li>
+</ul>
+<h2 id="具体内容">具体内容</h2>
+<h3 id="树的重心">树的重心</h3>
+<h4 id="定义">定义</h4>
+<div class="note info"><h4 id="树的重心">树的重心</h4>
+<p>树的重心是满足如下条件的点 $u$:</p>
+<ul>
+<li>树上不存在其他节点 $v$，使得 $\max{\operatorname{siz}(son_v)} &lt; \max{\operatorname{size}(son_u)}$。</li>
+</ul>
+</div>
+<h4 id="性质">性质</h4>
+<p>树的重心 $G$ 有如下性质：</p>
+<div class="note info"><h4 id="树的重心的性质">树的重心的性质</h4>
+<ul>
+<li>当以 $G$ 为根节点时，不能存在 $v$ 满足 $\max_{\forall v \in \operatorname{son}(u)}{\operatorname{size}(v)} &gt; \frac{N}{2}$ ($N$为整棵树的大小)。反之亦然。</li>
+<li>树中所有节点到 $G$ 的<strong>距离之和最小</strong>，如果有两个重心，则距离<strong>相同</strong>。</li>
+<li>如果两棵树的重心分别为 $G_1$，$G_2$，则两棵树由一条边拼接起来之后，新树的重心<strong>一定在 $G_1$ 到 $G_2$ 的路径上</strong>。</li>
+<li>在一棵树上加入 (或删除) 一个叶子节点，其重心<strong>只移动一条边的距离</strong>。</li>
+<li>树的重心一定在<strong>以根节点为链头的重链上</strong>。</li>
+</ul>
+</div>
+<h4 id="例题">例题</h4>
+<p><a href="www.vjudge.net/problem/CodeForces-685B">CF685B</a> Kay and Snowflake</p>
+<div class="note info"><h4 id="题目大意：">题目大意：</h4>
+<p>求一颗大小为 $n$ ($1 \le n \le 10^{5}$) 有根树的所有子树的重心。</p>
+</div>
+<p>考虑运用性质 $4$，对整棵树进行 $dfs$，每次用子节点的重心暴力向上跳，再用性质 $1$ 检查，复杂度 $\Theta(n \log n)$。</p>
+<p><em><strong>Code</strong></em></p>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="keyword">constexpr</span> <span class="type">int</span> N = <span class="number">3e5</span> + <span class="number">5</span>;</span><br><span class="line"><span class="type">int</span> head[N], cnt = <span class="number">0</span>;</span><br><span class="line"><span class="type">int</span> n, q, father[N], query_node;</span><br><span class="line"><span class="type">int</span> son[N], sub_size[N], answer[N];</span><br><span class="line"></span><br><span class="line"><span class="keyword">struct</span> <span class="title class_">Edge</span> &#123;</span><br><span class="line">    <span class="type">int</span> to, next;</span><br><span class="line">&#125; e[N &lt;&lt; <span class="number">1</span>];</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">add_edge</span><span class="params">(<span class="type">const</span> <span class="type">int</span> u, <span class="type">const</span> <span class="type">int</span> v)</span> </span>&#123;</span><br><span class="line">    e[cnt].to = v;</span><br><span class="line">    e[cnt].next = head[u];</span><br><span class="line">    head[u] = cnt++;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">dfs</span><span class="params">(<span class="type">const</span> <span class="type">int</span> u)</span> </span>&#123;</span><br><span class="line">    sub_size[u] = <span class="number">1</span>;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = head[u]; ~i; i = e[i].next) &#123;</span><br><span class="line">        <span class="type">const</span> <span class="type">int</span> v = e[i].to;</span><br><span class="line">        <span class="keyword">if</span> (v == father[u]) <span class="keyword">continue</span>;</span><br><span class="line"></span><br><span class="line">        <span class="built_in">dfs</span>(v);</span><br><span class="line">        sub_size[u] += sub_size[v];</span><br><span class="line"></span><br><span class="line">        <span class="keyword">if</span> (son[u] == <span class="number">0</span> || sub_size[v] &gt; sub_size[son[u]]) &#123;</span><br><span class="line">            son[u] = v;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span> (son[u] == <span class="number">0</span>) &#123;</span><br><span class="line">        answer[u] = u;</span><br><span class="line">    &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">        answer[u] = answer[son[u]];</span><br><span class="line"></span><br><span class="line">        <span class="keyword">while</span> (answer[u] != u) &#123;</span><br><span class="line">            <span class="keyword">if</span> (sub_size[son[answer[u]]] * <span class="number">2</span> &lt;= sub_size[u] &amp;&amp; (sub_size[u] - sub_size[answer[u]]) * <span class="number">2</span> &lt;= sub_size[u]) &#123;</span><br><span class="line">                <span class="keyword">break</span>;</span><br><span class="line">            &#125;</span><br><span class="line">            answer[u] = father[answer[u]];</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    ios::<span class="built_in">sync_with_stdio</span>(<span class="literal">false</span>);</span><br><span class="line">    cin.<span class="built_in">tie</span>(<span class="literal">nullptr</span>);</span><br><span class="line">    cout.<span class="built_in">tie</span>(<span class="literal">nullptr</span>);</span><br><span class="line"></span><br><span class="line">    <span class="built_in">memset</span>(head, <span class="number">-1</span>, <span class="built_in">sizeof</span>(head));</span><br><span class="line"></span><br><span class="line">    cin &gt;&gt; n &gt;&gt; q;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">2</span>; i &lt;= n; i++) &#123;</span><br><span class="line">        cin &gt;&gt; father[i];</span><br><span class="line">        <span class="built_in">add_edge</span>(i, father[i]);</span><br><span class="line">        <span class="built_in">add_edge</span>(father[i], i);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="built_in">dfs</span>(<span class="number">1</span>);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">while</span> (q--) &#123;</span><br><span class="line">        cin &gt;&gt; query_node;</span><br><span class="line">        cout &lt;&lt; answer[query_node] &lt;&lt; <span class="string">&#x27;\n&#x27;</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="树上启发式合并">树上启发式合并</h3>
+<h4 id="算法内容">算法内容</h4>
+<p>对于某些问题，暴力的复杂度远远大于 $std$ 的复杂度，我们可以考虑<strong>启发式合并的思想</strong>。<br>
+启发式合并时人类对于算法的主观优化，我们以按秩合并的并查集为例。</p>
+<p><em><strong>并查集</strong></em></p>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="keyword">struct</span> <span class="title class_">DSU</span> &#123;</span><br><span class="line">    <span class="type">int</span> father[N], size[N];</span><br><span class="line">    <span class="function"><span class="type">void</span> <span class="title">init</span><span class="params">(<span class="type">int</span> limit)</span> </span>&#123;</span><br><span class="line">        std::<span class="built_in">iota</span>(father + <span class="number">1</span>, father + n + <span class="number">1</span>, <span class="number">1</span>);</span><br><span class="line">        std::<span class="built_in">memset</span>(size, <span class="number">1</span>, <span class="built_in">sizeof</span>(size));</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="type">int</span> <span class="title">find</span><span class="params">(<span class="type">int</span> x)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (father[x] != x) father[x] = <span class="built_in">find</span>(father[x]);</span><br><span class="line">        <span class="keyword">return</span> father[x];</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="type">bool</span> <span class="title">check</span><span class="params">(<span class="type">int</span> x, <span class="type">int</span> y)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="built_in">find</span>(x) == <span class="built_in">find</span>(y);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="type">void</span> <span class="title">merge</span><span class="params">(<span class="type">int</span> x, <span class="type">int</span> y)</span> </span>&#123;</span><br><span class="line">        x = <span class="built_in">find</span>(x), y = <span class="built_in">find</span>(y);</span><br><span class="line">        <span class="keyword">if</span> (x == y) <span class="keyword">return</span> <span class="built_in">void</span>();</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 按秩合并</span></span><br><span class="line">        <span class="keyword">if</span> (size[x] &gt; size[y]) &#123;</span><br><span class="line">            <span class="built_in">swap</span>(x, y);</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        father[x] = y;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>通过人的主观感受，我们可以知道将大小更小的子树合并到大小更大的子树上一定是更优的。树上启发式合并也是这种思想。我们通过和树链剖分类似的方法，将子节点分为重儿子和轻儿子，对于统计答案时，我们对重儿子统计的答案保留，对轻儿子统计的答案进行撤销，这样保证了复杂度的正确性。</p>
+<h4 id="例题-2">例题</h4>
+<p><a href="www.vjudge.net/problem/CodeForces-600E">CF600E</a> Lomsat gelral</p>
+<div class="note info"><h4 id="题目描述">题目描述</h4>
+<p>给定一个有根树，每个点有一个颜色 $c_i$，对每个子树，求所有出现最多的颜色的和。<br>
+$n \le 10^{5}$</p>
+</div>
+<p>我们开一个桶记录每一种颜色再子树内的出现次数，并同时维护两个变量：</p>
+<ul>
+<li>$max$：当前出现最多的颜色出现的次数。</li>
+<li>$sum$：出现最多的颜色的和。</li>
+</ul>
+<p>每次我们遍历的时候先遍历轻儿子，再遍历重儿子，传入一个标记 $f$，表示当前的统计数据是否保留，并根据题意维护 $max$ 和 $sum$ 即可。</p>
+<p><em><strong>Code</strong></em></p>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">using</span> std::cin;</span><br><span class="line"><span class="keyword">using</span> std::cout;</span><br><span class="line"></span><br><span class="line"><span class="keyword">constexpr</span> <span class="type">int</span> N = <span class="number">1e5</span> + <span class="number">5</span>;</span><br><span class="line"><span class="type">int</span> head[N], cnt = <span class="number">0</span>;</span><br><span class="line"><span class="type">int</span> n, col[N], u, v;</span><br><span class="line"><span class="type">int</span> tot[N], size[N], son[N], father[N], dfn = <span class="number">0</span>;</span><br><span class="line"><span class="type">long</span> <span class="type">long</span> max = <span class="number">0</span>, sum = <span class="number">0</span>, answer[N];</span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">Edge</span> &#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="type">int</span> to, next;</span><br><span class="line"></span><br><span class="line">    <span class="built_in">Edge</span>(<span class="type">const</span> <span class="type">int</span> to = <span class="number">0</span>, <span class="type">const</span> <span class="type">int</span> next = <span class="number">0</span>) : <span class="built_in">to</span>(to), <span class="built_in">next</span>(next) &#123;&#125;</span><br><span class="line">&#125; e[N &lt;&lt; <span class="number">1</span>];</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">add_edge</span><span class="params">(<span class="type">const</span> <span class="type">int</span> u, <span class="type">const</span> <span class="type">int</span> v)</span> </span>&#123;</span><br><span class="line">    e[cnt] = <span class="built_in">Edge</span>(v, head[u]);</span><br><span class="line">    head[u] = cnt++;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">dfs1</span><span class="params">(<span class="type">const</span> <span class="type">int</span> u, <span class="type">const</span> <span class="type">int</span> fa)</span> </span>&#123;</span><br><span class="line">    size[u] = <span class="number">1</span>;</span><br><span class="line">    father[u] = fa;</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = head[u]; ~i; i = e[i].next) &#123;</span><br><span class="line">        <span class="type">int</span> v = e[i].to;</span><br><span class="line">        <span class="keyword">if</span> (v == fa) <span class="keyword">continue</span>;</span><br><span class="line"></span><br><span class="line">        <span class="built_in">dfs1</span>(v, u);</span><br><span class="line">        size[u] += size[v];</span><br><span class="line"></span><br><span class="line">        <span class="keyword">if</span> (son[u] == <span class="number">0</span> || size[v] &gt; size[son[u]]) &#123;</span><br><span class="line">            son[u] = v;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">update</span><span class="params">(<span class="type">const</span> <span class="type">int</span> u, <span class="type">const</span> <span class="type">int</span> val, <span class="type">const</span> <span class="type">int</span> ban)</span> </span>&#123;</span><br><span class="line">    tot[col[u]] += val;</span><br><span class="line">    <span class="keyword">if</span> (tot[col[u]] == max) &#123;</span><br><span class="line">        sum += col[u];</span><br><span class="line">    &#125; <span class="keyword">else</span> <span class="keyword">if</span> (tot[col[u]] &gt; max) &#123;</span><br><span class="line">        max = tot[col[u]];</span><br><span class="line">        sum = col[u];</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = head[u]; ~i; i = e[i].next) &#123;</span><br><span class="line">        <span class="type">const</span> <span class="type">int</span> v = e[i].to;</span><br><span class="line">        <span class="keyword">if</span> (v == father[u] || v == ban) &#123;</span><br><span class="line">            <span class="keyword">continue</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        </span><br><span class="line">        <span class="built_in">update</span>(v, val, ban);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">dfs2</span><span class="params">(<span class="type">const</span> <span class="type">int</span> u, <span class="type">const</span> <span class="type">bool</span> heavy_son)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = head[u]; ~i; i = e[i].next) &#123;</span><br><span class="line">        <span class="type">const</span> <span class="type">int</span> v = e[i].to;</span><br><span class="line">        <span class="keyword">if</span> (v == father[u] || v == son[u]) &#123;</span><br><span class="line">            <span class="keyword">continue</span>;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="built_in">dfs2</span>(v, <span class="literal">false</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">if</span> (son[u] != <span class="number">0</span>) &#123;</span><br><span class="line">        <span class="built_in">dfs2</span>(son[u], <span class="literal">true</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="built_in">update</span>(u, <span class="number">1</span>, son[u]);</span><br><span class="line">    </span><br><span class="line">    answer[u] = sum;</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">if</span> (heavy_son == <span class="literal">false</span>) &#123;</span><br><span class="line">        <span class="built_in">update</span>(u, <span class="number">-1</span>, <span class="number">-1</span>);</span><br><span class="line">        sum = <span class="number">0</span>;</span><br><span class="line">        max = <span class="number">0</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    std::ios::<span class="built_in">sync_with_stdio</span>(<span class="literal">false</span>);</span><br><span class="line">    cin.<span class="built_in">tie</span>(<span class="literal">nullptr</span>);</span><br><span class="line">    cout.<span class="built_in">tie</span>(<span class="literal">nullptr</span>);</span><br><span class="line">    </span><br><span class="line">    std::<span class="built_in">memset</span>(head, <span class="number">-1</span>, <span class="built_in">sizeof</span>(head));</span><br><span class="line"></span><br><span class="line">    cin &gt;&gt; n;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">1</span>; i &lt;= n; i++) &#123;</span><br><span class="line">        cin &gt;&gt; col[i];</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">1</span>; i &lt; n; i++) &#123;</span><br><span class="line">        cin &gt;&gt; u &gt;&gt; v;</span><br><span class="line">        <span class="built_in">add_edge</span>(u, v);</span><br><span class="line">        <span class="built_in">add_edge</span>(v, u);</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="built_in">dfs1</span>(<span class="number">1</span>, <span class="number">0</span>);</span><br><span class="line">    <span class="built_in">dfs2</span>(<span class="number">1</span>, <span class="literal">true</span>);</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">1</span>; i &lt;= n; i++) &#123;</span><br><span class="line">        cout &lt;&lt; answer[i] &lt;&lt; <span class="string">&quot; &quot;</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="树链剖分">树链剖分</h3>
+<h4 id="算法步骤">算法步骤</h4>
+<p>我们维护 $5$ 个数组：</p>
+<ul>
+<li>$fa[u]$：表示节点 $u$ 的父亲。</li>
+<li>$size[u]$：表示节点 $u$ 的子树大小。</li>
+<li>$son[u]$：表示节点 $u$ 的重儿子 (即节点 $u$ 的子节点中子树大小最大的节点) 的编号。</li>
+<li>$top[u]$：表示节点 $u$ 所在链的链头编号。</li>
+<li>$id[i]$：表示 $dfn$ 值为 $i$ 的节点编号。</li>
+</ul>
+<p>这样我们就把整棵树拆成了若干条链和轻边。这样我们就可以用线段树对整棵树进行维护 (每一条链都对应了一段连续的 $dfn$ 区间)。</p>
+<h4 id="例题-3">例题</h4>
+<p><a href="www.luogu.com.cn/problem/P3384">洛谷 P3384</a> 重链剖分/树链剖分</p>
+<p>根据题意对树剖完了的 $dfn$ 序列用线段树维护即可。</p>
+<p><em><strong>Code</strong></em></p>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> OnlineJudge</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">using</span> std::cin;</span><br><span class="line"><span class="keyword">using</span> std::cout;</span><br><span class="line"></span><br><span class="line"><span class="keyword">constexpr</span> <span class="type">int</span> N = <span class="number">1e5</span> + <span class="number">5</span>;</span><br><span class="line"><span class="type">int</span> head[N], cnt = <span class="number">0</span>;</span><br><span class="line"><span class="type">int</span> n, m, root, P, u, v, initial_value[N], value[N], opt;</span><br><span class="line"><span class="type">int</span> top[N], size[N], son[N], dep[N], fa[N], id[N], num = <span class="number">0</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">Edge</span> &#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="type">int</span> to, next;</span><br><span class="line"></span><br><span class="line">    <span class="built_in">Edge</span>(<span class="type">const</span> <span class="type">int</span> to = <span class="number">0</span>, <span class="type">const</span> <span class="type">int</span> next = <span class="number">0</span>) : <span class="built_in">to</span>(to), <span class="built_in">next</span>(next) &#123;&#125;</span><br><span class="line">&#125; e[N &lt;&lt; <span class="number">1</span>];</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">add_edge</span><span class="params">(<span class="type">int</span> u, <span class="type">int</span> v)</span> </span>&#123;</span><br><span class="line">    e[cnt] = <span class="built_in">Edge</span>(v, head[u]);</span><br><span class="line">    head[u] = cnt++;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">struct</span> <span class="title class_">SegmentTree</span> &#123;</span><br><span class="line">    <span class="keyword">struct</span> <span class="title class_">Node</span> &#123;</span><br><span class="line">        <span class="type">int</span> left, right;</span><br><span class="line">        <span class="type">long</span> <span class="type">long</span> sum, add;</span><br><span class="line"></span><br><span class="line">        <span class="function"><span class="keyword">explicit</span> <span class="title">Node</span><span class="params">(<span class="type">const</span> <span class="type">int</span> l = <span class="number">0</span>, <span class="type">const</span> <span class="type">int</span> r = <span class="number">0</span>, <span class="type">const</span> <span class="type">int</span> s = <span class="number">0</span>, <span class="type">const</span> <span class="type">int</span> a = <span class="number">0</span>)</span> :</span></span><br><span class="line"><span class="function">            left(l), right(r), sum(s), add(a) &#123;</span>&#125;</span><br><span class="line">    &#125;;</span><br><span class="line"></span><br><span class="line">    Node tr[N &lt;&lt; <span class="number">2</span>];</span><br><span class="line"></span><br><span class="line">    <span class="built_in">SegmentTree</span>() &#123;&#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="type">void</span> <span class="title">make_lazy</span><span class="params">(<span class="type">const</span> <span class="type">int</span> k, <span class="type">const</span> <span class="type">long</span> <span class="type">long</span> value)</span> </span>&#123;</span><br><span class="line">        (tr[k].sum += (tr[k].right - tr[k].left + <span class="number">1</span>) * value) %= P;</span><br><span class="line">        (tr[k].add += value) %= P;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="type">void</span> <span class="title">push_up</span><span class="params">(<span class="type">const</span> <span class="type">int</span> k)</span> </span>&#123;</span><br><span class="line">        <span class="type">const</span> <span class="type">int</span> left_child = k &lt;&lt; <span class="number">1</span>, right_child = k &lt;&lt; <span class="number">1</span> | <span class="number">1</span>;</span><br><span class="line">        tr[k].sum = tr[left_child].sum + tr[right_child].sum;</span><br><span class="line">        tr[k].sum %= P;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="type">void</span> <span class="title">push_down</span><span class="params">(<span class="type">const</span> <span class="type">int</span> k)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (tr[k].add == <span class="number">0</span>) <span class="keyword">return</span> <span class="built_in">void</span>();</span><br><span class="line"></span><br><span class="line">        <span class="type">const</span> <span class="type">int</span> left_child = k &lt;&lt; <span class="number">1</span>, right_child = k &lt;&lt; <span class="number">1</span> | <span class="number">1</span>;</span><br><span class="line">        <span class="built_in">make_lazy</span>(left_child, tr[k].add);</span><br><span class="line">        <span class="built_in">make_lazy</span>(right_child, tr[k].add);</span><br><span class="line"></span><br><span class="line">        tr[k].add = <span class="number">0</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="type">void</span> <span class="title">build_tree</span><span class="params">(<span class="type">const</span> <span class="type">int</span> k, <span class="type">const</span> <span class="type">int</span> left, <span class="type">const</span> <span class="type">int</span> right)</span> </span>&#123;</span><br><span class="line">        tr[k] = <span class="built_in">Node</span>(left, right);</span><br><span class="line"></span><br><span class="line">        <span class="keyword">if</span> (tr[k].left == tr[k].right) &#123;</span><br><span class="line">            tr[k].sum = value[left] % P;</span><br><span class="line">            <span class="keyword">return</span> <span class="built_in">void</span>();</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="type">const</span> <span class="type">int</span> mid = (tr[k].left + tr[k].right) &gt;&gt; <span class="number">1</span>;</span><br><span class="line">        <span class="type">const</span> <span class="type">int</span> lc = k &lt;&lt; <span class="number">1</span>, rc = k &lt;&lt; <span class="number">1</span> | <span class="number">1</span>;</span><br><span class="line"></span><br><span class="line">        <span class="built_in">build_tree</span>(lc, left, mid);</span><br><span class="line">        <span class="built_in">build_tree</span>(rc, mid + <span class="number">1</span>, right);</span><br><span class="line"></span><br><span class="line">        <span class="built_in">push_up</span>(k);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="type">void</span> <span class="title">modify</span><span class="params">(<span class="type">const</span> <span class="type">int</span> k, <span class="type">const</span> <span class="type">int</span> left, <span class="type">const</span> <span class="type">int</span> right, <span class="type">const</span> <span class="type">long</span> <span class="type">long</span> value)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (tr[k].left &gt;= left &amp;&amp; tr[k].right &lt;= right) &#123;</span><br><span class="line">            <span class="built_in">make_lazy</span>(k, value);</span><br><span class="line">            <span class="keyword">return</span> <span class="built_in">void</span>();</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="built_in">push_down</span>(k);</span><br><span class="line"></span><br><span class="line">        <span class="type">const</span> <span class="type">int</span> mid = (tr[k].left + tr[k].right) &gt;&gt; <span class="number">1</span>;</span><br><span class="line">        <span class="type">const</span> <span class="type">int</span> lc = k &lt;&lt; <span class="number">1</span>, rc = k &lt;&lt; <span class="number">1</span> | <span class="number">1</span>;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">if</span> (right &lt;= mid) &#123;</span><br><span class="line">            <span class="built_in">modify</span>(lc, left, right, value);</span><br><span class="line">        &#125; <span class="keyword">else</span> <span class="keyword">if</span> (left &gt; mid) &#123;</span><br><span class="line">            <span class="built_in">modify</span>(rc, left, right, value);</span><br><span class="line">        &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">            <span class="built_in">modify</span>(lc, left, mid, value);</span><br><span class="line">            <span class="built_in">modify</span>(rc, mid + <span class="number">1</span>, right, value);</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="built_in">push_up</span>(k);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="type">long</span> <span class="type">long</span> <span class="title">query</span><span class="params">(<span class="type">const</span> <span class="type">int</span> k, <span class="type">const</span> <span class="type">int</span> left, <span class="type">const</span> <span class="type">int</span> right)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (tr[k].left &gt;= left &amp;&amp; tr[k].right &lt;= right) &#123;</span><br><span class="line">            <span class="keyword">return</span> tr[k].sum % P;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="built_in">push_down</span>(k);</span><br><span class="line"></span><br><span class="line">        <span class="type">const</span> <span class="type">int</span> mid = (tr[k].left + tr[k].right) &gt;&gt; <span class="number">1</span>;</span><br><span class="line">        <span class="type">const</span> <span class="type">int</span> lc = k &lt;&lt; <span class="number">1</span>, rc = k &lt;&lt; <span class="number">1</span> | <span class="number">1</span>;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">if</span> (right &lt;= mid) &#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="built_in">query</span>(lc, left, right) % P;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span> (left &gt; mid) &#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="built_in">query</span>(rc, left, right) % P;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> (<span class="built_in">query</span>(lc, left, mid) + <span class="built_in">query</span>(rc, mid + <span class="number">1</span>, right)) % P;</span><br><span class="line">    &#125;</span><br><span class="line">&#125; seg;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">dfs</span><span class="params">(<span class="type">int</span> u, <span class="type">int</span> father)</span> </span>&#123;</span><br><span class="line">    fa[u] = father;</span><br><span class="line">    size[u] = <span class="number">1</span>;</span><br><span class="line">    dep[u] = dep[father] + <span class="number">1</span>;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = head[u]; ~i; i = e[i].next) &#123;</span><br><span class="line">        <span class="type">int</span> v = e[i].to;</span><br><span class="line">        <span class="keyword">if</span> (v == father) &#123;</span><br><span class="line">            <span class="keyword">continue</span>;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="built_in">dfs</span>(v, u);</span><br><span class="line">        size[u] += size[v];</span><br><span class="line">        <span class="keyword">if</span> (son[u] == <span class="number">0</span> || size[v] &gt; size[son[u]]) &#123;</span><br><span class="line">            son[u] = v;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">dfs2</span><span class="params">(<span class="type">int</span> u, <span class="type">int</span> link_top)</span> </span>&#123;</span><br><span class="line">    top[u] = link_top;</span><br><span class="line">    id[u] = ++num;</span><br><span class="line">    value[num] = initial_value[u];</span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span> (son[u] == <span class="number">0</span>) <span class="keyword">return</span>;</span><br><span class="line">    </span><br><span class="line">    <span class="built_in">dfs2</span>(son[u], link_top);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = head[u]; ~i; i = e[i].next) &#123;</span><br><span class="line">        <span class="type">int</span> v = e[i].to;</span><br><span class="line">        <span class="keyword">if</span> (v == fa[u] || v == son[u]) &#123;</span><br><span class="line">            <span class="keyword">continue</span>;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="built_in">dfs2</span>(v, v);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">using</span> std::swap;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">update_range</span><span class="params">(<span class="type">int</span> u, <span class="type">int</span> v, <span class="type">const</span> <span class="type">long</span> <span class="type">long</span> value)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">while</span> (top[u] != top[v]) &#123;</span><br><span class="line">        <span class="meta">#<span class="keyword">ifndef</span> OnlineJudge</span></span><br><span class="line">        cout &lt;&lt; u &lt;&lt; <span class="string">&#x27; &#x27;</span> &lt;&lt; top[u] &lt;&lt; <span class="string">&quot; &quot;</span> &lt;&lt; v &lt;&lt; <span class="string">&quot; &quot;</span> &lt;&lt; top[v] &lt;&lt; <span class="string">&#x27;\n&#x27;</span>;</span><br><span class="line">        <span class="meta">#<span class="keyword">endif</span></span></span><br><span class="line">        </span><br><span class="line">        <span class="keyword">if</span> (dep[top[u]] &lt; dep[top[v]]) &#123;</span><br><span class="line">            <span class="built_in">swap</span>(u, v);</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        seg.<span class="built_in">modify</span>(<span class="number">1</span>, id[top[u]], id[u], value);</span><br><span class="line">        u = fa[top[u]];</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span> (dep[u] &gt; dep[v]) &#123;</span><br><span class="line">        <span class="built_in">swap</span>(u, v);</span><br><span class="line">    &#125;</span><br><span class="line">    seg.<span class="built_in">modify</span>(<span class="number">1</span>, id[u], id[v], value);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">long</span> <span class="type">long</span> <span class="title">query_range</span><span class="params">(<span class="type">int</span> u, <span class="type">int</span> v)</span> </span>&#123;</span><br><span class="line">    <span class="type">long</span> <span class="type">long</span> retval = <span class="number">0</span>;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">while</span> (top[u] != top[v]) &#123;</span><br><span class="line">        <span class="keyword">if</span> (dep[top[u]] &lt; dep[top[v]]) &#123;</span><br><span class="line">            <span class="built_in">swap</span>(u, v);</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        (retval += seg.<span class="built_in">query</span>(<span class="number">1</span>, id[top[u]], id[u])) %= P;</span><br><span class="line">        u = fa[top[u]];</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span> (dep[u] &gt; dep[v]) &#123;</span><br><span class="line">        <span class="built_in">swap</span>(u, v);</span><br><span class="line">    &#125;</span><br><span class="line">    (retval += seg.<span class="built_in">query</span>(<span class="number">1</span>, id[u], id[v])) %= P;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> retval;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">update_subtree</span><span class="params">(<span class="type">const</span> <span class="type">int</span> u, <span class="type">const</span> <span class="type">long</span> <span class="type">long</span> value)</span> </span>&#123;</span><br><span class="line">    seg.<span class="built_in">modify</span>(<span class="number">1</span>, id[u], id[u] + size[u] - <span class="number">1</span>, value);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">long</span> <span class="type">long</span> <span class="title">query_subtree</span><span class="params">(<span class="type">const</span> <span class="type">int</span> u)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> seg.<span class="built_in">query</span>(<span class="number">1</span>, id[u], id[u] + size[u] - <span class="number">1</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">using</span> std::cin;</span><br><span class="line"><span class="keyword">using</span> std::cout;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    std::ios::<span class="built_in">sync_with_stdio</span>(<span class="literal">false</span>);</span><br><span class="line">    cin.<span class="built_in">tie</span>(<span class="literal">nullptr</span>);</span><br><span class="line">    cout.<span class="built_in">tie</span>(<span class="literal">nullptr</span>);</span><br><span class="line"></span><br><span class="line">    std::<span class="built_in">memset</span>(head, <span class="number">-1</span>, <span class="built_in">sizeof</span>(head));</span><br><span class="line">    </span><br><span class="line">    cin &gt;&gt; n &gt;&gt; m &gt;&gt; root &gt;&gt; P;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">1</span>; i &lt;= n; i++) &#123;</span><br><span class="line">        cin &gt;&gt; initial_value[i];</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">1</span>; i &lt; n; i++) &#123;</span><br><span class="line">        cin &gt;&gt; u &gt;&gt; v;</span><br><span class="line"></span><br><span class="line">        <span class="built_in">add_edge</span>(u, v);</span><br><span class="line">        <span class="built_in">add_edge</span>(v, u);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="built_in">dfs</span>(root, <span class="number">0</span>);</span><br><span class="line">    <span class="built_in">dfs2</span>(root, root);</span><br><span class="line"></span><br><span class="line">    seg.<span class="built_in">build_tree</span>(<span class="number">1</span>, <span class="number">1</span>, n);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">1</span>; i &lt;= m; i++) &#123;</span><br><span class="line">        cin &gt;&gt; opt;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">switch</span> (opt) &#123;</span><br><span class="line">            <span class="type">int</span> x, y;</span><br><span class="line">            <span class="type">long</span> <span class="type">long</span> z;</span><br><span class="line"></span><br><span class="line">            <span class="keyword">case</span> <span class="number">1</span>:</span><br><span class="line">                cin &gt;&gt; x &gt;&gt; y &gt;&gt; z;</span><br><span class="line">                <span class="built_in">update_range</span>(x, y, z);</span><br><span class="line">                <span class="keyword">break</span>;</span><br><span class="line">            <span class="keyword">case</span> <span class="number">2</span>:</span><br><span class="line">                cin &gt;&gt; x &gt;&gt; y;</span><br><span class="line">                cout &lt;&lt; <span class="built_in">query_range</span>(x, y) &lt;&lt; <span class="string">&#x27;\n&#x27;</span>;</span><br><span class="line">                <span class="keyword">break</span>;</span><br><span class="line">            <span class="keyword">case</span> <span class="number">3</span>:</span><br><span class="line">                cin &gt;&gt; x &gt;&gt; z;</span><br><span class="line">                <span class="built_in">update_subtree</span>(x, z);</span><br><span class="line">                <span class="keyword">break</span>;</span><br><span class="line">            <span class="keyword">case</span> <span class="number">4</span>:</span><br><span class="line">                cin &gt;&gt; x;</span><br><span class="line">                cout &lt;&lt; <span class="built_in">query_subtree</span>(x) &lt;&lt; <span class="string">&#x27;\n&#x27;</span>;</span><br><span class="line">                <span class="keyword">break</span>;</span><br><span class="line">            <span class="keyword">default</span>:</span><br><span class="line">                <span class="keyword">break</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="左偏树">左偏树</h3>
+<p>左偏树是可并堆的一种。</p>
+<h4 id="定义-2">定义</h4>
+<p>我们定义 <strong>外节点</strong> 表示子节点数小于两个的节点。定义一个节点 $u$ 的 $dist_u$ 表示到最近的外节点的距离。<br>
+左偏树满足如下性质：</p>
+<ul>
+<li>对于任意一个节点 $u$，均满足 $dist_{\operatorname{lson}(u)} &gt; dist_{\operatorname{rson}(u)}$，即 <em><strong>左偏</strong></em>。</li>
+<li>由上一条性质我们可以推导出：$dist_u = dist_{\operatorname{rson}(u)} + 1$。</li>
+</ul>
+<h4 id="操作">操作</h4>
+<h5 id="合并">合并</h5>
+<p>左偏树的合并操作有以下几个步骤：</p>
+<ul>
+<li>定义 $\operatorname{merge}(x, y)$ 表示将以 $x$ 和 $y$ 为根节点的左偏树合并。</li>
+<li>我们钦定 $val_x &lt; val_y$，将 $x$ 作为合并后的新的根节点 即维护一个小根堆。</li>
+<li>接下来进行 $\operatorname{merge}(\operatorname{lson}(x),y)$。</li>
+<li>然后维护左偏树的性质：
+<ul>
+<li>如果 $dist_{\operatorname{lson}(x)} &lt; dist_{\operatorname{rson}(x)}$，则 $\operatorname{swap}(\operatorname{lson}(x), \operatorname{rson}(x))$。</li>
+<li>维护 $dist_x = dist_{\operatorname{rson}(x)} + 1$。</li>
+</ul>
+</li>
+</ul>
+<h5 id="删除">删除</h5>
+<p>删除还是基于左偏树的 $\operatorname{merge}(x,y)$ 操作，如果删除的是 $x$，则 $\operatorname{merge}(\operatorname{lson}(x), \operatorname{rson}(x))$，然后维护左偏树的性质即可</p>
+<h4 id="例题-4">例题</h4>
+<p><a href="www.luogu.com.cn/problem/P3337">洛谷 P3337</a> 左偏树/可并堆</p>
+<p>模板题，根据题意维护即可。</p>
+<p><em><strong>Code</strong></em></p>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">using</span> std::cin;</span><br><span class="line"><span class="keyword">using</span> std::cout;</span><br><span class="line"></span><br><span class="line"><span class="keyword">constexpr</span> <span class="type">int</span> N = <span class="number">1e5</span> + <span class="number">5</span>;</span><br><span class="line"><span class="type">int</span> n, m, erase[N], op, x, y;</span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">LeftistTree</span> &#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="keyword">struct</span> <span class="title class_">Node</span> &#123;</span><br><span class="line">        <span class="type">int</span> value, index;</span><br><span class="line"></span><br><span class="line">        <span class="built_in">Node</span>(<span class="type">const</span> <span class="type">int</span> v = <span class="number">0</span>, <span class="type">const</span> <span class="type">int</span> i = <span class="number">0</span>) :</span><br><span class="line">            <span class="built_in">value</span>(v), <span class="built_in">index</span>(i) &#123;&#125;</span><br><span class="line"></span><br><span class="line">        <span class="type">bool</span> <span class="keyword">operator</span>&lt;(<span class="type">const</span> Node&amp; compare_node) <span class="type">const</span> &#123;</span><br><span class="line">            <span class="keyword">if</span> (value != compare_node.value) &#123;</span><br><span class="line">                <span class="keyword">return</span> value &lt; compare_node.value;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">return</span> index &lt; compare_node.index;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="type">bool</span> <span class="keyword">operator</span>&gt;(<span class="type">const</span> Node&amp; compare_node) <span class="type">const</span> &#123;</span><br><span class="line">            <span class="keyword">if</span> (value != compare_node.value) &#123;</span><br><span class="line">                <span class="keyword">return</span> value &gt; compare_node.value;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">return</span> index &gt; compare_node.index;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125; val[N];</span><br><span class="line">    <span class="type">int</span> father[N] = &#123;&#125;;</span><br><span class="line">    <span class="type">int</span> dist[N] = &#123;&#125;, lc[N] = &#123;&#125;, rc[N] = &#123;&#125;;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="type">int</span> <span class="title">find</span><span class="params">(<span class="type">const</span> <span class="type">int</span> x)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (father[x] != x) father[x] = <span class="built_in">find</span>(father[x]);</span><br><span class="line">        <span class="keyword">return</span> father[x];</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="type">int</span> <span class="title">merge</span><span class="params">(<span class="type">int</span> x, <span class="type">int</span> y)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">using</span> std::swap;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">if</span> (x == <span class="number">0</span> || y == <span class="number">0</span>) <span class="keyword">return</span> x + y;</span><br><span class="line">        <span class="keyword">if</span> (val[x] &gt; val[y]) <span class="built_in">swap</span>(x, y);</span><br><span class="line"></span><br><span class="line">        rc[x] = <span class="built_in">merge</span>(rc[x], y);</span><br><span class="line"></span><br><span class="line">        <span class="keyword">if</span> (dist[lc[x]] &lt; dist[rc[x]]) <span class="built_in">swap</span>(lc[x], rc[x]);</span><br><span class="line">        dist[x] = dist[rc[x]] + <span class="number">1</span>;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">return</span> x;</span><br><span class="line">    &#125;</span><br><span class="line">&#125; tr;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="keyword">using</span> std::memset;</span><br><span class="line"></span><br><span class="line">    std::ios::<span class="built_in">sync_with_stdio</span>(<span class="literal">false</span>);</span><br><span class="line">    cin.<span class="built_in">tie</span>(<span class="literal">nullptr</span>);</span><br><span class="line">    cout.<span class="built_in">tie</span>(<span class="literal">nullptr</span>);</span><br><span class="line"></span><br><span class="line">    <span class="built_in">memset</span>(tr.rc, <span class="number">0</span>, <span class="built_in">sizeof</span>(tr.rc));</span><br><span class="line">    <span class="built_in">memset</span>(tr.lc, <span class="number">0</span>, <span class="built_in">sizeof</span>(tr.lc));</span><br><span class="line">    <span class="built_in">memset</span>(tr.dist, <span class="number">0</span>, <span class="built_in">sizeof</span>(tr.dist));</span><br><span class="line">    tr.dist[<span class="number">0</span>] = <span class="number">-1</span>;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    cin &gt;&gt; n &gt;&gt; m;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">1</span>; i &lt;= n; i++) &#123;</span><br><span class="line">        cin &gt;&gt; tr.val[i].value;</span><br><span class="line">        tr.val[i].index = i;</span><br><span class="line">        tr.father[i] = i;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">1</span>; i &lt;= m; i++) &#123;</span><br><span class="line">        cin &gt;&gt; op;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">if</span> (op == <span class="number">1</span>) &#123;</span><br><span class="line">            cin &gt;&gt; x &gt;&gt; y;</span><br><span class="line"></span><br><span class="line">            <span class="keyword">if</span> (erase[x] || erase[y]) &#123;</span><br><span class="line">                <span class="keyword">continue</span>;</span><br><span class="line">            &#125;</span><br><span class="line"></span><br><span class="line">            x = tr.<span class="built_in">find</span>(x), y = tr.<span class="built_in">find</span>(y);</span><br><span class="line">            <span class="keyword">if</span> (x == y) &#123;</span><br><span class="line">                <span class="keyword">continue</span>;</span><br><span class="line">            &#125;</span><br><span class="line"></span><br><span class="line">            tr.father[x] = tr.father[y] = tr.<span class="built_in">merge</span>(x, y);</span><br><span class="line">        &#125; <span class="keyword">else</span> <span class="keyword">if</span> (op == <span class="number">2</span>) &#123;</span><br><span class="line">            cin &gt;&gt; x;</span><br><span class="line"></span><br><span class="line">            <span class="keyword">if</span> (erase[x] == <span class="literal">true</span>) &#123;</span><br><span class="line">                cout &lt;&lt; <span class="string">&quot;-1\n&quot;</span>;</span><br><span class="line">            &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">                x = tr.<span class="built_in">find</span>(x);</span><br><span class="line">                cout &lt;&lt; tr.val[x].value &lt;&lt; <span class="string">&#x27;\n&#x27;</span>;</span><br><span class="line"></span><br><span class="line">                erase[x] = <span class="literal">true</span>;</span><br><span class="line">                <span class="type">const</span> <span class="type">int</span> current_root = tr.<span class="built_in">merge</span>(tr.lc[x], tr.rc[x]);</span><br><span class="line">                tr.father[tr.lc[x]] = current_root;</span><br><span class="line">                tr.father[tr.rc[x]] = current_root;</span><br><span class="line">                tr.father[x] = current_root;</span><br><span class="line">                tr.lc[x] = <span class="number">0</span>;</span><br><span class="line">                tr.rc[x] = <span class="number">0</span>;</span><br><span class="line">                tr.dist[x] = <span class="number">0</span>;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="点分治">点分治</h3>
+<p><a target="_blank" rel="noopener" href="https://oi-wiki.org/graph/tree-divide/#%E7%82%B9%E5%88%86%E6%B2%BB">OI Wiki</a></p>
+<h4 id="思想">思想</h4>
+<p>我们对每个节点进行分治，将树上的路径分为 <em>经过点 $u$ 的</em> 和 <em>不经过点 $u$ 的</em>，而点 $u$ 通常取树的重心。</p>
+<p>典型问题：$K$ 长路径计数。</p>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          
+
+<div class="post-copyright">
+<ul>
+  <li class="post-copyright-author">
+      <strong>本文作者： </strong>FallenLeaf
+  </li>
+  <li class="post-copyright-link">
+      <strong>本文链接：</strong>
+      <a href="https://fallenleaf0327.github.io/2025/07/21/%E9%9B%86%E8%AE%AD%E6%80%BB%E7%BB%93%EF%BC%882025%E6%9A%91%EF%BC%89/OI%E9%9B%86%E8%AE%AD-Day5/OI%E9%9B%86%E8%AE%AD-Day5/" title="OI集训 Day5">https://fallenleaf0327.github.io/2025/07/21/集训总结（2025暑）/OI集训-Day5/OI集训-Day5/</a>
+  </li>
+  <li class="post-copyright-license">
+      <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+</div>
+
+          <div class="post-tags">
+              <a href="/tags/%E9%9B%86%E8%AE%AD/" rel="tag"><i class="fa fa-tag"></i> 集训</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2025/07/20/%E9%9B%86%E8%AE%AD%E6%80%BB%E7%BB%93%EF%BC%882025%E6%9A%91%EF%BC%89/OI%E9%9B%86%E8%AE%AD-Day4/OI%E9%9B%86%E8%AE%AD-Day4/" rel="prev" title="OI集训 Day4">
+                  <i class="fa fa-angle-left"></i> OI集训 Day4
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/2025/07/22/%E9%9B%86%E8%AE%AD%E6%80%BB%E7%BB%93%EF%BC%882025%E6%9A%91%EF%BC%89/OI%E9%9B%86%E8%AE%AD-Day6/OI%E9%9B%86%E8%AE%AD-Day6/" rel="next" title="OI集训 Day6">
+                  OI集训 Day6 <i class="fa fa-angle-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+  <div class="copyright">
+    &copy; 
+    <span itemprop="copyrightYear">2025</span>
+    <span class="with-love">
+      <i class="fa fa-heart"></i>
+    </span>
+    <span class="author" itemprop="copyrightHolder">FallenLeaf</span>
+  </div>
+<div class="wordcount">
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-chart-line"></i>
+    </span>
+      <span>站点总字数：</span>
+    <span title="站点总字数">27k</span>
+  </span>
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+      <span>站点阅读时长 &asymp;</span>
+    <span title="站点阅读时长">1:37</span>
+  </span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/" rel="noopener" target="_blank">NexT.Gemini</a> 强力驱动
+  </div>
+
+    </div>
+  </footer>
+
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+  <div class="sidebar-dimmer"></div>
+  <div class="back-to-top" role="button" aria-label="返回顶部">
+    <i class="fa fa-arrow-up fa-lg"></i>
+    <span>0%</span>
+  </div>
+  <div class="reading-progress-bar"></div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+</body>
+</html>
