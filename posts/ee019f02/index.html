@@ -20,22 +20,27 @@
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"fallenleaf0327.github.io","root":"/","images":"/images","scheme":"Gemini","darkmode":true,"version":"8.23.2","exturl":false,"sidebar":{"position":"left","width_expanded":320,"width_dual_column":240,"display":"post","padding":18,"offset":12},"hljswrap":false,"codeblock":{"theme":{"light":"atom-one-light","dark":"atom-one-dark"},"prism":{"light":"prism","dark":"prism-dark"},"copy_button":{"enable":true,"style":"flat"},"fold":{"enable":true,"height":500},"language":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"duration":200,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.json","localsearch":{"enable":true,"top_n_per_article":10,"unescape":true,"preload":false}}</script><script src="/js/config.js" defer></script>
 
-    <meta property="og:type" content="website">
-<meta property="og:title" content="FallenLeaf&#39;s Blog">
-<meta property="og:url" content="https://fallenleaf0327.github.io/#%20hexo-abbrlink/index.html">
+    <meta name="description" content="Content：字符串算法进阶 Date：2025.8.6  Luogu-P13270 最小表示法  题意 给定一个长度为 nnn 的字符串 sss，求 sss 的最小表示法。  思路 首先如果暴力的话，复杂度是 O(n2)O(n^2)O(n2) 的，但是我们发现如果我们当前已经发现了一个最小表示法，我们想要找到一个比这个还小的表示法，那么一定存在一个位置，使得这个位置上的字符不相等，根据这个就可">
+<meta property="og:type" content="article">
+<meta property="og:title" content="OI集训 Day21">
+<meta property="og:url" content="https://fallenleaf0327.github.io/#%20hexo-abbrlink/posts/ee019f02/index.html">
 <meta property="og:site_name" content="FallenLeaf&#39;s Blog">
+<meta property="og:description" content="Content：字符串算法进阶 Date：2025.8.6  Luogu-P13270 最小表示法  题意 给定一个长度为 nnn 的字符串 sss，求 sss 的最小表示法。  思路 首先如果暴力的话，复杂度是 O(n2)O(n^2)O(n2) 的，但是我们发现如果我们当前已经发现了一个最小表示法，我们想要找到一个比这个还小的表示法，那么一定存在一个位置，使得这个位置上的字符不相等，根据这个就可">
 <meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2025-08-05T16:00:00.000Z">
+<meta property="article:modified_time" content="2025-08-06T13:07:57.384Z">
 <meta property="article:author" content="FallenLeaf">
+<meta property="article:tag" content="集训">
 <meta name="twitter:card" content="summary">
 
 
-<link rel="canonical" href="https://fallenleaf0327.github.io/#%20hexo-abbrlink/">
+<link rel="canonical" href="https://fallenleaf0327.github.io/#%20hexo-abbrlink/posts/ee019f02/">
 
 
-<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":true,"isPost":false,"lang":"zh-CN","comments":"","permalink":"","path":"index.html","title":""}</script>
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://fallenleaf0327.github.io/#%20hexo-abbrlink/posts/ee019f02/","path":"posts/ee019f02/","title":"OI集训 Day21"}</script>
 
 <script class="next-config" data-name="calendar" type="application/json">""</script>
-<title>FallenLeaf's Blog</title>
+<title>OI集训 Day21 | FallenLeaf's Blog</title>
   
 
   <script src="/js/third-party/analytics/baidu-analytics.js" defer></script>
@@ -94,7 +99,7 @@
 
     <a href="/" class="brand" rel="start">
       <i class="logo-line"></i>
-      <h1 class="site-title">FallenLeaf's Blog</h1>
+      <p class="site-title">FallenLeaf's Blog</p>
       <i class="logo-line"></i>
     </a>
   </div>
@@ -147,7 +152,7 @@
   
   <aside class="sidebar">
 
-    <div class="sidebar-inner sidebar-overview-active">
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
       <ul class="sidebar-nav">
         <li class="sidebar-nav-toc">
           文章目录
@@ -160,6 +165,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#luogu-p13270"><span class="nav-text"> Luogu-P13270 最小表示法</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%A2%98%E6%84%8F"><span class="nav-text"> 题意</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%80%9D%E8%B7%AF"><span class="nav-text"> 思路</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#luogu-p5357"><span class="nav-text"> Luogu-P5357 AC自动机</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%A2%98%E6%84%8F-2"><span class="nav-text"> 题意</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%80%9D%E8%B7%AF-2"><span class="nav-text"> 思路</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%A8%A1%E6%8B%9F%E9%A2%98-%E5%97%91%E7%93%9C%E5%AD%90"><span class="nav-text"> 模拟题 - 嗑瓜子</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%A2%98%E6%84%8F-3"><span class="nav-text"> 题意</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%80%9D%E8%B7%AF-3"><span class="nav-text"> 思路</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#code"><span class="nav-text"> Code</span></a></li></ol></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -207,16 +213,17 @@
 
     </div>
 
-    <div class="main-inner index posts-expand">
+    <div class="main-inner post posts-expand">
 
-    
+
+  
 
 
 <div class="post-block">
   
   
 
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
     <link itemprop="mainEntityOfPage" href="https://fallenleaf0327.github.io/#%20hexo-abbrlink/posts/ee019f02/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -230,13 +237,13 @@
     </span>
 
     <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content=" | FallenLeaf's Blog">
+      <meta itemprop="name" content="OI集训 Day21 | FallenLeaf's Blog">
       <meta itemprop="description" content="">
     </span>
       <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/posts/ee019f02/" class="post-title-link" itemprop="url">OI集训 Day21</a>
-        </h2>
+        <h1 class="post-title" itemprop="name headline">
+          OI集训 Day21
+        </h1>
 
         <div class="post-meta-container">
           <div class="post-meta">
@@ -283,8 +290,7 @@
     
     
     
-    <div class="post-body" itemprop="articleBody">
-          <p><strong>Content</strong>：字符串算法进阶<br>
+    <div class="post-body" itemprop="articleBody"><p><strong>Content</strong>：字符串算法进阶<br>
 <strong>Date</strong>：2025.8.6</p>
 <h1 id="luogu-p13270"><a class="markdownIt-Anchor" href="#luogu-p13270"></a> <a target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/P13270">Luogu-P13270</a> 最小表示法</h1>
 <h2 id="题意"><a class="markdownIt-Anchor" href="#题意"></a> 题意</h2>
@@ -375,7 +381,6 @@
     <span class="keyword">return</span> <span class="number">0</span>;
 &#125;</code></pre>
 
-      
     </div>
 
     
@@ -383,332 +388,38 @@
     
 
     <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
+          
+
+<div class="post-copyright">
+<ul>
+  <li class="post-copyright-author">
+      <strong>本文作者： </strong>FallenLeaf
+  </li>
+  <li class="post-copyright-link">
+      <strong>本文链接：</strong>
+      <a href="https://fallenleaf0327.github.io/#%20hexo-abbrlink/posts/ee019f02/" title="OI集训 Day21">https://fallenleaf0327.github.io/# hexo-abbrlink/posts/ee019f02/</a>
+  </li>
+  <li class="post-copyright-license">
+      <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
 </div>
 
+          <div class="post-tags">
+              <a href="/tags/%E9%9B%86%E8%AE%AD/" rel="tag"><i class="fa fa-tag"></i> 集训</a>
+          </div>
 
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://fallenleaf0327.github.io/#%20hexo-abbrlink/posts/9906af94/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/uploads/Avatar.jpg">
-      <meta itemprop="name" content="FallenLeaf">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="FallenLeaf's Blog">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content=" | FallenLeaf's Blog">
-      <meta itemprop="description" content="">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/posts/9906af94/" class="post-title-link" itemprop="url">OI集训 Day20</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">发表于</span>
-
-      <time title="创建时间：2025-08-05 00:00:00" itemprop="dateCreated datePublished" datetime="2025-08-05T00:00:00+08:00">2025-08-05</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar-check"></i>
-      </span>
-      <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2025-08-06 10:36:34" itemprop="dateModified" datetime="2025-08-06T10:36:34+08:00">2025-08-06</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">分类于</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/%E9%9B%86%E8%AE%AD%E6%80%BB%E7%BB%93%EF%BC%882025%E6%9A%91%EF%BC%89/" itemprop="url" rel="index"><span itemprop="name">集训总结（2025暑）</span></a>
-        </span>
-    </span>
-
-  
-    <span class="post-meta-break"></span>
-    <span class="post-meta-item" title="本文字数">
-      <span class="post-meta-item-icon">
-        <i class="far fa-file-word"></i>
-      </span>
-      <span class="post-meta-item-text">本文字数：</span>
-      <span>204</span>
-    </span>
-    <span class="post-meta-item" title="阅读时长">
-      <span class="post-meta-item-icon">
-        <i class="far fa-clock"></i>
-      </span>
-      <span class="post-meta-item-text">阅读时长 &asymp;</span>
-      <span>1 分钟</span>
-    </span>
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <p><strong>Content</strong>：字符串<br>
-<strong>Date</strong>：2025.8.5</p>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/posts/9906af94/#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
         
-      
-    </div>
 
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://fallenleaf0327.github.io/#%20hexo-abbrlink/posts/cbf744f3/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/uploads/Avatar.jpg">
-      <meta itemprop="name" content="FallenLeaf">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="FallenLeaf's Blog">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content=" | FallenLeaf's Blog">
-      <meta itemprop="description" content="">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/posts/cbf744f3/" class="post-title-link" itemprop="url">OI集训 Day19</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">发表于</span>
-
-      <time title="创建时间：2025-08-04 00:00:00" itemprop="dateCreated datePublished" datetime="2025-08-04T00:00:00+08:00">2025-08-04</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar-check"></i>
-      </span>
-      <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2025-08-06 10:36:34" itemprop="dateModified" datetime="2025-08-06T10:36:34+08:00">2025-08-06</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">分类于</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/%E9%9B%86%E8%AE%AD%E6%80%BB%E7%BB%93%EF%BC%882025%E6%9A%91%EF%BC%89/" itemprop="url" rel="index"><span itemprop="name">集训总结（2025暑）</span></a>
-        </span>
-    </span>
-
-  
-    <span class="post-meta-break"></span>
-    <span class="post-meta-item" title="本文字数">
-      <span class="post-meta-item-icon">
-        <i class="far fa-file-word"></i>
-      </span>
-      <span class="post-meta-item-text">本文字数：</span>
-      <span>16</span>
-    </span>
-    <span class="post-meta-item" title="阅读时长">
-      <span class="post-meta-item-icon">
-        <i class="far fa-clock"></i>
-      </span>
-      <span class="post-meta-item-text">阅读时长 &asymp;</span>
-      <span>1 分钟</span>
-    </span>
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <p><strong>Content</strong>：欢乐 ACM<br>
-<strong>Date</strong>：2025.8.4</p>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/posts/cbf744f3/#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/posts/9906af94/" rel="prev" title="OI集训 Day20">
+                  <i class="fa fa-angle-left"></i> OI集训 Day20
+                </a>
             </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://fallenleaf0327.github.io/#%20hexo-abbrlink/posts/bcf07465/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/uploads/Avatar.jpg">
-      <meta itemprop="name" content="FallenLeaf">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="FallenLeaf's Blog">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content=" | FallenLeaf's Blog">
-      <meta itemprop="description" content="">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/posts/bcf07465/" class="post-title-link" itemprop="url">OI集训 Day18</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">发表于</span>
-
-      <time title="创建时间：2025-08-04 00:00:00" itemprop="dateCreated datePublished" datetime="2025-08-04T00:00:00+08:00">2025-08-04</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar-check"></i>
-      </span>
-      <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2025-08-06 10:36:34" itemprop="dateModified" datetime="2025-08-06T10:36:34+08:00">2025-08-06</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">分类于</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/%E9%9B%86%E8%AE%AD%E6%80%BB%E7%BB%93%EF%BC%882025%E6%9A%91%EF%BC%89/" itemprop="url" rel="index"><span itemprop="name">集训总结（2025暑）</span></a>
-        </span>
-    </span>
-
-  
-    <span class="post-meta-break"></span>
-    <span class="post-meta-item" title="本文字数">
-      <span class="post-meta-item-icon">
-        <i class="far fa-file-word"></i>
-      </span>
-      <span class="post-meta-item-text">本文字数：</span>
-      <span>335</span>
-    </span>
-    <span class="post-meta-item" title="阅读时长">
-      <span class="post-meta-item-icon">
-        <i class="far fa-clock"></i>
-      </span>
-      <span class="post-meta-item-text">阅读时长 &asymp;</span>
-      <span>1 分钟</span>
-    </span>
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <p><strong>Content</strong>：构造<br>
-<strong>Date</strong>：2025.8.3</p>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/posts/bcf07465/#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
+            <div class="post-nav-item">
             </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
+          </div>
     </footer>
   </article>
 </div>
@@ -716,441 +427,7 @@
 
 
 
-    
 
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://fallenleaf0327.github.io/#%20hexo-abbrlink/posts/2c4f69f4/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/uploads/Avatar.jpg">
-      <meta itemprop="name" content="FallenLeaf">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="FallenLeaf's Blog">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content=" | FallenLeaf's Blog">
-      <meta itemprop="description" content="">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/posts/2c4f69f4/" class="post-title-link" itemprop="url">OI集训 Day17</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">发表于</span>
-
-      <time title="创建时间：2025-08-02 00:00:00" itemprop="dateCreated datePublished" datetime="2025-08-02T00:00:00+08:00">2025-08-02</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar-check"></i>
-      </span>
-      <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2025-08-06 10:36:34" itemprop="dateModified" datetime="2025-08-06T10:36:34+08:00">2025-08-06</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">分类于</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/%E9%9B%86%E8%AE%AD%E6%80%BB%E7%BB%93%EF%BC%882025%E6%9A%91%EF%BC%89/" itemprop="url" rel="index"><span itemprop="name">集训总结（2025暑）</span></a>
-        </span>
-    </span>
-
-  
-    <span class="post-meta-break"></span>
-    <span class="post-meta-item" title="本文字数">
-      <span class="post-meta-item-icon">
-        <i class="far fa-file-word"></i>
-      </span>
-      <span class="post-meta-item-text">本文字数：</span>
-      <span>1k</span>
-    </span>
-    <span class="post-meta-item" title="阅读时长">
-      <span class="post-meta-item-icon">
-        <i class="far fa-clock"></i>
-      </span>
-      <span class="post-meta-item-text">阅读时长 &asymp;</span>
-      <span>4 分钟</span>
-    </span>
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <p><strong>Content</strong>：博弈论<br>
-<strong>Date</strong>：2025.8.2</p>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/posts/2c4f69f4/#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://fallenleaf0327.github.io/#%20hexo-abbrlink/posts/5b485962/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/uploads/Avatar.jpg">
-      <meta itemprop="name" content="FallenLeaf">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="FallenLeaf's Blog">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content=" | FallenLeaf's Blog">
-      <meta itemprop="description" content="">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/posts/5b485962/" class="post-title-link" itemprop="url">OI集训 Day16</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">发表于</span>
-
-      <time title="创建时间：2025-08-01 00:00:00" itemprop="dateCreated datePublished" datetime="2025-08-01T00:00:00+08:00">2025-08-01</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar-check"></i>
-      </span>
-      <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2025-08-06 10:36:34" itemprop="dateModified" datetime="2025-08-06T10:36:34+08:00">2025-08-06</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">分类于</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/%E9%9B%86%E8%AE%AD%E6%80%BB%E7%BB%93%EF%BC%882025%E6%9A%91%EF%BC%89/" itemprop="url" rel="index"><span itemprop="name">集训总结（2025暑）</span></a>
-        </span>
-    </span>
-
-  
-    <span class="post-meta-break"></span>
-    <span class="post-meta-item" title="本文字数">
-      <span class="post-meta-item-icon">
-        <i class="far fa-file-word"></i>
-      </span>
-      <span class="post-meta-item-text">本文字数：</span>
-      <span>553</span>
-    </span>
-    <span class="post-meta-item" title="阅读时长">
-      <span class="post-meta-item-icon">
-        <i class="far fa-clock"></i>
-      </span>
-      <span class="post-meta-item-text">阅读时长 &asymp;</span>
-      <span>2 分钟</span>
-    </span>
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <p><strong>Content</strong>：生成函数，多项式，期望<br>
-<strong>Date</strong>：2025.8.1</p>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/posts/5b485962/#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://fallenleaf0327.github.io/#%20hexo-abbrlink/posts/c24108d8/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/uploads/Avatar.jpg">
-      <meta itemprop="name" content="FallenLeaf">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="FallenLeaf's Blog">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content=" | FallenLeaf's Blog">
-      <meta itemprop="description" content="">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/posts/c24108d8/" class="post-title-link" itemprop="url">OI集训 Day15</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">发表于</span>
-
-      <time title="创建时间：2025-07-31 00:00:00" itemprop="dateCreated datePublished" datetime="2025-07-31T00:00:00+08:00">2025-07-31</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar-check"></i>
-      </span>
-      <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2025-08-06 10:36:34" itemprop="dateModified" datetime="2025-08-06T10:36:34+08:00">2025-08-06</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">分类于</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/%E9%9B%86%E8%AE%AD%E6%80%BB%E7%BB%93%EF%BC%882025%E6%9A%91%EF%BC%89/" itemprop="url" rel="index"><span itemprop="name">集训总结（2025暑）</span></a>
-        </span>
-    </span>
-
-  
-    <span class="post-meta-break"></span>
-    <span class="post-meta-item" title="本文字数">
-      <span class="post-meta-item-icon">
-        <i class="far fa-file-word"></i>
-      </span>
-      <span class="post-meta-item-text">本文字数：</span>
-      <span>325</span>
-    </span>
-    <span class="post-meta-item" title="阅读时长">
-      <span class="post-meta-item-icon">
-        <i class="far fa-clock"></i>
-      </span>
-      <span class="post-meta-item-text">阅读时长 &asymp;</span>
-      <span>1 分钟</span>
-    </span>
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <p><strong>Content</strong>：组合数学<br>
-<strong>Date</strong>：2025.7.31</p>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/posts/c24108d8/#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://fallenleaf0327.github.io/#%20hexo-abbrlink/posts/b546384e/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/uploads/Avatar.jpg">
-      <meta itemprop="name" content="FallenLeaf">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="FallenLeaf's Blog">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content=" | FallenLeaf's Blog">
-      <meta itemprop="description" content="">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/posts/b546384e/" class="post-title-link" itemprop="url">OI集训 Day14</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">发表于</span>
-
-      <time title="创建时间：2025-07-30 00:00:00" itemprop="dateCreated datePublished" datetime="2025-07-30T00:00:00+08:00">2025-07-30</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar-check"></i>
-      </span>
-      <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2025-08-06 10:36:34" itemprop="dateModified" datetime="2025-08-06T10:36:34+08:00">2025-08-06</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">分类于</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/%E9%9B%86%E8%AE%AD%E6%80%BB%E7%BB%93%EF%BC%882025%E6%9A%91%EF%BC%89/" itemprop="url" rel="index"><span itemprop="name">集训总结（2025暑）</span></a>
-        </span>
-    </span>
-
-  
-    <span class="post-meta-break"></span>
-    <span class="post-meta-item" title="本文字数">
-      <span class="post-meta-item-icon">
-        <i class="far fa-file-word"></i>
-      </span>
-      <span class="post-meta-item-text">本文字数：</span>
-      <span>1k</span>
-    </span>
-    <span class="post-meta-item" title="阅读时长">
-      <span class="post-meta-item-icon">
-        <i class="far fa-clock"></i>
-      </span>
-      <span class="post-meta-item-text">阅读时长 &asymp;</span>
-      <span>4 分钟</span>
-    </span>
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <p><strong>Content</strong>：数论<br>
-<strong>Date</strong>：2025.7.30</p>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/posts/b546384e/#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-  <nav class="pagination">
-    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><span class="space">&hellip;</span><a class="page-number" href="/page/4/">4</a><a class="extend next" rel="next" title="下一页" aria-label="下一页" href="/page/2/"><i class="fa fa-angle-right"></i></a>
-  </nav>
 
 </div>
   </main>
