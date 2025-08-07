@@ -6,10 +6,10 @@
 <meta name="theme-color" content="#222" media="(prefers-color-scheme: light)">
 <meta name="theme-color" content="#222" media="(prefers-color-scheme: dark)"><meta name="generator" content="Hexo 7.3.0">
 
-  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="/uploads/favicon-32x32-leaf.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="/uploads/favicon-16x16-leaf.png">
-  <link rel="mask-icon" href="/uploads/custom_logo.svg" color="#222">
+  <link rel="apple-touch-icon" sizes="180x180" href="/uploads/avatar_circle.jpg">
+  <link rel="icon" type="image/png" sizes="32x32" href="/uploads/avatar_circle.jpg">
+  <link rel="icon" type="image/png" sizes="16x16" href="/uploads/avatar_circle.jpg">
+  <link rel="mask-icon" href="/uploads/avatar_circle.jpg" color="#222">
 
 <link rel="stylesheet" href="/css/main.css">
 
@@ -245,9 +245,15 @@
         <i class="far fa-calendar"></i>
       </span>
       <span class="post-meta-item-text">发表于</span>
-      
 
-      <time title="创建时间：2025-08-06 00:00:00 / 修改时间：21:07:57" itemprop="dateCreated datePublished" datetime="2025-08-06T00:00:00+08:00">2025-08-06</time>
+      <time title="创建时间：2025-08-06 00:00:00" itemprop="dateCreated datePublished" datetime="2025-08-06T00:00:00+08:00">2025-08-06</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2025-08-07 08:26:07" itemprop="dateModified" datetime="2025-08-07T08:26:07+08:00">2025-08-07</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -266,7 +272,7 @@
         <i class="far fa-file-word"></i>
       </span>
       <span class="post-meta-item-text">本文字数：</span>
-      <span>640</span>
+      <span>641</span>
     </span>
     <span class="post-meta-item" title="阅读时长">
       <span class="post-meta-item-icon">
@@ -286,95 +292,14 @@
     <div class="post-body" itemprop="articleBody">
           <p><strong>Content</strong>：字符串算法进阶<br>
 <strong>Date</strong>：2025.8.6</p>
-<h1 id="luogu-p13270"><a class="markdownIt-Anchor" href="#luogu-p13270"></a> <a target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/P13270">Luogu-P13270</a> 最小表示法</h1>
-<h2 id="题意"><a class="markdownIt-Anchor" href="#题意"></a> 题意</h2>
-<p>给定一个长度为 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>n</mi></mrow><annotation encoding="application/x-tex">n</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathnormal">n</span></span></span></span> 的字符串 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>s</mi></mrow><annotation encoding="application/x-tex">s</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathnormal">s</span></span></span></span>，求 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>s</mi></mrow><annotation encoding="application/x-tex">s</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathnormal">s</span></span></span></span> 的最小表示法。</p>
-<h2 id="思路"><a class="markdownIt-Anchor" href="#思路"></a> 思路</h2>
-<p>首先如果暴力的话，复杂度是 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>O</mi><mo stretchy="false">(</mo><msup><mi>n</mi><mn>2</mn></msup><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">O(n^2)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.064108em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.02778em;">O</span><span class="mopen">(</span><span class="mord"><span class="mord mathnormal">n</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141079999999999em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span></span></span></span></span><span class="mclose">)</span></span></span></span> 的，但是我们发现如果我们当前已经发现了一个最小表示法，我们想要找到一个比这个还小的表示法，那么一定存在一个位置，使得这个位置上的字符不相等，根据这个就可以把复杂度优化到 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>O</mi><mo stretchy="false">(</mo><mi>n</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">O(n)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.02778em;">O</span><span class="mopen">(</span><span class="mord mathnormal">n</span><span class="mclose">)</span></span></span></span>。</p>
-<p>提交记录：<a target="_blank" rel="noopener" href="https://www.luogu.com.cn/record/229168015">Link</a>。</p>
-<h1 id="luogu-p5357"><a class="markdownIt-Anchor" href="#luogu-p5357"></a> <a target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/P5357">Luogu-P5357</a> AC自动机</h1>
-<h2 id="题意-2"><a class="markdownIt-Anchor" href="#题意-2"></a> 题意</h2>
-<p>给定一个字符串 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>s</mi></mrow><annotation encoding="application/x-tex">s</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathnormal">s</span></span></span></span> 和 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>n</mi></mrow><annotation encoding="application/x-tex">n</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathnormal">n</span></span></span></span> 个模式串 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>t</mi><mi>i</mi></msub></mrow><annotation encoding="application/x-tex">t_i</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.76508em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal">t</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.31166399999999994em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">i</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span>，求每个模式串在字符串 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>s</mi></mrow><annotation encoding="application/x-tex">s</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathnormal">s</span></span></span></span> 中的出现次数。</p>
-<h2 id="思路-2"><a class="markdownIt-Anchor" href="#思路-2"></a> 思路</h2>
-<p>首先我们可以对 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>s</mi></mrow><annotation encoding="application/x-tex">s</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathnormal">s</span></span></span></span> 建一个 AC 自动机，然后统计每个模式串在这个 AC 自动机的字典树上经过了那些节点，然后打标记。再建出 Fail 树，然后在 Fail 树上对标记求和。</p>
-<p>提交记录：<a target="_blank" rel="noopener" href="https://www.luogu.com.cn/record/229191297">Link</a>。</p>
-<h1 id="模拟题-嗑瓜子"><a class="markdownIt-Anchor" href="#模拟题-嗑瓜子"></a> 模拟题 - 嗑瓜子</h1>
-<h2 id="题意-3"><a class="markdownIt-Anchor" href="#题意-3"></a> 题意</h2>
-<p>有一个人在嗑 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>n</mi></mrow><annotation encoding="application/x-tex">n</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathnormal">n</span></span></span></span> 个瓜子，每次在瓜子中等概率拿出一个，有以下两种情况：</p>
-<ol>
-<li>如果拿出的是瓜子，则吃掉，并把壳扔回瓜子中。</li>
-<li>如果拿出的是壳，则将其丢弃。<br>
-求他吃掉所有瓜子的期望。</li>
-</ol>
-<h2 id="思路-3"><a class="markdownIt-Anchor" href="#思路-3"></a> 思路</h2>
-<p>定义 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>d</mi><msub><mi>p</mi><mrow><mi>i</mi><mo separator="true">,</mo><mi>j</mi></mrow></msub></mrow><annotation encoding="application/x-tex">dp_{i,j}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.980548em;vertical-align:-0.286108em;"></span><span class="mord mathnormal">d</span><span class="mord"><span class="mord mathnormal">p</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.311664em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">i</span><span class="mpunct mtight">,</span><span class="mord mathnormal mtight" style="margin-right:0.05724em;">j</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.286108em;"><span></span></span></span></span></span></span></span></span></span> 表示有 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>i</mi></mrow><annotation encoding="application/x-tex">i</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.65952em;vertical-align:0em;"></span><span class="mord mathnormal">i</span></span></span></span> 个瓜子和 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>j</mi></mrow><annotation encoding="application/x-tex">j</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.85396em;vertical-align:-0.19444em;"></span><span class="mord mathnormal" style="margin-right:0.05724em;">j</span></span></span></span> 个壳的期望。根据题意写出转移即可。</p>
-<p><em><strong>Important</strong></em>：注意空间，因为 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>j</mi><mrow><mi>m</mi><mi>a</mi><mi>x</mi></mrow></msub></mrow><annotation encoding="application/x-tex">j_{max}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.85396em;vertical-align:-0.19444em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.05724em;">j</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.151392em;"><span style="top:-2.5500000000000003em;margin-left:-0.05724em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">m</span><span class="mord mathnormal mtight">a</span><span class="mord mathnormal mtight">x</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span> 可以达到 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>2</mn><mo>×</mo><mi>n</mi></mrow><annotation encoding="application/x-tex">2 \times n</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.72777em;vertical-align:-0.08333em;"></span><span class="mord">2</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">×</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathnormal">n</span></span></span></span>，所以第二维要开到两倍。</p>
-<h2 id="code"><a class="markdownIt-Anchor" href="#code"></a> Code</h2>
-<pre><code class="highlight cpp"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span>
-<span class="meta">#<span class="keyword">define</span> OnlineJudge</span>
-
-<span class="keyword">using</span> std::cin;
-<span class="keyword">using</span> std::cout;
-
-<span class="keyword">constexpr</span> <span class="type">int</span> MOD = <span class="number">998244353</span>;
-<span class="keyword">constexpr</span> <span class="type">int</span> N = <span class="number">4005</span>;    <span class="comment">// ! 注意两倍空间</span>
-<span class="type">long</span> <span class="type">long</span> dp[N][N];
-
-<span class="function"><span class="type">long</span> <span class="type">long</span> <span class="title">QuickPow</span><span class="params">(<span class="type">long</span> <span class="type">long</span> base, <span class="type">long</span> <span class="type">long</span> pow)</span> </span>&#123;
-    <span class="type">long</span> <span class="type">long</span> result = <span class="number">1</span>;
-    <span class="keyword">while</span> (pow) &#123;
-        <span class="keyword">if</span> (pow &amp; <span class="number">1</span>) result = result * base % MOD;
-        base = base * base % MOD;
-        pow &gt;&gt;= <span class="number">1</span>;
-    &#125;
-    <span class="keyword">return</span> result;
-&#125;
-
-<span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;
-    std::ios::<span class="built_in">sync_with_stdio</span>(<span class="literal">false</span>);
-    cin.<span class="built_in">tie</span>(<span class="literal">nullptr</span>);
-    cout.<span class="built_in">tie</span>(<span class="literal">nullptr</span>);
-    
-    <span class="type">int</span> n;
-    cin &gt;&gt; n;
-    
-    dp[n][<span class="number">0</span>] = <span class="number">1</span>;
-    
-    <span class="keyword">for</span> (<span class="type">int</span> i = n - <span class="number">1</span>; i &gt;= <span class="number">0</span>; i--) &#123;
-        <span class="keyword">for</span> (<span class="type">int</span> j = (n - i) * <span class="number">2</span>; j &gt;= (i == <span class="number">0</span> ? <span class="number">2</span> : <span class="number">0</span>); j--) &#123;
-            <span class="keyword">if</span> (i == <span class="number">0</span>) &#123;
-                dp[i][j] = <span class="built_in">QuickPow</span>(j - <span class="number">1</span>, MOD - <span class="number">2</span>) * dp[i + <span class="number">1</span>][j - <span class="number">2</span>] % MOD;
-            &#125; <span class="keyword">else</span> &#123;
-                <span class="keyword">if</span> (j &lt; <span class="number">2</span>) &#123;
-                    dp[i][j] = (j + <span class="number">1</span>) * <span class="built_in">QuickPow</span>(i + j + <span class="number">1</span>, MOD - <span class="number">2</span>) % MOD * dp[i][j + <span class="number">1</span>] % MOD;
-                &#125; <span class="keyword">else</span> <span class="keyword">if</span> (j == (n - i) * <span class="number">2</span>) &#123;
-                    dp[i][j] = (i + <span class="number">1</span>) * <span class="built_in">QuickPow</span>(i + j - <span class="number">1</span>, MOD - <span class="number">2</span>) % MOD * dp[i + <span class="number">1</span>][j - <span class="number">2</span>] % MOD;
-                &#125; <span class="keyword">else</span> &#123;
-                    dp[i][j] = ((i + <span class="number">1</span>) * <span class="built_in">QuickPow</span>(i + j - <span class="number">1</span>, MOD - <span class="number">2</span>) % MOD * dp[i + <span class="number">1</span>][j - <span class="number">2</span>] % MOD + (j + <span class="number">1</span>) * <span class="built_in">QuickPow</span>(i + j + <span class="number">1</span>, MOD - <span class="number">2</span>) % MOD * dp[i][j + <span class="number">1</span>] % MOD) % MOD;
-                &#125;
-            &#125;
-        &#125;
-    &#125;
-    
-    <span class="meta">#<span class="keyword">ifndef</span> OnlineJudge</span>
-    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt;= n; i++) &#123;
-        <span class="keyword">for</span> (<span class="type">int</span> j = <span class="number">0</span>; j &lt;= <span class="number">2</span> * (n - i); j++) &#123;
-            cout &lt;&lt; dp[i][j] &lt;&lt; <span class="string">&#x27; &#x27;</span>;
-        &#125;
-        cout &lt;&lt; <span class="string">&#x27;\n&#x27;</span>;
-    &#125;
-    <span class="meta">#<span class="keyword">endif</span></span>
-    
-    <span class="type">long</span> <span class="type">long</span> answer = <span class="number">0</span>;
-    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">1</span>; i &lt;= n * <span class="number">2</span>; i++) &#123;
-        answer = (answer + (<span class="number">3</span> * n - i) * dp[<span class="number">0</span>][i] % MOD) % MOD;
-    &#125;
-    
-    cout &lt;&lt; answer &lt;&lt; <span class="string">&#x27;\n&#x27;</span>;
-    
-    <span class="keyword">return</span> <span class="number">0</span>;
-&#125;</code></pre>
-
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/posts/ee019f02/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
       
     </div>
 
@@ -508,114 +433,6 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://fallenleaf0327.github.io/#%20hexo-abbrlink/posts/cbf744f3/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/uploads/Avatar.jpg">
-      <meta itemprop="name" content="FallenLeaf">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="FallenLeaf's Blog">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content=" | FallenLeaf's Blog">
-      <meta itemprop="description" content="">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/posts/cbf744f3/" class="post-title-link" itemprop="url">OI集训 Day19</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">发表于</span>
-
-      <time title="创建时间：2025-08-04 00:00:00" itemprop="dateCreated datePublished" datetime="2025-08-04T00:00:00+08:00">2025-08-04</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar-check"></i>
-      </span>
-      <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2025-08-06 10:36:34" itemprop="dateModified" datetime="2025-08-06T10:36:34+08:00">2025-08-06</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">分类于</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/%E9%9B%86%E8%AE%AD%E6%80%BB%E7%BB%93%EF%BC%882025%E6%9A%91%EF%BC%89/" itemprop="url" rel="index"><span itemprop="name">集训总结（2025暑）</span></a>
-        </span>
-    </span>
-
-  
-    <span class="post-meta-break"></span>
-    <span class="post-meta-item" title="本文字数">
-      <span class="post-meta-item-icon">
-        <i class="far fa-file-word"></i>
-      </span>
-      <span class="post-meta-item-text">本文字数：</span>
-      <span>16</span>
-    </span>
-    <span class="post-meta-item" title="阅读时长">
-      <span class="post-meta-item-icon">
-        <i class="far fa-clock"></i>
-      </span>
-      <span class="post-meta-item-text">阅读时长 &asymp;</span>
-      <span>1 分钟</span>
-    </span>
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <p><strong>Content</strong>：欢乐 ACM<br>
-<strong>Date</strong>：2025.8.4</p>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/posts/cbf744f3/#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
     <link itemprop="mainEntityOfPage" href="https://fallenleaf0327.github.io/#%20hexo-abbrlink/posts/bcf07465/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -694,6 +511,114 @@
           <!--noindex-->
             <div class="post-button">
               <a class="btn" href="/posts/bcf07465/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://fallenleaf0327.github.io/#%20hexo-abbrlink/posts/cbf744f3/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/uploads/Avatar.jpg">
+      <meta itemprop="name" content="FallenLeaf">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="FallenLeaf's Blog">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content=" | FallenLeaf's Blog">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/posts/cbf744f3/" class="post-title-link" itemprop="url">OI集训 Day19</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2025-08-04 00:00:00" itemprop="dateCreated datePublished" datetime="2025-08-04T00:00:00+08:00">2025-08-04</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2025-08-06 10:36:34" itemprop="dateModified" datetime="2025-08-06T10:36:34+08:00">2025-08-06</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E9%9B%86%E8%AE%AD%E6%80%BB%E7%BB%93%EF%BC%882025%E6%9A%91%EF%BC%89/" itemprop="url" rel="index"><span itemprop="name">集训总结（2025暑）</span></a>
+        </span>
+    </span>
+
+  
+    <span class="post-meta-break"></span>
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>16</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>1 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <p><strong>Content</strong>：欢乐 ACM<br>
+<strong>Date</strong>：2025.8.4</p>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/posts/cbf744f3/#more" rel="contents">
                 阅读全文 &raquo;
               </a>
             </div>
