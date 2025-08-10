@@ -246,7 +246,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          327 字
+          345 字
         
       </span>
     
@@ -313,25 +313,25 @@
 <h1>课堂内容</h1>
 <h2 id="完全图匹配构造">完全图匹配构造</h2>
 <h3 id="描述">描述</h3>
-<p>对于一个 $n$ （$n \mid 2$） 个顶点的完全图，将其分为 $n-1$ 个匹配。</p>
+<p>对于一个 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>n</mi></mrow><annotation encoding="application/x-tex">n</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.4306em;"></span><span class="mord mathnormal">n</span></span></span></span> （<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>n</mi><mo>∣</mo><mn>2</mn></mrow><annotation encoding="application/x-tex">n \mid 2</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal">n</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">∣</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">2</span></span></span></span>） 个顶点的完全图，将其分为 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>n</mi><mo>−</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">n-1</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6667em;vertical-align:-0.0833em;"></span><span class="mord mathnormal">n</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">1</span></span></span></span> 个匹配。</p>
 <h3 id="思路">思路</h3>
-<p>我们将其中一个点提出来，剩下的 $n-1$ 个点形成一个正多边形，然后将提出的那个点放在中心。</p>
-<p>对于每一条 “斜率” 相同的边，我们把他们放在一个方案中，然后对这个方案进行旋转，就构造了 $n-1$ 个匹配。</p>
+<p>我们将其中一个点提出来，剩下的 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>n</mi><mo>−</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">n-1</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6667em;vertical-align:-0.0833em;"></span><span class="mord mathnormal">n</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">1</span></span></span></span> 个点形成一个正多边形，然后将提出的那个点放在中心。</p>
+<p>对于每一条 “斜率” 相同的边，我们把他们放在一个方案中，然后对这个方案进行旋转，就构造了 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>n</mi><mo>−</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">n-1</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6667em;vertical-align:-0.0833em;"></span><span class="mord mathnormal">n</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">1</span></span></span></span> 个匹配。</p>
 <p><img src="/uploads/OI%E9%9B%86%E8%AE%AD-Day18/1.png" srcset="/img/loading.gif" lazyload alt="img"></p>
 <h2 id="完全图曼哈顿路构造">完全图曼哈顿路构造</h2>
 <h3 id="描述-2">描述</h3>
-<p>对于一个包含 $n$ 个点的完全图，要求将其分成 $\lfloor n / 2 \rfloor$ 条曼哈顿路。</p>
+<p>对于一个包含 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>n</mi></mrow><annotation encoding="application/x-tex">n</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.4306em;"></span><span class="mord mathnormal">n</span></span></span></span> 个点的完全图，要求将其分成 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false">⌊</mo><mi>n</mi><mi mathvariant="normal">/</mi><mn>2</mn><mo stretchy="false">⌋</mo></mrow><annotation encoding="application/x-tex">\lfloor n / 2 \rfloor</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">⌊</span><span class="mord mathnormal">n</span><span class="mord">/2</span><span class="mclose">⌋</span></span></span></span> 条曼哈顿路。</p>
 <h3 id="思路-2">思路</h3>
 <ol>
 <li>
-<p>当 $n \mid 2$ 时<br>
-我们将这些点排成一个正 $n$ 边形，然后做如下构造：<br>
+<p>当 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>n</mi><mo>∣</mo><mn>2</mn></mrow><annotation encoding="application/x-tex">n \mid 2</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal">n</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">∣</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">2</span></span></span></span> 时<br>
+我们将这些点排成一个正 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>n</mi></mrow><annotation encoding="application/x-tex">n</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.4306em;"></span><span class="mord mathnormal">n</span></span></span></span> 边形，然后做如下构造：<br>
 <img src="/uploads/OI%E9%9B%86%E8%AE%AD-Day18/2.png" srcset="/img/loading.gif" lazyload alt="img"><br>
 还是通过第一个构造方案的旋转得出其他的方案。</p>
 </li>
 <li>
-<p>当 $n \nmid 2$ 时<br>
-我们考虑通过上面的构造延伸，构造一个 正 $(n-1)$ 边形，然后在中间加入一个点，把每一条曼哈顿路的起点和中点和这个点相连，就得到了 $n$ 为奇数时的构造。下面是其中一条曼哈顿回路。<br>
+<p>当 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>n</mi><mo>∤</mo><mn>2</mn></mrow><annotation encoding="application/x-tex">n \nmid 2</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.9925em;vertical-align:-0.2514em;"></span><span class="mord mathnormal">n</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel amsrm">∤</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">2</span></span></span></span> 时<br>
+我们考虑通过上面的构造延伸，构造一个 正 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false">(</mo><mi>n</mi><mo>−</mo><mn>1</mn><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">(n-1)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">(</span><span class="mord mathnormal">n</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord">1</span><span class="mclose">)</span></span></span></span> 边形，然后在中间加入一个点，把每一条曼哈顿路的起点和中点和这个点相连，就得到了 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>n</mi></mrow><annotation encoding="application/x-tex">n</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.4306em;"></span><span class="mord mathnormal">n</span></span></span></span> 为奇数时的构造。下面是其中一条曼哈顿回路。<br>
 <img src="/uploads/OI%E9%9B%86%E8%AE%AD-Day18/3.png" srcset="/img/loading.gif" lazyload alt="img"></p>
 </li>
 </ol>
