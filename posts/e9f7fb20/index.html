@@ -1,313 +1,223 @@
-
-
-<!DOCTYPE html>
-<html lang="zh-CN" data-default-color-scheme=auto>
-
-
-
-<head>
-  <meta charset="UTF-8">
-
-  <link rel="apple-touch-icon" sizes="76x76" href="/uploads/avatar_circle.jpg">
-  <link rel="icon" href="/uploads/avatar_circle.jpg">
-  
-
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
-  <meta http-equiv="x-ua-compatible" content="ie=edge">
-  
-    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
-  
-  <meta name="theme-color" content="#2f4154">
-  <meta name="author" content="FallenLeaf">
-  <meta name="keywords" content="">
-  
-    <meta name="description" content="Content：Math Date：2025.7.20">
-  
-  
-    <meta name="referrer" content="no-referrer-when-downgrade">
-  
-  
-  <title>OI集训 Day4 - FallenLeaf&#39;s Blog</title>
-
-  <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
-
-
-
-  <link  rel="stylesheet" href="https://lib.baomitu.com/github-markdown-css/4.0.0/github-markdown.min.css" />
-
-  <link  rel="stylesheet" href="https://lib.baomitu.com/hint.css/2.7.0/hint.min.css" />
-
-  <link  rel="stylesheet" href="https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.css" />
-
-  <link  rel="stylesheet" href="https://lib.baomitu.com/KaTeX/0.16.2/katex.min.css" />
-
-
-
-<!-- 主题依赖的图标库，不要自行修改 -->
-<!-- Do not modify the link that theme dependent icons -->
-
-<link rel="stylesheet" href="//at.alicdn.com/t/c/font_1749284_5i9bdhy70f8.css">
-
-
-
-<link rel="stylesheet" href="//at.alicdn.com/t/c/font_1736178_k526ubmyhba.css">
-
-
-<link  rel="stylesheet" href="/css/main.css" />
-
-
-  <link id="highlight-css" rel="stylesheet" href="/css/highlight.css" />
-  
-    <link id="highlight-css-dark" rel="stylesheet" href="/css/highlight-dark.css" />
-  
-
-
-
-  
-<link rel="stylesheet" href="/css/custom.css">
-
-
-
-  <script id="fluid-configs">
-    var Fluid = window.Fluid || {};
-    Fluid.ctx = Object.assign({}, Fluid.ctx)
-    var CONFIG = {"hostname":"fallenleaf0327.github.io","root":"/","version":"1.9.8","typing":{"enable":true,"typeSpeed":100,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":"#"},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"CPP"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":true,"follow_dnt":true,"baidu":"fc11c8ca35c8a5b57cc025dde92e6c08","google":{"measurement_id":null},"tencent":{"sid":null,"cid":null},"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false},"umami":{"src":null,"website_id":null,"domains":null,"start_time":"2024-01-01T00:00:00.000Z","token":null,"api_server":null}},"search_path":"/local-search.xml","include_content_in_search":true};
-
-    if (CONFIG.web_analytics.follow_dnt) {
-      var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
-      Fluid.ctx.dnt = dntVal && (dntVal.startsWith('1') || dntVal.startsWith('yes') || dntVal.startsWith('on'));
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>OI集训 Day4 | FallenLeaf's Blog</title><meta name="author" content="FallenLeaf"><meta name="copyright" content="FallenLeaf"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="Content：Math Date：2025.7.20">
+<meta property="og:type" content="article">
+<meta property="og:title" content="OI集训 Day4">
+<meta property="og:url" content="https://fallenleaf0327.github.io/#%20hexo-abbrlink/posts/e9f7fb20/index.html">
+<meta property="og:site_name" content="FallenLeaf&#39;s Blog">
+<meta property="og:description" content="Content：Math Date：2025.7.20">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://fallenleaf0327.github.io/#%20hexo-abbrlink/uploads/image/img8.png">
+<meta property="article:published_time" content="2025-07-19T16:00:00.000Z">
+<meta property="article:modified_time" content="2025-08-06T02:36:34.405Z">
+<meta property="article:author" content="FallenLeaf">
+<meta property="article:tag" content="集训">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://fallenleaf0327.github.io/#%20hexo-abbrlink/uploads/image/img8.png"><script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "OI集训 Day4",
+  "url": "https://fallenleaf0327.github.io/#%20hexo-abbrlink/posts/e9f7fb20/",
+  "image": "https://fallenleaf0327.github.io/#%20hexo-abbrlink/uploads/image/img8.png",
+  "datePublished": "2025-07-19T16:00:00.000Z",
+  "dateModified": "2025-08-06T02:36:34.405Z",
+  "author": [
+    {
+      "@type": "Person",
+      "name": "FallenLeaf",
+      "url": "https://FallenLeaf0327.github.io/# hexo-abbrlink"
     }
-  </script>
-  <script  src="/js/utils.js" ></script>
-  <script  src="/js/color-schema.js" ></script>
-  
-
-  
-    <!-- Baidu Analytics -->
-    <script async>
-      if (!Fluid.ctx.dnt) {
-        var _hmt = _hmt || [];
-        (function() {
-          var hm = document.createElement("script");
-          hm.src = "https://hm.baidu.com/hm.js?fc11c8ca35c8a5b57cc025dde92e6c08";
-          var s = document.getElementsByTagName("script")[0];
-          s.parentNode.insertBefore(hm, s);
-        })();
+  ]
+}</script><link rel="shortcut icon" href="/"><link rel="canonical" href="https://fallenleaf0327.github.io/#%20hexo-abbrlink/posts/e9f7fb20/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//hm.baidu.com"/><link rel="preconnect" href="//fonts.googleapis.com" crossorigin=""/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/node-snackbar/dist/snackbar.min.css" media="print" onload="this.media='all'"><script>
+    (() => {
+      
+    const saveToLocal = {
+      set: (key, value, ttl) => {
+        if (!ttl) return
+        const expiry = Date.now() + ttl * 86400000
+        localStorage.setItem(key, JSON.stringify({ value, expiry }))
+      },
+      get: key => {
+        const itemStr = localStorage.getItem(key)
+        if (!itemStr) return undefined
+        const { value, expiry } = JSON.parse(itemStr)
+        if (Date.now() > expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return value
       }
-    </script>
+    }
+
+    window.btf = {
+      saveToLocal,
+      getScript: (url, attr = {}) => new Promise((resolve, reject) => {
+        const script = document.createElement('script')
+        script.src = url
+        script.async = true
+        Object.entries(attr).forEach(([key, val]) => script.setAttribute(key, val))
+        script.onload = script.onreadystatechange = () => {
+          if (!script.readyState || /loaded|complete/.test(script.readyState)) resolve()
+        }
+        script.onerror = reject
+        document.head.appendChild(script)
+      }),
+      getCSS: (url, id) => new Promise((resolve, reject) => {
+        const link = document.createElement('link')
+        link.rel = 'stylesheet'
+        link.href = url
+        if (id) link.id = id
+        link.onload = link.onreadystatechange = () => {
+          if (!link.readyState || /loaded|complete/.test(link.readyState)) resolve()
+        }
+        link.onerror = reject
+        document.head.appendChild(link)
+      }),
+      addGlobalFn: (key, fn, name = false, parent = window) => {
+        if (!false && key.startsWith('pjax')) return
+        const globalFn = parent.globalFn || {}
+        globalFn[key] = globalFn[key] || {}
+        globalFn[key][name || Object.keys(globalFn[key]).length] = fn
+        parent.globalFn = globalFn
+      }
+    }
   
-
-  
-
-  
-
-  
-
-  
-
-
-
-  
-<meta name="generator" content="Hexo 7.3.0"></head>
-
-
-<body>
-  
-
-  <header>
-    
-
-<div class="header-inner" style="height: 70vh;">
-  <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
-  <div class="container">
-    <a class="navbar-brand" href="/">
-      <strong>FallenLeaf&#39;s Blog</strong>
-    </a>
-
-    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
-            data-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <div class="animated-icon"><span></span><span></span><span></span></div>
-    </button>
-
-    <!-- Collapsible content -->
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav ml-auto text-center">
-        
-          
-          
-          
-          
-            <li class="nav-item">
-              <a class="nav-link" href="/" target="_self">
-                <i class="iconfont icon-home-fill"></i>
-                <span>首页</span>
-              </a>
-            </li>
-          
-        
-          
-          
-          
-          
-            <li class="nav-item">
-              <a class="nav-link" href="/archives/" target="_self">
-                <i class="iconfont icon-archive-fill"></i>
-                <span>归档</span>
-              </a>
-            </li>
-          
-        
-          
-          
-          
-          
-            <li class="nav-item">
-              <a class="nav-link" href="/categories/" target="_self">
-                <i class="iconfont icon-category-fill"></i>
-                <span>分类</span>
-              </a>
-            </li>
-          
-        
-          
-          
-          
-          
-            <li class="nav-item">
-              <a class="nav-link" href="/tags/" target="_self">
-                <i class="iconfont icon-tags-fill"></i>
-                <span>标签</span>
-              </a>
-            </li>
-          
-        
-          
-          
-          
-          
-            <li class="nav-item">
-              <a class="nav-link" href="/about/" target="_self">
-                <i class="iconfont icon-user-fill"></i>
-                <span>关于</span>
-              </a>
-            </li>
-          
-        
-        
-          <li class="nav-item" id="search-btn">
-            <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
-              <i class="iconfont icon-search"></i>
-            </a>
-          </li>
-          
-        
-        
-          <li class="nav-item" id="color-toggle-btn">
-            <a class="nav-link" target="_self" href="javascript:;" aria-label="Color Toggle">
-              <i class="iconfont icon-dark" id="color-toggle-icon"></i>
-            </a>
-          </li>
-        
-      </ul>
-    </div>
-  </div>
-</nav>
-
-  
-
-<div id="banner" class="banner" parallax=true
-     style="background: url('/uploads/background1.png') no-repeat center center; background-size: cover;">
-  <div class="full-bg-img">
-    <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
-      <div class="banner-text text-center fade-in-up">
-        <div class="h2">
-          
-            <span id="subtitle" data-typed-text="OI集训 Day4"></span>
-          
-        </div>
-
-        
-          
-  <div class="mt-3">
-    
-    
-      <span class="post-meta">
-        <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2025-07-20 00:00" pubdate>
-          2025年7月20日 凌晨
-        </time>
-      </span>
-    
-  </div>
-
-  <div class="mt-1">
-    
-      <span class="post-meta mr-2">
-        <i class="iconfont icon-chart"></i>
-        
-          3.1k 字
-        
-      </span>
-    
-
-    
-      <span class="post-meta mr-2">
-        <i class="iconfont icon-clock-fill"></i>
-        
-        
-        
-          27 分钟
-        
-      </span>
-    
-
-    
-    
-  </div>
-
-
-        
-      </div>
-
       
-    </div>
-  </div>
-</div>
+      const activateDarkMode = () => {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      const activateLightMode = () => {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
 
-</div>
+      btf.activateDarkMode = activateDarkMode
+      btf.activateLightMode = activateLightMode
 
-  </header>
+      const theme = saveToLocal.get('theme')
+    
+          const mediaQueryDark = window.matchMedia('(prefers-color-scheme: dark)')
+          const mediaQueryLight = window.matchMedia('(prefers-color-scheme: light)')
 
-  <main>
+          if (theme === undefined) {
+            if (mediaQueryLight.matches) activateLightMode()
+            else if (mediaQueryDark.matches) activateDarkMode()
+            else {
+              const hour = new Date().getHours()
+              const isNight = hour <= 6 || hour >= 18
+              isNight ? activateDarkMode() : activateLightMode()
+            }
+            mediaQueryDark.addEventListener('change', () => {
+              if (saveToLocal.get('theme') === undefined) {
+                e.matches ? activateDarkMode() : activateLightMode()
+              }
+            })
+          } else {
+            theme === 'light' ? activateLightMode() : activateDarkMode()
+          }
+        
+      
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        document.documentElement.classList.toggle('hide-aside', asideStatus === 'hide')
+      }
     
       
+    const detectApple = () => {
+      if (/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)) {
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+  
+    })()
+  </script><script>var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?fc11c8ca35c8a5b57cc025dde92e6c08";
+  var s = document.getElementsByTagName("script")[0];
+  s.parentNode.insertBefore(hm, s);
+})();
+btf.addGlobalFn('pjaxComplete', () => {
+  _hmt.push(['_trackPageview',window.location.pathname])
+}, 'baidu_analytics')
+</script><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Titillium+Web&amp;display=swap" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: {"path":"/search.json","preload":true,"top_n_per_article":1,"unescape":true,"languages":{"hits_empty":"未找到符合您查询的内容：${query}","hits_stats":"共找到 ${hits} 篇文章"}},
+  translate: undefined,
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false,"highlightFullpage":false,"highlightMacStyle":true},
+  copy: {
+    success: '复制成功',
+    error: '复制失败',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '天',
+  dateSuffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'null',
+  Snackbar: {"chs_to_cht":"已切换为繁体中文","cht_to_chs":"已切换为简体中文","day_to_night":"已切换为深色模式","night_to_day":"已切换为浅色模式","bgLight":"#49b1f5","bgDark":"#1f1f1f","position":"bottom-left"},
+  infinitegrid: {
+    js: 'https://cdn.jsdelivr.net/npm/@egjs/infinitegrid/dist/infinitegrid.min.js',
+    buttonText: '加载更多'
+  },
+  isPhotoFigcaption: false,
+  islazyloadPlugin: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: false,
+  },
+  autoDarkmode: true
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'OI集训 Day4',
+  isHighlightShrink: true,
+  isToc: true,
+  pageType: 'post'
+}</script><meta name="generator" content="Hexo 7.3.0"></head><body><div id="loading-box"><div class="loading-left-bg"></div><div class="loading-right-bg"></div><div class="spinner-box"><div class="configure-border-1"><div class="configure-core"></div></div><div class="configure-border-2"><div class="configure-core"></div></div><div class="loading-word">加载中...</div></div></div><script>(()=>{
+  const $loadingBox = document.getElementById('loading-box')
+  const $body = document.body
+  const preloader = {
+    endLoading: () => {
+      if ($loadingBox.classList.contains('loaded')) return
+      $body.style.overflow = ''
+      $loadingBox.classList.add('loaded')
+    },
+    initLoading: () => {
+      $body.style.overflow = 'hidden'
+      $loadingBox.classList.remove('loaded')
+    }
+  }
 
-<div class="container-fluid nopadding-x">
-  <div class="row nomargin-x">
-    <div class="side-col d-none d-lg-block col-lg-2">
-      
+  preloader.initLoading()
 
-    </div>
+  if (document.readyState === 'complete') {
+    preloader.endLoading()
+  } else {
+    window.addEventListener('load', preloader.endLoading)
+    document.addEventListener('DOMContentLoaded', preloader.endLoading)
+    // Add timeout protection: force end after 7 seconds
+    setTimeout(preloader.endLoading, 7000)
+  }
 
-    <div class="col-lg-8 nopadding-x-md">
-      <div class="container nopadding-x-md" id="board-ctn">
-        <div id="board">
-          <article class="post-content mx-auto">
-            <h1 id="seo-header">OI集训 Day4</h1>
-            
-              <p id="updated-time" class="note note-info" style="">
-                
-                  
-                    本文最后更新于 2025年8月6日 上午
-                  
-                
-              </p>
-            
-            
-              <div class="markdown-body">
-                
-                <p><strong>Content</strong>：Math<br>
+  if (false) {
+    btf.addGlobalFn('pjaxSend', preloader.initLoading, 'preloader_init')
+    btf.addGlobalFn('pjaxComplete', preloader.endLoading, 'preloader_end')
+  }
+})()</script><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img text-center"><img src="/uploads/avatar_circle.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/ loading='lazy'></div><div class="site-data text-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">36</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">10</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">3</div></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/home/"><i class="fa-fw fas fa-home"></i><span> Home</span></a></div><div class="menus_item"><a class="site-page" href="/archive/"><i class="fa-fw fas fa-archive"></i><span> Archive</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> Tags</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> Categories</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> About</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg fixed" id="page-header" style="background-image: url(/uploads/image/img8.png);"><nav id="nav"><span id="blog-info"><a class="nav-site-title" href="/"><img class="site-icon" src="/uploads/avatar_circle.jpg" alt="Logo" loading='lazy'><span class="site-name">FallenLeaf's Blog</span></a><a class="nav-page-title" href="/"><span class="site-name">OI集训 Day4</span><span class="site-name"><i class="fa-solid fa-circle-arrow-left"></i><span>  返回首页</span></span></a></span><div id="menus"><div id="search-button"><span class="site-page social-icon search"><i class="fas fa-search fa-fw"></i><span> 搜索</span></span></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/home/"><i class="fa-fw fas fa-home"></i><span> Home</span></a></div><div class="menus_item"><a class="site-page" href="/archive/"><i class="fa-fw fas fa-archive"></i><span> Archive</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> Tags</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> Categories</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> About</span></a></div></div><div id="toggle-menu"><span class="site-page"><i class="fas fa-bars fa-fw"></i></span></div></div></nav><div id="post-info"><h1 class="post-title">OI集训 Day4</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="fa-fw post-meta-icon far fa-calendar-alt"></i><span class="post-meta-label">发表于</span><time datetime="2025-07-19T16:00:00.000Z" title="发表于 2025-07-20 00:00:00">2025-07-20</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E9%9B%86%E8%AE%AD%E6%80%BB%E7%BB%93%EF%BC%882025%E6%9A%91%EF%BC%89/">集训总结（2025暑）</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-wordcount"><i class="far fa-file-word fa-fw post-meta-icon"></i><span class="post-meta-label">总字数:</span><span class="word-count">3.3k</span><span class="post-meta-separator">|</span><i class="far fa-clock fa-fw post-meta-icon"></i><span class="post-meta-label">阅读时长:</span><span>16分钟</span></span><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title=""><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">浏览量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="container post-content" id="article-container"><div id="post-outdate-notice" data="{&quot;limitDay&quot;:365,&quot;messagePrev&quot;:&quot;It has been&quot;,&quot;messageNext&quot;:&quot;days since the last update, the content of the article may be outdated.&quot;,&quot;postUpdate&quot;:&quot;2025-08-06 10:36:34&quot;}" hidden></div><p><strong>Content</strong>：Math<br>
 <strong>Date</strong>：2025.7.20</p>
 <span id="more"></span>
 <h2 id="内容">内容</h2>
@@ -321,16 +231,18 @@
 <h2 id="具体内容">具体内容</h2>
 <h3 id="矩阵">矩阵</h3>
 <h4 id="矩阵定义">矩阵定义</h4>
-<div class="note note-info">
-            <h4 id="定义">定义</h4><p>将一些元素排列成若干行，每行放上相同数量的元素，就是一个矩阵 (Matrix)。<br>对于矩阵 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi></mrow><annotation encoding="application/x-tex">A</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal">A</span></span></span></span> 的第 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>i</mi></mrow><annotation encoding="application/x-tex">i</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6595em;"></span><span class="mord mathnormal">i</span></span></span></span> 行，第 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>j</mi></mrow><annotation encoding="application/x-tex">j</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.854em;vertical-align:-0.1944em;"></span><span class="mord mathnormal" style="margin-right:0.05724em;">j</span></span></span></span> 列，我们记作 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>a</mi><mrow><mi>i</mi><mo separator="true">,</mo><mi>j</mi></mrow></msub></mrow><annotation encoding="application/x-tex">a_{i,j}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.7167em;vertical-align:-0.2861em;"></span><span class="mord"><span class="mord mathnormal">a</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3117em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">i</span><span class="mpunct mtight">,</span><span class="mord mathnormal mtight" style="margin-right:0.05724em;">j</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.2861em;"><span></span></span></span></span></span></span></span></span></span> 或 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>a</mi><mrow><mi>i</mi><mi>j</mi></mrow></msub></mrow><annotation encoding="application/x-tex">a_{ij}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.7167em;vertical-align:-0.2861em;"></span><span class="mord"><span class="mord mathnormal">a</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3117em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight" style="margin-right:0.05724em;">ij</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.2861em;"><span></span></span></span></span></span></span></span></span></span>。<br>对于举证 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>A</mi><mrow><mi>m</mi><mo>×</mo><mi>n</mi></mrow></msub></mrow><annotation encoding="application/x-tex">A_{m \times n}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8917em;vertical-align:-0.2083em;"></span><span class="mord"><span class="mord mathnormal">A</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.2583em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">m</span><span class="mbin mtight">×</span><span class="mord mathnormal mtight">n</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.2083em;"><span></span></span></span></span></span></span></span></span></span>，如果 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>m</mi><mo>=</mo><mi>n</mi></mrow><annotation encoding="application/x-tex">m = n</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.4306em;"></span><span class="mord mathnormal">m</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.4306em;"></span><span class="mord mathnormal">n</span></span></span></span>，则我们称矩阵 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi></mrow><annotation encoding="application/x-tex">A</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal">A</span></span></span></span> 为方阵。</p>
-          </div>
+<div class="note info simple"><h4 id="定义">定义</h4>
+<p>将一些元素排列成若干行，每行放上相同数量的元素，就是一个矩阵 (Matrix)。<br>
+对于矩阵 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi></mrow><annotation encoding="application/x-tex">A</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal">A</span></span></span></span> 的第 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>i</mi></mrow><annotation encoding="application/x-tex">i</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6595em;"></span><span class="mord mathnormal">i</span></span></span></span> 行，第 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>j</mi></mrow><annotation encoding="application/x-tex">j</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.854em;vertical-align:-0.1944em;"></span><span class="mord mathnormal" style="margin-right:0.05724em;">j</span></span></span></span> 列，我们记作 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>a</mi><mrow><mi>i</mi><mo separator="true">,</mo><mi>j</mi></mrow></msub></mrow><annotation encoding="application/x-tex">a_{i,j}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.7167em;vertical-align:-0.2861em;"></span><span class="mord"><span class="mord mathnormal">a</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3117em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">i</span><span class="mpunct mtight">,</span><span class="mord mathnormal mtight" style="margin-right:0.05724em;">j</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.2861em;"><span></span></span></span></span></span></span></span></span></span> 或 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>a</mi><mrow><mi>i</mi><mi>j</mi></mrow></msub></mrow><annotation encoding="application/x-tex">a_{ij}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.7167em;vertical-align:-0.2861em;"></span><span class="mord"><span class="mord mathnormal">a</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3117em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight" style="margin-right:0.05724em;">ij</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.2861em;"><span></span></span></span></span></span></span></span></span></span>。<br>
+对于举证 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>A</mi><mrow><mi>m</mi><mo>×</mo><mi>n</mi></mrow></msub></mrow><annotation encoding="application/x-tex">A_{m \times n}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8917em;vertical-align:-0.2083em;"></span><span class="mord"><span class="mord mathnormal">A</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.2583em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">m</span><span class="mbin mtight">×</span><span class="mord mathnormal mtight">n</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.2083em;"><span></span></span></span></span></span></span></span></span></span>，如果 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>m</mi><mo>=</mo><mi>n</mi></mrow><annotation encoding="application/x-tex">m = n</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.4306em;"></span><span class="mord mathnormal">m</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.4306em;"></span><span class="mord mathnormal">n</span></span></span></span>，则我们称矩阵 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi></mrow><annotation encoding="application/x-tex">A</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal">A</span></span></span></span> 为方阵。</p>
+</div>
 <h4 id="矩阵基本操作">矩阵基本操作</h4>
 <ol>
 <li>矩阵加法：对于矩阵 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>A</mi><mrow><mi>m</mi><mo>×</mo><mi>n</mi></mrow></msub></mrow><annotation encoding="application/x-tex">A_{m \times n}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8917em;vertical-align:-0.2083em;"></span><span class="mord"><span class="mord mathnormal">A</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.2583em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">m</span><span class="mbin mtight">×</span><span class="mord mathnormal mtight">n</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.2083em;"><span></span></span></span></span></span></span></span></span></span>, <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>B</mi><mrow><mi>m</mi><mo>×</mo><mi>n</mi></mrow></msub></mrow><annotation encoding="application/x-tex">B_{m \times n}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8917em;vertical-align:-0.2083em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.05017em;">B</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.2583em;"><span style="top:-2.55em;margin-left:-0.0502em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">m</span><span class="mbin mtight">×</span><span class="mord mathnormal mtight">n</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.2083em;"><span></span></span></span></span></span></span></span></span></span>, 我们定义矩阵加法为：<p class="katex-block "><span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><msub><mi>C</mi><mrow><mi>i</mi><mo separator="true">,</mo><mi>j</mi></mrow></msub><mo>=</mo><msub><mi>A</mi><mrow><mi>i</mi><mo separator="true">,</mo><mi>j</mi></mrow></msub><mo>+</mo><msub><mi>B</mi><mrow><mi>i</mi><mo separator="true">,</mo><mi>j</mi></mrow></msub></mrow><annotation encoding="application/x-tex">   	 C_{i,j} = A_{i, j} + B_{i, j}
 </annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.9694em;vertical-align:-0.2861em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.07153em;">C</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3117em;"><span style="top:-2.55em;margin-left:-0.0715em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">i</span><span class="mpunct mtight">,</span><span class="mord mathnormal mtight" style="margin-right:0.05724em;">j</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.2861em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.9694em;vertical-align:-0.2861em;"></span><span class="mord"><span class="mord mathnormal">A</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3117em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">i</span><span class="mpunct mtight">,</span><span class="mord mathnormal mtight" style="margin-right:0.05724em;">j</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.2861em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.9694em;vertical-align:-0.2861em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.05017em;">B</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3117em;"><span style="top:-2.55em;margin-left:-0.0502em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">i</span><span class="mpunct mtight">,</span><span class="mord mathnormal mtight" style="margin-right:0.05724em;">j</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.2861em;"><span></span></span></span></span></span></span></span></span></span></span></p>
-即矩阵对应位置上的元素之和。   <div class="note note-warning">
-            <h4 id="注意">注意</h4><p>只有当两个矩阵的大小相同时，才可以进行矩阵加法。</p>
-          </div>
+即矩阵对应位置上的元素之和。   <div class="note warning simple"><h4 id="注意">注意</h4>
+<p>只有当两个矩阵的大小相同时，才可以进行矩阵加法。</p>
+</div>
 </li>
 <li>标量乘法：对于矩阵 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>A</mi><mrow><mi>m</mi><mo>×</mo><mi>n</mi></mrow></msub></mrow><annotation encoding="application/x-tex">A_{m \times n}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8917em;vertical-align:-0.2083em;"></span><span class="mord"><span class="mord mathnormal">A</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.2583em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">m</span><span class="mbin mtight">×</span><span class="mord mathnormal mtight">n</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.2083em;"><span></span></span></span></span></span></span></span></span></span> 和标量 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>x</mi></mrow><annotation encoding="application/x-tex">x</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.4306em;"></span><span class="mord mathnormal">x</span></span></span></span>, 我们定义矩阵的标量乘法为：</li>
 </ol>
@@ -353,13 +265,13 @@
 <li>矩阵乘法具备分配律：<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false">(</mo><mi>A</mi><mo>+</mo><mi>B</mi><mo stretchy="false">)</mo><mi>C</mi><mo>=</mo><mi>A</mi><mi>C</mi><mo>+</mo><mi>B</mi><mi>C</mi></mrow><annotation encoding="application/x-tex">(A + B)C = AC + BC</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">(</span><span class="mord mathnormal">A</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.05017em;">B</span><span class="mclose">)</span><span class="mord mathnormal" style="margin-right:0.07153em;">C</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.7667em;vertical-align:-0.0833em;"></span><span class="mord mathnormal">A</span><span class="mord mathnormal" style="margin-right:0.07153em;">C</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.07153em;">BC</span></span></span></span>；</li>
 <li>矩阵乘法具有结合律：<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false">(</mo><mi>A</mi><mi>B</mi><mo stretchy="false">)</mo><mi>C</mi><mo>=</mo><mi>A</mi><mo stretchy="false">(</mo><mi>B</mi><mi>C</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">(AB)C = A(BC)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">(</span><span class="mord mathnormal">A</span><span class="mord mathnormal" style="margin-right:0.05017em;">B</span><span class="mclose">)</span><span class="mord mathnormal" style="margin-right:0.07153em;">C</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal">A</span><span class="mopen">(</span><span class="mord mathnormal" style="margin-right:0.07153em;">BC</span><span class="mclose">)</span></span></span></span>;</li>
 </ul>
- <div class="note note-warning">
-            <h4 id="注意">注意</h4><p>矩阵乘法不具备交换律！</p>
-          </div>
+ <div class="note warning simple"><h4 id="注意">注意</h4>
+<p>矩阵乘法不具备交换律！</p>
+</div>
 </li>
-<li>矩阵乘法单位元：<div class="note note-info">
-            <h4 id="矩阵乘法单位元">矩阵乘法单位元</h4><p>矩阵的乘法单位元 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>I</mi></mrow><annotation encoding="application/x-tex">I</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.07847em;">I</span></span></span></span> 为矩阵主对角线上全部为 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>1</mn></mrow><annotation encoding="application/x-tex">1</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">1</span></span></span></span>，其余均为 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>0</mn></mrow><annotation encoding="application/x-tex">0</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">0</span></span></span></span> 的 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>0</mn><mi mathvariant="normal">/</mi><mn>1</mn></mrow><annotation encoding="application/x-tex">0/1</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord">0/1</span></span></span></span> 矩阵。</p>
-          </div>
+<li>矩阵乘法单位元：<div class="note info simple"><h4 id="矩阵乘法单位元">矩阵乘法单位元</h4>
+<p>矩阵的乘法单位元 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>I</mi></mrow><annotation encoding="application/x-tex">I</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.07847em;">I</span></span></span></span> 为矩阵主对角线上全部为 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>1</mn></mrow><annotation encoding="application/x-tex">1</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">1</span></span></span></span>，其余均为 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>0</mn></mrow><annotation encoding="application/x-tex">0</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">0</span></span></span></span> 的 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>0</mn><mi mathvariant="normal">/</mi><mn>1</mn></mrow><annotation encoding="application/x-tex">0/1</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord">0/1</span></span></span></span> 矩阵。</p>
+</div>
 </li>
 <li>矩阵的逆：如果对于矩阵 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi></mrow><annotation encoding="application/x-tex">A</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal">A</span></span></span></span> 存在矩阵 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>B</mi></mrow><annotation encoding="application/x-tex">B</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.05017em;">B</span></span></span></span>，使得 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi><mi>B</mi><mo>=</mo><mi>I</mi></mrow><annotation encoding="application/x-tex">AB = I</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal">A</span><span class="mord mathnormal" style="margin-right:0.05017em;">B</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.07847em;">I</span></span></span></span>，则 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>B</mi></mrow><annotation encoding="application/x-tex">B</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.05017em;">B</span></span></span></span> 称作矩阵 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi></mrow><annotation encoding="application/x-tex">A</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal">A</span></span></span></span> 的逆元，记作 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi>A</mi><mrow><mo>−</mo><mn>1</mn></mrow></msup></mrow><annotation encoding="application/x-tex">A^{-1}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8141em;"></span><span class="mord"><span class="mord mathnormal">A</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">−</span><span class="mord mtight">1</span></span></span></span></span></span></span></span></span></span></span></span>。<br>
 对于逆元我们可以使用高斯消元求解。我们对矩阵 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false">(</mo><mi>A</mi><mtext> </mtext><mi mathvariant="normal">∣</mi><mtext> </mtext><mi>I</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">(A \ | \ I)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">(</span><span class="mord mathnormal">A</span><span class="mspace"> </span><span class="mord">∣</span><span class="mspace"> </span><span class="mord mathnormal" style="margin-right:0.07847em;">I</span><span class="mclose">)</span></span></span></span> 进行高斯消元，最后会得到 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false">(</mo><mi>I</mi><mtext> </mtext><mi mathvariant="normal">∣</mi><mtext> </mtext><mi>B</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">(I \ | \ B)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">(</span><span class="mord mathnormal" style="margin-right:0.07847em;">I</span><span class="mspace"> </span><span class="mord">∣</span><span class="mspace"> </span><span class="mord mathnormal" style="margin-right:0.05017em;">B</span><span class="mclose">)</span></span></span></span> (若无法把左边化为乘法单位元，则矩阵 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi></mrow><annotation encoding="application/x-tex">A</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal">A</span></span></span></span> 不存在逆元)，则 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>B</mi></mrow><annotation encoding="application/x-tex">B</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.05017em;">B</span></span></span></span> 就为 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi></mrow><annotation encoding="application/x-tex">A</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal">A</span></span></span></span> 的逆元。</li>
@@ -414,269 +326,12 @@ l0,-1944c-2,-159.3,-10,-310.7,-24,-454c-53.3,-528,-210,-949.7,
 <li>否则原线性方程组有唯一解。</li>
 </ul>
 <p><a target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/P3389">洛谷 P3389</a> <em><strong>Code</strong></em></p>
- <div class="code-wrapper"><pre><code class="hljs cpp"> <span class="hljs-meta">#<span class="hljs-keyword">include</span> <span class="hljs-string">&lt;bits/stdc++.h&gt;</span></span>
-
-<span class="hljs-keyword">using</span> <span class="hljs-keyword">namespace</span> std;
-
-<span class="hljs-keyword">constexpr</span> <span class="hljs-type">int</span> N = <span class="hljs-number">105</span>;
-<span class="hljs-keyword">constexpr</span> <span class="hljs-type">double</span> eps = <span class="hljs-number">1e-8</span>;
-
-<span class="hljs-keyword">class</span> <span class="hljs-title class_">Matrix</span> &#123;
-    <span class="hljs-type">double</span> mat[N][N] = &#123;&#123;<span class="hljs-number">0</span>&#125;&#125;;
-    <span class="hljs-type">int</span> size = <span class="hljs-number">0</span>;
-
-    <span class="hljs-keyword">public</span>:
-    <span class="hljs-built_in">Matrix</span>() = <span class="hljs-keyword">default</span>;
-
-    <span class="hljs-function"><span class="hljs-type">void</span> <span class="hljs-title">input_matrix</span><span class="hljs-params">()</span> </span>&#123;
-        cin &gt;&gt; size;
-
-        <span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> i = <span class="hljs-number">0</span>; i &lt; size; i++)
-            <span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> j = <span class="hljs-number">0</span>; j &lt;= size; j++)
-                cin &gt;&gt; mat[i][j];
-    &#125;
-
-    <span class="hljs-function"><span class="hljs-type">int</span> <span class="hljs-title">guess</span><span class="hljs-params">()</span> </span>&#123;
-        <span class="hljs-type">int</span> i, j, r = <span class="hljs-number">0</span>;
-        <span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> c = <span class="hljs-number">0</span>; c &lt; size; c++) &#123;
-            <span class="hljs-type">int</span> t = r;
-            <span class="hljs-keyword">for</span> (i = t + <span class="hljs-number">1</span>; i &lt; size; i++) &#123;
-                <span class="hljs-keyword">if</span> (<span class="hljs-built_in">abs</span>(mat[i][c]) &gt; <span class="hljs-built_in">abs</span>(mat[t][c])) &#123;
-                    t = i;
-                &#125;
-            &#125;
-
-            <span class="hljs-keyword">if</span> (<span class="hljs-built_in">abs</span>(mat[t][c]) &lt; eps) <span class="hljs-keyword">continue</span>;
-
-            <span class="hljs-keyword">for</span> (i = c; i &lt;= size; i++) &#123;
-                <span class="hljs-built_in">swap</span>(mat[t][i], mat[r][i]);
-            &#125;
-
-            <span class="hljs-keyword">for</span> (i = size; i &gt;= c; i--) &#123;
-                mat[r][i] /= mat[r][c];
-            &#125;
-
-            <span class="hljs-keyword">for</span> (i = r + <span class="hljs-number">1</span>; i &lt; size; i++) &#123;
-                <span class="hljs-keyword">if</span> (<span class="hljs-built_in">abs</span>(mat[i][c]) &gt; eps) &#123;
-                    <span class="hljs-keyword">for</span> (j = size; j &gt;= c; j--) &#123;
-                        mat[i][j] -= mat[r][j] * mat[i][c];
-                    &#125;
-                &#125;
-            &#125;
-
-            r++;
-        &#125;
-
-        <span class="hljs-keyword">if</span> (r &lt; size) &#123;
-            <span class="hljs-keyword">return</span> <span class="hljs-number">-1</span>;
-        &#125;
-
-        <span class="hljs-keyword">for</span> (i = size - <span class="hljs-number">1</span>; i &gt;= <span class="hljs-number">0</span>; i--) &#123;
-            <span class="hljs-keyword">for</span> (j = i + <span class="hljs-number">1</span>; j &lt; size; j++) &#123;
-                mat[i][size] -= mat[i][j] * mat[j][size];
-            &#125;
-        &#125;
-
-        <span class="hljs-keyword">return</span> <span class="hljs-number">1</span>;
-    &#125;
-
-    <span class="hljs-function"><span class="hljs-type">int</span> <span class="hljs-title">get_size</span><span class="hljs-params">()</span> <span class="hljs-type">const</span> </span>&#123; <span class="hljs-keyword">return</span> size; &#125;
-
-    <span class="hljs-function"><span class="hljs-type">double</span> <span class="hljs-title">get_solution</span><span class="hljs-params">(<span class="hljs-type">int</span> i)</span> <span class="hljs-type">const</span> </span>&#123; <span class="hljs-keyword">return</span> mat[i][size]; &#125;
-&#125;;
-
-<span class="hljs-function"><span class="hljs-type">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span> </span>&#123;
-    ios::<span class="hljs-built_in">sync_with_stdio</span>(<span class="hljs-literal">false</span>);
-    cin.<span class="hljs-built_in">tie</span>(<span class="hljs-literal">nullptr</span>);
-    cout.<span class="hljs-built_in">tie</span>(<span class="hljs-literal">nullptr</span>);
-
-    Matrix matrix;
-
-    matrix.<span class="hljs-built_in">input_matrix</span>();
-
-    <span class="hljs-keyword">if</span> (matrix.<span class="hljs-built_in">guess</span>() == <span class="hljs-number">-1</span>) &#123;
-        cout &lt;&lt; <span class="hljs-string">&quot;No Solution\n&quot;</span>;
-    &#125; <span class="hljs-keyword">else</span> &#123;
-        <span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> i = <span class="hljs-number">0</span>; i &lt; matrix.<span class="hljs-built_in">get_size</span>(); i++) &#123;
-            <span class="hljs-type">double</span> answer = matrix.<span class="hljs-built_in">get_solution</span>(i);
-            <span class="hljs-keyword">if</span> (<span class="hljs-built_in">abs</span>(answer) &lt; eps) &#123;
-                answer = <span class="hljs-number">0</span>;
-            &#125; <span class="hljs-keyword">else</span> &#123;
-                answer = <span class="hljs-built_in">round</span>(answer * <span class="hljs-number">100.00</span>) / <span class="hljs-number">100.00</span>;
-            &#125;
-
-            cout &lt;&lt; <span class="hljs-built_in">setiosflags</span>(ios::fixed) &lt;&lt; <span class="hljs-built_in">setprecision</span>(<span class="hljs-number">2</span>) &lt;&lt; answer &lt;&lt; <span class="hljs-string">&quot;\n&quot;</span>;
-        &#125;
-    &#125;
-
-    <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;
-&#125;</code></pre></div>
+ <figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"> <span class="meta">#<span class="keyword">include</span> <span class="string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="keyword">constexpr</span> <span class="type">int</span> N = <span class="number">105</span>;</span><br><span class="line"><span class="keyword">constexpr</span> <span class="type">double</span> eps = <span class="number">1e-8</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">Matrix</span> &#123;</span><br><span class="line">    <span class="type">double</span> mat[N][N] = &#123;&#123;<span class="number">0</span>&#125;&#125;;</span><br><span class="line">    <span class="type">int</span> size = <span class="number">0</span>;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span>:</span><br><span class="line">    <span class="built_in">Matrix</span>() = <span class="keyword">default</span>;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="type">void</span> <span class="title">input_matrix</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        cin &gt;&gt; size;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; size; i++)</span><br><span class="line">            <span class="keyword">for</span> (<span class="type">int</span> j = <span class="number">0</span>; j &lt;= size; j++)</span><br><span class="line">                cin &gt;&gt; mat[i][j];</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="type">int</span> <span class="title">guess</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="type">int</span> i, j, r = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> c = <span class="number">0</span>; c &lt; size; c++) &#123;</span><br><span class="line">            <span class="type">int</span> t = r;</span><br><span class="line">            <span class="keyword">for</span> (i = t + <span class="number">1</span>; i &lt; size; i++) &#123;</span><br><span class="line">                <span class="keyword">if</span> (<span class="built_in">abs</span>(mat[i][c]) &gt; <span class="built_in">abs</span>(mat[t][c])) &#123;</span><br><span class="line">                    t = i;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line"></span><br><span class="line">            <span class="keyword">if</span> (<span class="built_in">abs</span>(mat[t][c]) &lt; eps) <span class="keyword">continue</span>;</span><br><span class="line"></span><br><span class="line">            <span class="keyword">for</span> (i = c; i &lt;= size; i++) &#123;</span><br><span class="line">                <span class="built_in">swap</span>(mat[t][i], mat[r][i]);</span><br><span class="line">            &#125;</span><br><span class="line"></span><br><span class="line">            <span class="keyword">for</span> (i = size; i &gt;= c; i--) &#123;</span><br><span class="line">                mat[r][i] /= mat[r][c];</span><br><span class="line">            &#125;</span><br><span class="line"></span><br><span class="line">            <span class="keyword">for</span> (i = r + <span class="number">1</span>; i &lt; size; i++) &#123;</span><br><span class="line">                <span class="keyword">if</span> (<span class="built_in">abs</span>(mat[i][c]) &gt; eps) &#123;</span><br><span class="line">                    <span class="keyword">for</span> (j = size; j &gt;= c; j--) &#123;</span><br><span class="line">                        mat[i][j] -= mat[r][j] * mat[i][c];</span><br><span class="line">                    &#125;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line"></span><br><span class="line">            r++;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">if</span> (r &lt; size) &#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="number">-1</span>;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">for</span> (i = size - <span class="number">1</span>; i &gt;= <span class="number">0</span>; i--) &#123;</span><br><span class="line">            <span class="keyword">for</span> (j = i + <span class="number">1</span>; j &lt; size; j++) &#123;</span><br><span class="line">                mat[i][size] -= mat[i][j] * mat[j][size];</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="type">int</span> <span class="title">get_size</span><span class="params">()</span> <span class="type">const</span> </span>&#123; <span class="keyword">return</span> size; &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="type">double</span> <span class="title">get_solution</span><span class="params">(<span class="type">int</span> i)</span> <span class="type">const</span> </span>&#123; <span class="keyword">return</span> mat[i][size]; &#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    ios::<span class="built_in">sync_with_stdio</span>(<span class="literal">false</span>);</span><br><span class="line">    cin.<span class="built_in">tie</span>(<span class="literal">nullptr</span>);</span><br><span class="line">    cout.<span class="built_in">tie</span>(<span class="literal">nullptr</span>);</span><br><span class="line"></span><br><span class="line">    Matrix matrix;</span><br><span class="line"></span><br><span class="line">    matrix.<span class="built_in">input_matrix</span>();</span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span> (matrix.<span class="built_in">guess</span>() == <span class="number">-1</span>) &#123;</span><br><span class="line">        cout &lt;&lt; <span class="string">&quot;No Solution\n&quot;</span>;</span><br><span class="line">    &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; matrix.<span class="built_in">get_size</span>(); i++) &#123;</span><br><span class="line">            <span class="type">double</span> answer = matrix.<span class="built_in">get_solution</span>(i);</span><br><span class="line">            <span class="keyword">if</span> (<span class="built_in">abs</span>(answer) &lt; eps) &#123;</span><br><span class="line">                answer = <span class="number">0</span>;</span><br><span class="line">            &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">                answer = <span class="built_in">round</span>(answer * <span class="number">100.00</span>) / <span class="number">100.00</span>;</span><br><span class="line">            &#125;</span><br><span class="line"></span><br><span class="line">            cout &lt;&lt; <span class="built_in">setiosflags</span>(ios::fixed) &lt;&lt; <span class="built_in">setprecision</span>(<span class="number">2</span>) &lt;&lt; answer &lt;&lt; <span class="string">&quot;\n&quot;</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p><a target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/P2455">洛谷 P2455</a> <em><strong>Code</strong></em></p>
-<div class="code-wrapper"><pre><code class="hljs cpp"><span class="hljs-meta">#<span class="hljs-keyword">include</span> <span class="hljs-string">&lt;bits/stdc++.h&gt;</span></span>
-
-<span class="hljs-keyword">using</span> <span class="hljs-keyword">namespace</span> std;
-
-<span class="hljs-type">const</span> <span class="hljs-type">int</span> N = <span class="hljs-number">110</span>;
-<span class="hljs-type">const</span> <span class="hljs-type">double</span> eps = <span class="hljs-number">1e-8</span>;
-<span class="hljs-type">int</span> n;
-<span class="hljs-type">double</span> a[N][N];
-
-<span class="hljs-function"><span class="hljs-type">int</span> <span class="hljs-title">gauss</span><span class="hljs-params">()</span> </span>&#123;
-    <span class="hljs-type">int</span> i, j, c, r = <span class="hljs-number">0</span>;
-    
-    <span class="hljs-keyword">for</span> (c = <span class="hljs-number">0</span>; c &lt; n; c ++) &#123;
-        <span class="hljs-type">int</span> t = r;
-        <span class="hljs-keyword">for</span> (i = t + <span class="hljs-number">1</span>; i &lt; n; i ++)
-            <span class="hljs-keyword">if</span> (<span class="hljs-built_in">abs</span>(a[i][c]) &gt; <span class="hljs-built_in">abs</span>(a[t][c])) t = i;
-        
-        <span class="hljs-keyword">if</span> (<span class="hljs-built_in">abs</span>(a[t][c]) &lt; eps) <span class="hljs-keyword">continue</span>;
-        
-        <span class="hljs-keyword">for</span> (i = c; i &lt;= n; i ++) <span class="hljs-built_in">swap</span>(a[t][i], a[r][i]);
-        
-        <span class="hljs-keyword">for</span> (i = n; i &gt;= c; i --) a[r][i] /= a[r][c];
-        
-        <span class="hljs-keyword">for</span> (i = r + <span class="hljs-number">1</span>; i &lt; n; i ++)
-            <span class="hljs-keyword">if</span> (<span class="hljs-built_in">abs</span>(a[i][c]) &gt; eps)
-                <span class="hljs-keyword">for</span> (j = n; j &gt;= c; j --)
-                    a[i][j] -= a[r][j] * a[i][c];
-        
-        r ++;
-    &#125;
-    
-    <span class="hljs-keyword">if</span> (r &lt; n) &#123;
-        <span class="hljs-keyword">for</span> (i = r; i &lt; n; i ++)
-            <span class="hljs-keyword">if</span> (<span class="hljs-built_in">abs</span>(a[i][n]) &gt; eps) <span class="hljs-keyword">return</span> <span class="hljs-number">2</span>;
-        <span class="hljs-keyword">return</span> <span class="hljs-number">1</span>;
-    &#125;
-    
-    <span class="hljs-keyword">for</span> (i = n - <span class="hljs-number">1</span>; i &gt;= <span class="hljs-number">0</span>; i --)
-        <span class="hljs-keyword">for</span> (j = i + <span class="hljs-number">1</span>; j &lt; n; j ++)
-            a[i][n] -= a[i][j] * a[j][n];
-            
-    <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;
-&#125;
-
-<span class="hljs-function"><span class="hljs-type">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span> </span>&#123;
-    <span class="hljs-built_in">scanf</span>(<span class="hljs-string">&quot;%d&quot;</span>, &amp;n);
-    
-    <span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> i = <span class="hljs-number">0</span>; i &lt; n; i ++) &#123;
-        <span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> j = <span class="hljs-number">0</span>; j &lt;= n; j ++) &#123;
-            <span class="hljs-built_in">scanf</span>(<span class="hljs-string">&quot;%lf&quot;</span>, &amp;a[i][j]);
-        &#125;
-    &#125;
-    
-    <span class="hljs-type">int</span> t = <span class="hljs-built_in">gauss</span>();
-    <span class="hljs-keyword">if</span> (t == <span class="hljs-number">2</span>) <span class="hljs-built_in">puts</span>(<span class="hljs-string">&quot;-1&quot;</span>);
-    <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (t == <span class="hljs-number">1</span>) <span class="hljs-built_in">puts</span>(<span class="hljs-string">&quot;0&quot;</span>);
-    <span class="hljs-keyword">else</span> &#123;
-        <span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> i = <span class="hljs-number">0</span>; i &lt; n; i ++) &#123;
-            <span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;x%d=&quot;</span>, i + <span class="hljs-number">1</span>);
-            <span class="hljs-keyword">if</span> (<span class="hljs-built_in">abs</span>(a[i][n]) &lt; eps) a[i][n] = <span class="hljs-number">0</span>;
-            <span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;%.2lf\n&quot;</span>, a[i][n]);
-        &#125;
-    &#125;
-    
-    <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;
-&#125;</code></pre></div>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="type">const</span> <span class="type">int</span> N = <span class="number">110</span>;</span><br><span class="line"><span class="type">const</span> <span class="type">double</span> eps = <span class="number">1e-8</span>;</span><br><span class="line"><span class="type">int</span> n;</span><br><span class="line"><span class="type">double</span> a[N][N];</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">gauss</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="type">int</span> i, j, c, r = <span class="number">0</span>;</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">for</span> (c = <span class="number">0</span>; c &lt; n; c ++) &#123;</span><br><span class="line">        <span class="type">int</span> t = r;</span><br><span class="line">        <span class="keyword">for</span> (i = t + <span class="number">1</span>; i &lt; n; i ++)</span><br><span class="line">            <span class="keyword">if</span> (<span class="built_in">abs</span>(a[i][c]) &gt; <span class="built_in">abs</span>(a[t][c])) t = i;</span><br><span class="line">        </span><br><span class="line">        <span class="keyword">if</span> (<span class="built_in">abs</span>(a[t][c]) &lt; eps) <span class="keyword">continue</span>;</span><br><span class="line">        </span><br><span class="line">        <span class="keyword">for</span> (i = c; i &lt;= n; i ++) <span class="built_in">swap</span>(a[t][i], a[r][i]);</span><br><span class="line">        </span><br><span class="line">        <span class="keyword">for</span> (i = n; i &gt;= c; i --) a[r][i] /= a[r][c];</span><br><span class="line">        </span><br><span class="line">        <span class="keyword">for</span> (i = r + <span class="number">1</span>; i &lt; n; i ++)</span><br><span class="line">            <span class="keyword">if</span> (<span class="built_in">abs</span>(a[i][c]) &gt; eps)</span><br><span class="line">                <span class="keyword">for</span> (j = n; j &gt;= c; j --)</span><br><span class="line">                    a[i][j] -= a[r][j] * a[i][c];</span><br><span class="line">        </span><br><span class="line">        r ++;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">if</span> (r &lt; n) &#123;</span><br><span class="line">        <span class="keyword">for</span> (i = r; i &lt; n; i ++)</span><br><span class="line">            <span class="keyword">if</span> (<span class="built_in">abs</span>(a[i][n]) &gt; eps) <span class="keyword">return</span> <span class="number">2</span>;</span><br><span class="line">        <span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">for</span> (i = n - <span class="number">1</span>; i &gt;= <span class="number">0</span>; i --)</span><br><span class="line">        <span class="keyword">for</span> (j = i + <span class="number">1</span>; j &lt; n; j ++)</span><br><span class="line">            a[i][n] -= a[i][j] * a[j][n];</span><br><span class="line">            </span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="built_in">scanf</span>(<span class="string">&quot;%d&quot;</span>, &amp;n);</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; n; i ++) &#123;</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> j = <span class="number">0</span>; j &lt;= n; j ++) &#123;</span><br><span class="line">            <span class="built_in">scanf</span>(<span class="string">&quot;%lf&quot;</span>, &amp;a[i][j]);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="type">int</span> t = <span class="built_in">gauss</span>();</span><br><span class="line">    <span class="keyword">if</span> (t == <span class="number">2</span>) <span class="built_in">puts</span>(<span class="string">&quot;-1&quot;</span>);</span><br><span class="line">    <span class="keyword">else</span> <span class="keyword">if</span> (t == <span class="number">1</span>) <span class="built_in">puts</span>(<span class="string">&quot;0&quot;</span>);</span><br><span class="line">    <span class="keyword">else</span> &#123;</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; n; i ++) &#123;</span><br><span class="line">            <span class="built_in">printf</span>(<span class="string">&quot;x%d=&quot;</span>, i + <span class="number">1</span>);</span><br><span class="line">            <span class="keyword">if</span> (<span class="built_in">abs</span>(a[i][n]) &lt; eps) a[i][n] = <span class="number">0</span>;</span><br><span class="line">            <span class="built_in">printf</span>(<span class="string">&quot;%.2lf\n&quot;</span>, a[i][n]);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>除了高斯消元外，我们还有另外一种消元的方式——高斯-约旦消元，下面给出代码。</p>
 <p><a target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/P3389">洛谷 P3389</a> <em><strong>Code</strong></em></p>
-<div class="code-wrapper"><pre><code class="hljs cpp"><span class="hljs-meta">#<span class="hljs-keyword">include</span> <span class="hljs-string">&lt;bits/stdc++.h&gt;</span></span>
-
-<span class="hljs-keyword">using</span> <span class="hljs-keyword">namespace</span> std;
-
-<span class="hljs-keyword">constexpr</span> <span class="hljs-type">int</span> N = <span class="hljs-number">105</span>;
-<span class="hljs-keyword">constexpr</span> <span class="hljs-type">double</span> eps = <span class="hljs-number">1e-8</span>;
-
-<span class="hljs-keyword">class</span> <span class="hljs-title class_">Matrix</span> &#123;
-    <span class="hljs-type">double</span> mat[N][N] = &#123;&#123;<span class="hljs-number">0</span>&#125;&#125;;
-    <span class="hljs-type">int</span> size = <span class="hljs-number">0</span>;
-
-    <span class="hljs-keyword">public</span>:
-    <span class="hljs-built_in">Matrix</span>() = <span class="hljs-keyword">default</span>;
-
-    <span class="hljs-function"><span class="hljs-type">void</span> <span class="hljs-title">input_matrix</span><span class="hljs-params">()</span> </span>&#123;
-        cin &gt;size;
-
-        <span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> i = <span class="hljs-number">0</span>; i &lt; size; i++)
-            <span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> j = <span class="hljs-number">0</span>; j &lt;= size; j++)
-                cin &gt;mat[i][j];
-    &#125;
-
-    <span class="hljs-function"><span class="hljs-type">int</span> <span class="hljs-title">guess</span><span class="hljs-params">()</span> </span>&#123;
-        <span class="hljs-type">int</span> i, j, r = <span class="hljs-number">0</span>;
-        <span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> c = <span class="hljs-number">0</span>; c &lt; size; c++) &#123;
-            <span class="hljs-type">int</span> t = r;
-            <span class="hljs-keyword">for</span> (i = t + <span class="hljs-number">1</span>; i &lt; size; i++) &#123;
-                <span class="hljs-keyword">if</span> (<span class="hljs-built_in">abs</span>(mat[i][c]) <span class="hljs-built_in">abs</span>(mat[t][c])) &#123;
-                    t = i;
-                &#125;
-            &#125;
-
-            <span class="hljs-keyword">if</span> (<span class="hljs-built_in">abs</span>(mat[t][c]) &lt; eps) <span class="hljs-keyword">continue</span>;
-
-            <span class="hljs-keyword">for</span> (i = c; i &lt;= size; i++) &#123;
-                <span class="hljs-built_in">swap</span>(mat[t][i], mat[r][i]);
-            &#125;
-
-            <span class="hljs-keyword">for</span> (i = size; i &gt;= c; i--) &#123;
-                mat[r][i] /= mat[r][c];
-            &#125;
-
-            <span class="hljs-keyword">for</span> (i = r + <span class="hljs-number">1</span>; i &lt; size; i++) &#123;
-                <span class="hljs-keyword">if</span> (<span class="hljs-built_in">abs</span>(mat[i][c]) eps) &#123;
-                    <span class="hljs-keyword">for</span> (j = size; j &gt;= c; j--) &#123;
-                        mat[i][j] -= mat[r][j] * mat[i][c];
-                    &#125;
-                &#125;
-            &#125;
-
-            r++;
-        &#125;
-
-        <span class="hljs-keyword">if</span> (r &lt; size) &#123;
-            <span class="hljs-keyword">return</span> <span class="hljs-number">-1</span>;
-        &#125;
-
-        <span class="hljs-keyword">for</span> (i = size - <span class="hljs-number">1</span>; i &gt;= <span class="hljs-number">0</span>; i--) &#123;
-            <span class="hljs-keyword">for</span> (j = i + <span class="hljs-number">1</span>; j &lt; size; j++) &#123;
-                mat[i][size] -= mat[i][j] * mat[j][size];
-            &#125;
-        &#125;
-
-        <span class="hljs-keyword">return</span> <span class="hljs-number">1</span>;
-    &#125;
-
-    <span class="hljs-function"><span class="hljs-type">int</span> <span class="hljs-title">get_size</span><span class="hljs-params">()</span> <span class="hljs-type">const</span> </span>&#123; <span class="hljs-keyword">return</span> size; &#125;
-
-    <span class="hljs-function"><span class="hljs-type">double</span> <span class="hljs-title">get_solution</span><span class="hljs-params">(<span class="hljs-type">int</span> i)</span> <span class="hljs-type">const</span> </span>&#123; <span class="hljs-keyword">return</span> mat[i][size]; &#125;
-&#125;;
-
-<span class="hljs-function"><span class="hljs-type">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span> </span>&#123;
-    ios::<span class="hljs-built_in">sync_with_stdio</span>(<span class="hljs-literal">false</span>);
-    cin.<span class="hljs-built_in">tie</span>(<span class="hljs-literal">nullptr</span>);
-    cout.<span class="hljs-built_in">tie</span>(<span class="hljs-literal">nullptr</span>);
-
-    Matrix matrix;
-
-    matrix.<span class="hljs-built_in">input_matrix</span>();
-
-    <span class="hljs-keyword">if</span> (matrix.<span class="hljs-built_in">guess</span>() == <span class="hljs-number">-1</span>) &#123;
-        cout &lt;&lt; <span class="hljs-string">&quot;No Solution\n&quot;</span>;
-    &#125; <span class="hljs-keyword">else</span> &#123;
-        <span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> i = <span class="hljs-number">0</span>; i &lt; matrix.<span class="hljs-built_in">get_size</span>(); i++) &#123;
-            <span class="hljs-type">double</span> answer = matrix.<span class="hljs-built_in">get_solution</span>(i);
-            <span class="hljs-keyword">if</span> (<span class="hljs-built_in">abs</span>(answer) &lt; eps) &#123;
-                answer = <span class="hljs-number">0</span>;
-            &#125; <span class="hljs-keyword">else</span> &#123;
-                answer = <span class="hljs-built_in">round</span>(answer * <span class="hljs-number">100.00</span>) / <span class="hljs-number">100.00</span>;
-            &#125;
-
-            cout &lt;&lt; <span class="hljs-built_in">setiosflags</span>(ios::fixed) &lt;&lt; <span class="hljs-built_in">setprecision</span>(<span class="hljs-number">2</span>) &lt;&lt; answer &lt;&lt; <span class="hljs-string">&quot;\n&quot;</span>;
-        &#125;
-    &#125;
-
-    <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;
-&#125;</code></pre></div>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="keyword">constexpr</span> <span class="type">int</span> N = <span class="number">105</span>;</span><br><span class="line"><span class="keyword">constexpr</span> <span class="type">double</span> eps = <span class="number">1e-8</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">Matrix</span> &#123;</span><br><span class="line">    <span class="type">double</span> mat[N][N] = &#123;&#123;<span class="number">0</span>&#125;&#125;;</span><br><span class="line">    <span class="type">int</span> size = <span class="number">0</span>;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span>:</span><br><span class="line">    <span class="built_in">Matrix</span>() = <span class="keyword">default</span>;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="type">void</span> <span class="title">input_matrix</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        cin &gt;size;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; size; i++)</span><br><span class="line">            <span class="keyword">for</span> (<span class="type">int</span> j = <span class="number">0</span>; j &lt;= size; j++)</span><br><span class="line">                cin &gt;mat[i][j];</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="type">int</span> <span class="title">guess</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="type">int</span> i, j, r = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> c = <span class="number">0</span>; c &lt; size; c++) &#123;</span><br><span class="line">            <span class="type">int</span> t = r;</span><br><span class="line">            <span class="keyword">for</span> (i = t + <span class="number">1</span>; i &lt; size; i++) &#123;</span><br><span class="line">                <span class="keyword">if</span> (<span class="built_in">abs</span>(mat[i][c]) <span class="built_in">abs</span>(mat[t][c])) &#123;</span><br><span class="line">                    t = i;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line"></span><br><span class="line">            <span class="keyword">if</span> (<span class="built_in">abs</span>(mat[t][c]) &lt; eps) <span class="keyword">continue</span>;</span><br><span class="line"></span><br><span class="line">            <span class="keyword">for</span> (i = c; i &lt;= size; i++) &#123;</span><br><span class="line">                <span class="built_in">swap</span>(mat[t][i], mat[r][i]);</span><br><span class="line">            &#125;</span><br><span class="line"></span><br><span class="line">            <span class="keyword">for</span> (i = size; i &gt;= c; i--) &#123;</span><br><span class="line">                mat[r][i] /= mat[r][c];</span><br><span class="line">            &#125;</span><br><span class="line"></span><br><span class="line">            <span class="keyword">for</span> (i = r + <span class="number">1</span>; i &lt; size; i++) &#123;</span><br><span class="line">                <span class="keyword">if</span> (<span class="built_in">abs</span>(mat[i][c]) eps) &#123;</span><br><span class="line">                    <span class="keyword">for</span> (j = size; j &gt;= c; j--) &#123;</span><br><span class="line">                        mat[i][j] -= mat[r][j] * mat[i][c];</span><br><span class="line">                    &#125;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line"></span><br><span class="line">            r++;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">if</span> (r &lt; size) &#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="number">-1</span>;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">for</span> (i = size - <span class="number">1</span>; i &gt;= <span class="number">0</span>; i--) &#123;</span><br><span class="line">            <span class="keyword">for</span> (j = i + <span class="number">1</span>; j &lt; size; j++) &#123;</span><br><span class="line">                mat[i][size] -= mat[i][j] * mat[j][size];</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="type">int</span> <span class="title">get_size</span><span class="params">()</span> <span class="type">const</span> </span>&#123; <span class="keyword">return</span> size; &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="type">double</span> <span class="title">get_solution</span><span class="params">(<span class="type">int</span> i)</span> <span class="type">const</span> </span>&#123; <span class="keyword">return</span> mat[i][size]; &#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    ios::<span class="built_in">sync_with_stdio</span>(<span class="literal">false</span>);</span><br><span class="line">    cin.<span class="built_in">tie</span>(<span class="literal">nullptr</span>);</span><br><span class="line">    cout.<span class="built_in">tie</span>(<span class="literal">nullptr</span>);</span><br><span class="line"></span><br><span class="line">    Matrix matrix;</span><br><span class="line"></span><br><span class="line">    matrix.<span class="built_in">input_matrix</span>();</span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span> (matrix.<span class="built_in">guess</span>() == <span class="number">-1</span>) &#123;</span><br><span class="line">        cout &lt;&lt; <span class="string">&quot;No Solution\n&quot;</span>;</span><br><span class="line">    &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; matrix.<span class="built_in">get_size</span>(); i++) &#123;</span><br><span class="line">            <span class="type">double</span> answer = matrix.<span class="built_in">get_solution</span>(i);</span><br><span class="line">            <span class="keyword">if</span> (<span class="built_in">abs</span>(answer) &lt; eps) &#123;</span><br><span class="line">                answer = <span class="number">0</span>;</span><br><span class="line">            &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">                answer = <span class="built_in">round</span>(answer * <span class="number">100.00</span>) / <span class="number">100.00</span>;</span><br><span class="line">            &#125;</span><br><span class="line"></span><br><span class="line">            cout &lt;&lt; <span class="built_in">setiosflags</span>(ios::fixed) &lt;&lt; <span class="built_in">setprecision</span>(<span class="number">2</span>) &lt;&lt; answer &lt;&lt; <span class="string">&quot;\n&quot;</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <h2 id="行列式">行列式</h2>
 <h3 id="定义">定义</h3>
 <p>对于矩阵 (通常为方阵) <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>A</mi><mrow><mi>n</mi><mo>×</mo><mi>n</mi></mrow></msub></mrow><annotation encoding="application/x-tex">A_{n \times n}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8917em;vertical-align:-0.2083em;"></span><span class="mord"><span class="mord mathnormal">A</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.2583em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">n</span><span class="mbin mtight">×</span><span class="mord mathnormal mtight">n</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.2083em;"><span></span></span></span></span></span></span></span></span></span>，我们定义其行列式为：</p>
@@ -684,88 +339,19 @@ l0,-1944c-2,-159.3,-10,-310.7,-24,-454c-53.3,-528,-210,-949.7,
 </annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mop">det</span><span class="mopen">(</span><span class="mord mathnormal">A</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:3.0818em;vertical-align:-1.4304em;"></span><span class="mop op-limits"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.05em;"><span style="top:-1.8557em;margin-left:0em;"><span class="pstrut" style="height:3.05em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">p</span><span class="mrel mtight">∈</span><span class="mord mtight"><span class="mord mathnormal mtight" style="margin-right:0.13889em;">P</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.1645em;"><span style="top:-2.357em;margin-left:-0.1389em;margin-right:0.0714em;"><span class="pstrut" style="height:2.5em;"></span><span class="sizing reset-size3 size1 mtight"><span class="mord mathnormal mtight">n</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.143em;"><span></span></span></span></span></span></span></span></span></span><span style="top:-3.05em;"><span class="pstrut" style="height:3.05em;"></span><span><span class="mop op-symbol large-op">∑</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:1.4304em;"><span></span></span></span></span></span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mop"><span class="mord mathrm">sgn</span></span><span class="mopen">(</span><span class="mord mathnormal">p</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mop op-limits"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.6514em;"><span style="top:-1.8723em;margin-left:0em;"><span class="pstrut" style="height:3.05em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">i</span><span class="mrel mtight">=</span><span class="mord mtight">0</span></span></span></span><span style="top:-3.05em;"><span class="pstrut" style="height:3.05em;"></span><span><span class="mop op-symbol large-op">∏</span></span></span><span style="top:-4.3em;margin-left:0em;"><span class="pstrut" style="height:3.05em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">n</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:1.2777em;"><span></span></span></span></span></span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord"><span class="mord mathnormal">A</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3117em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">i</span><span class="mpunct mtight">,</span><span class="mord mtight"><span class="mord mathnormal mtight">p</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3281em;"><span style="top:-2.357em;margin-left:0em;margin-right:0.0714em;"><span class="pstrut" style="height:2.5em;"></span><span class="sizing reset-size3 size1 mtight"><span class="mord mathnormal mtight">i</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.143em;"><span></span></span></span></span></span></span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.2861em;"><span></span></span></span></span></span></span></span></span></span></span></p>
 <p>其中 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>P</mi><mi>n</mi></msub></mrow><annotation encoding="application/x-tex">P_n</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.13889em;">P</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.1514em;"><span style="top:-2.55em;margin-left:-0.1389em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">n</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span> 表示长度为 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>n</mi></mrow><annotation encoding="application/x-tex">n</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.4306em;"></span><span class="mord mathnormal">n</span></span></span></span> 的所有排列的集合，<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="normal">sgn</mi><mo>⁡</mo><mo stretchy="false">(</mo><mi>p</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">\operatorname{sgn}(p)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mop"><span class="mord mathrm">sgn</span></span><span class="mopen">(</span><span class="mord mathnormal">p</span><span class="mclose">)</span></span></span></span> 表示 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false">(</mo><mo>−</mo><mn>1</mn><msup><mo stretchy="false">)</mo><mrow><mtext>排列</mtext><mi>p</mi><mtext>中的逆序对的个数</mtext></mrow></msup></mrow><annotation encoding="application/x-tex">(-1)^{排列 p 中的逆序对的个数}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.0913em;vertical-align:-0.25em;"></span><span class="mopen">(</span><span class="mord">−</span><span class="mord">1</span><span class="mclose"><span class="mclose">)</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8413em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord cjk_fallback mtight">排列</span><span class="mord mathnormal mtight">p</span><span class="mord cjk_fallback mtight">中的逆序对的个数</span></span></span></span></span></span></span></span></span></span></span></span>。<br>
 这里有一张快速求解行列式的图：<br>
-<img src="/uploads/OI%E9%9B%86%E8%AE%AD-Day4/page1.png" srcset="/img/loading.gif" lazyload alt="快速求解行列式"></p>
+<img src="/uploads/OI%E9%9B%86%E8%AE%AD-Day4/page1.png" alt="快速求解行列式" loading='lazy'></p>
 <h3 id="性质">性质</h3>
 <ul>
-<li>对矩阵做行 (列) 交换，行列式反号。<div class="note note-info 证明">
-            <p>根据排列的奇偶性，我们可以知道交换一个排列中的一对元素，其排列奇偶性也会发生变化，所以 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="normal">sgn</mi><mo>⁡</mo><mo stretchy="false">(</mo><mi>p</mi><mo stretchy="false">)</mo><mo>=</mo><mo>−</mo><mi mathvariant="normal">sgn</mi><mo>⁡</mo><mo stretchy="false">(</mo><msup><mi>p</mi><mo mathvariant="normal" lspace="0em" rspace="0em">′</mo></msup><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">\operatorname{sgn}(p) = -\operatorname{sgn}(p^{\prime})</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mop"><span class="mord mathrm">sgn</span></span><span class="mopen">(</span><span class="mord mathnormal">p</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1.0019em;vertical-align:-0.25em;"></span><span class="mord">−</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mop"><span class="mord mathrm">sgn</span></span><span class="mopen">(</span><span class="mord"><span class="mord mathnormal">p</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.7519em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">′</span></span></span></span></span></span></span></span></span><span class="mclose">)</span></span></span></span>，证毕。</p>
-          </div>
+<li>对矩阵做行 (列) 交换，行列式反号。<div class="note info 证明 simple"><p>根据排列的奇偶性，我们可以知道交换一个排列中的一对元素，其排列奇偶性也会发生变化，所以 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="normal">sgn</mi><mo>⁡</mo><mo stretchy="false">(</mo><mi>p</mi><mo stretchy="false">)</mo><mo>=</mo><mo>−</mo><mi mathvariant="normal">sgn</mi><mo>⁡</mo><mo stretchy="false">(</mo><msup><mi>p</mi><mo mathvariant="normal" lspace="0em" rspace="0em">′</mo></msup><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">\operatorname{sgn}(p) = -\operatorname{sgn}(p^{\prime})</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mop"><span class="mord mathrm">sgn</span></span><span class="mopen">(</span><span class="mord mathnormal">p</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1.0019em;vertical-align:-0.25em;"></span><span class="mord">−</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mop"><span class="mord mathrm">sgn</span></span><span class="mopen">(</span><span class="mord"><span class="mord mathnormal">p</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.7519em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">′</span></span></span></span></span></span></span></span></span><span class="mclose">)</span></span></span></span>，证毕。</p>
+</div>
 </li>
-<li>对矩阵做行 (列) 数乘，行列式乘上同样的常数<div class="note note-info 证明">
-            <p>我们知道一个排列包含 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false">[</mo><mn>1</mn><mo separator="true">,</mo><mi>n</mi><mo stretchy="false">]</mo></mrow><annotation encoding="application/x-tex">[1,n]</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">[</span><span class="mord">1</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal">n</span><span class="mclose">]</span></span></span></span> 之间的所有整数，所以被修改的元素会在每个连乘中出现且每个连乘中仅出现一次，所以可以提到整个式子的前面，证毕。</p>
-          </div>
+<li>对矩阵做行 (列) 数乘，行列式乘上同样的常数<div class="note info 证明 simple"><p>我们知道一个排列包含 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false">[</mo><mn>1</mn><mo separator="true">,</mo><mi>n</mi><mo stretchy="false">]</mo></mrow><annotation encoding="application/x-tex">[1,n]</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">[</span><span class="mord">1</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal">n</span><span class="mclose">]</span></span></span></span> 之间的所有整数，所以被修改的元素会在每个连乘中出现且每个连乘中仅出现一次，所以可以提到整个式子的前面，证毕。</p>
+</div>
 </li>
 <li>对矩阵做行 (列) 加法，行列式不变。</li>
 </ul>
 <h3 id="求解行列式">求解行列式</h3>
-<div class="code-wrapper"><pre><code class="hljs cpp"><span class="hljs-meta">#<span class="hljs-keyword">include</span> <span class="hljs-string">&lt;bits/stdc++.h&gt;</span></span>
-
-<span class="hljs-keyword">using</span> <span class="hljs-keyword">namespace</span> std;
-
-<span class="hljs-keyword">constexpr</span> <span class="hljs-type">int</span> N = <span class="hljs-number">605</span>;
-<span class="hljs-type">int</span> n;
-<span class="hljs-type">long</span> <span class="hljs-type">long</span> p;
-
-<span class="hljs-keyword">class</span> <span class="hljs-title class_">Matrix</span> &#123;
-    <span class="hljs-type">long</span> <span class="hljs-type">long</span> mat[N][N] = &#123;&#123;&#125;&#125;;
-    <span class="hljs-type">int</span> size = <span class="hljs-number">0</span>;
-
-    <span class="hljs-keyword">public</span>:
-    <span class="hljs-built_in">Matrix</span>() = <span class="hljs-keyword">default</span>;
-
-    <span class="hljs-function"><span class="hljs-type">void</span> <span class="hljs-title">get_input</span><span class="hljs-params">(<span class="hljs-type">int</span> n)</span> </span>&#123;
-        size = n;
-
-        <span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> i = <span class="hljs-number">1</span>; i &lt;= size; i++) &#123;
-            <span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> j = <span class="hljs-number">1</span>; j &lt;= size; j++) &#123;
-                cin &gt;mat[i][j];
-            &#125;
-        &#125;
-    &#125;
-
-    <span class="hljs-function"><span class="hljs-type">long</span> <span class="hljs-type">long</span> <span class="hljs-title">det</span><span class="hljs-params">(<span class="hljs-type">const</span> <span class="hljs-type">long</span> <span class="hljs-type">long</span> ModValue)</span> </span>&#123;
-        <span class="hljs-type">long</span> <span class="hljs-type">long</span> retval = <span class="hljs-number">1</span>, sgn = <span class="hljs-number">1</span>;
-
-        <span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> i = <span class="hljs-number">1</span>; i &lt;= size; i++) &#123;
-            <span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> j = i + <span class="hljs-number">1</span>; j &lt;= size; j++) &#123;
-                <span class="hljs-keyword">while</span> (mat[i][i]) &#123;
-                    <span class="hljs-type">long</span> <span class="hljs-type">long</span> divide = mat[j][i] / mat[i][i];
-
-                    <span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> k = <span class="hljs-number">1</span>; k &lt;= size; k++) &#123;
-                        mat[j][k] = (mat[j][k] - divide * mat[i][k] % ModValue + ModValue) % ModValue;
-                    &#125;
-
-                    sgn = -sgn;
-                    <span class="hljs-built_in">swap</span>(mat[i], mat[j]);
-                &#125;
-
-                sgn = -sgn;
-                <span class="hljs-built_in">swap</span>(mat[i], mat[j]);
-            &#125;
-        &#125;
-
-        retval = sgn;
-        <span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> i = <span class="hljs-number">1</span>; i &lt;= size; i ++) &#123;
-            retval = retval * mat[i][i] % ModValue;
-        &#125;
-
-        <span class="hljs-keyword">return</span> (retval + ModValue) % ModValue;
-    &#125;
-&#125; matrix;
-
-<span class="hljs-function"><span class="hljs-type">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span> </span>&#123;
-    ios::<span class="hljs-built_in">sync_with_stdio</span>(<span class="hljs-literal">false</span>);
-    cin.<span class="hljs-built_in">tie</span>(<span class="hljs-literal">nullptr</span>);
-    cout.<span class="hljs-built_in">tie</span>(<span class="hljs-literal">nullptr</span>);
-
-    cin &gt;n &gt;p;
-
-    matrix.<span class="hljs-built_in">get_input</span>(n);
-
-    cout &lt;&lt; matrix.<span class="hljs-built_in">det</span>(p) &lt;&lt; <span class="hljs-string">&#x27;\n&#x27;</span>;
-
-    <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;
-&#125;</code></pre></div>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="keyword">constexpr</span> <span class="type">int</span> N = <span class="number">605</span>;</span><br><span class="line"><span class="type">int</span> n;</span><br><span class="line"><span class="type">long</span> <span class="type">long</span> p;</span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">Matrix</span> &#123;</span><br><span class="line">    <span class="type">long</span> <span class="type">long</span> mat[N][N] = &#123;&#123;&#125;&#125;;</span><br><span class="line">    <span class="type">int</span> size = <span class="number">0</span>;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span>:</span><br><span class="line">    <span class="built_in">Matrix</span>() = <span class="keyword">default</span>;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="type">void</span> <span class="title">get_input</span><span class="params">(<span class="type">int</span> n)</span> </span>&#123;</span><br><span class="line">        size = n;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">1</span>; i &lt;= size; i++) &#123;</span><br><span class="line">            <span class="keyword">for</span> (<span class="type">int</span> j = <span class="number">1</span>; j &lt;= size; j++) &#123;</span><br><span class="line">                cin &gt;mat[i][j];</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="type">long</span> <span class="type">long</span> <span class="title">det</span><span class="params">(<span class="type">const</span> <span class="type">long</span> <span class="type">long</span> ModValue)</span> </span>&#123;</span><br><span class="line">        <span class="type">long</span> <span class="type">long</span> retval = <span class="number">1</span>, sgn = <span class="number">1</span>;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">1</span>; i &lt;= size; i++) &#123;</span><br><span class="line">            <span class="keyword">for</span> (<span class="type">int</span> j = i + <span class="number">1</span>; j &lt;= size; j++) &#123;</span><br><span class="line">                <span class="keyword">while</span> (mat[i][i]) &#123;</span><br><span class="line">                    <span class="type">long</span> <span class="type">long</span> divide = mat[j][i] / mat[i][i];</span><br><span class="line"></span><br><span class="line">                    <span class="keyword">for</span> (<span class="type">int</span> k = <span class="number">1</span>; k &lt;= size; k++) &#123;</span><br><span class="line">                        mat[j][k] = (mat[j][k] - divide * mat[i][k] % ModValue + ModValue) % ModValue;</span><br><span class="line">                    &#125;</span><br><span class="line"></span><br><span class="line">                    sgn = -sgn;</span><br><span class="line">                    <span class="built_in">swap</span>(mat[i], mat[j]);</span><br><span class="line">                &#125;</span><br><span class="line"></span><br><span class="line">                sgn = -sgn;</span><br><span class="line">                <span class="built_in">swap</span>(mat[i], mat[j]);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        retval = sgn;</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">1</span>; i &lt;= size; i ++) &#123;</span><br><span class="line">            retval = retval * mat[i][i] % ModValue;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">return</span> (retval + ModValue) % ModValue;</span><br><span class="line">    &#125;</span><br><span class="line">&#125; matrix;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    ios::<span class="built_in">sync_with_stdio</span>(<span class="literal">false</span>);</span><br><span class="line">    cin.<span class="built_in">tie</span>(<span class="literal">nullptr</span>);</span><br><span class="line">    cout.<span class="built_in">tie</span>(<span class="literal">nullptr</span>);</span><br><span class="line"></span><br><span class="line">    cin &gt;n &gt;p;</span><br><span class="line"></span><br><span class="line">    matrix.<span class="built_in">get_input</span>(n);</span><br><span class="line"></span><br><span class="line">    cout &lt;&lt; matrix.<span class="built_in">det</span>(p) &lt;&lt; <span class="string">&#x27;\n&#x27;</span>;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <h3 id="矩阵树定理-根本听不懂啊">矩阵树定理 <s>(根本听不懂啊)</s></h3>
 <p>矩阵树定理是把图的生成树个数和矩阵行列式联系起来的一个定理。<br>
 矩阵树定理<br>
@@ -784,417 +370,67 @@ l0,-1944c-2,-159.3,-10,-310.7,-24,-454c-53.3,-528,-210,-949.7,
 <li><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>S</mi></mrow><annotation encoding="application/x-tex">S</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.05764em;">S</span></span></span></span> 的线性基是一个线性无关的向量集合 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>W</mi></mrow><annotation encoding="application/x-tex">W</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.13889em;">W</span></span></span></span>，满足 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="normal">Span</mi><mo>⁡</mo><mo stretchy="false">(</mo><mi>W</mi><mo stretchy="false">)</mo><mo>=</mo><mi mathvariant="normal">Span</mi><mo>⁡</mo><mo stretchy="false">(</mo><mi>S</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">\operatorname{Span}(W) = \operatorname{Span}(S)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mop"><span class="mord mathrm">Span</span></span><span class="mopen">(</span><span class="mord mathnormal" style="margin-right:0.13889em;">W</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mop"><span class="mord mathrm">Span</span></span><span class="mopen">(</span><span class="mord mathnormal" style="margin-right:0.05764em;">S</span><span class="mclose">)</span></span></span></span>。</li>
 <li><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>K</mi></mrow><annotation encoding="application/x-tex">K</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.07153em;">K</span></span></span></span> 维空间的线性基 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>W</mi></mrow><annotation encoding="application/x-tex">W</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.13889em;">W</span></span></span></span> 满足 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mo fence="true">∣</mo><mi>W</mi><mo fence="true">∣</mo></mrow><mo>=</mo><mi>K</mi></mrow><annotation encoding="application/x-tex">\left\vert W \right\vert = K</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="minner"><span class="mopen delimcenter" style="top:0em;">∣</span><span class="mord mathnormal" style="margin-right:0.13889em;">W</span><span class="mclose delimcenter" style="top:0em;">∣</span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.07153em;">K</span></span></span></span>。</li>
 </ul>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta"><i class="fas fa-circle-user fa-fw"></i>文章作者: </span><span class="post-copyright-info"><a href="https://FallenLeaf0327.github.io/# hexo-abbrlink">FallenLeaf</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta"><i class="fas fa-square-arrow-up-right fa-fw"></i>文章链接: </span><span class="post-copyright-info"><a href="https://fallenleaf0327.github.io/#%20hexo-abbrlink/posts/e9f7fb20/">https://fallenleaf0327.github.io/#%20hexo-abbrlink/posts/e9f7fb20/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta"><i class="fas fa-circle-exclamation fa-fw"></i>版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来源 <a href="https://FallenLeaf0327.github.io/# hexo-abbrlink" target="_blank">FallenLeaf's Blog</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/%E9%9B%86%E8%AE%AD/">集训</a></div></div><nav class="pagination-post" id="pagination"><a class="pagination-related" href="/posts/9ef0cbb6/" title="OI集训 Day5"><img class="cover" src="/uploads/image/img1.png" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post" loading='lazy'><div class="info"><div class="info-1"><div class="info-item-1">上一篇</div><div class="info-item-2">OI集训 Day5</div></div><div class="info-2"><div class="info-item-1">Content: Problem on Tree Date：2025.7.21  概览  树的重心 树上启发式合并 树链剖分 左偏树 点分治  具体内容 树的重心 定义 树的重心 树的重心是满足如下条件的点 uuu:  树上不存在其他节点 vvv，使得 max⁡{siz⁡(sonv)}&lt;max⁡{size⁡(sonu)}\max\{\operatorname{siz}(son_v)\} &lt; \max\{\operatorname{size}(son_u)\}max{siz(sonv​)}&lt;max{size(sonu​)}。   性质 树的重心 GGG 有如下性质： 树的重心的性质  当以 GGG 为根节点时，不能存在 vvv 满足 max⁡∀v∈son⁡(u){size⁡(v)}&gt;N2\max_{\forall v \in \operatorname{son}(u)}\{\operatorname{size}(v)\} &gt; \frac{N}{2}max∀v∈son(u)​{size(v)}&gt;2N​ (NNN为整棵树的大小)。反之亦然。 树中所有...</div></div></div></a><a class="pagination-related" href="/posts/77936e83/" title="OI集训 Day3"><img class="cover" src="/uploads/image/img7.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post" loading='lazy'><div class="info text-right"><div class="info-1"><div class="info-item-1">下一篇</div><div class="info-item-2">OI集训 Day3</div></div><div class="info-2"><div class="info-item-1">Content： Data structs Date：2025.7.19  内容  三维偏序问题 CDQ分治 整体二分 分块 莫队算法  具体内容 三维偏序问题 问题描述  给定一些三元组 (ai,bi,ci)(a_i, b_i, c_i)(ai​,bi​,ci​)，询问对于三元组 (aj,bj,cj)(a_j, b_j, c_j)(aj​,bj​,cj​)，有多少个三元组满足 ai≤aja_i \le a_jai​≤aj​ 且 bi≤bjb_i \le b_jbi​≤bj​ 且 ci≤cjc_i \le c_jci​≤cj​。   首先对于这个问题，我们考虑先去重，然后排序。排序规则如下：  如果 ai≠aja_i \ne a_jai​=aj​，则返回 ai&lt;aja_i &lt; a_jai​&lt;aj​ 如果 bi≠bjb_i \ne b_jbi​=bj​，则返回 bi&lt;bjb_i &lt; b_jbi​&lt;bj​ 否则返回 ci&lt;cjc_i &lt; c_jci​&lt;cj​  这样我们就把 ai&lt;aja_i &lt; a_jai​&lt...</div></div></div></a></nav><div class="relatedPosts"><div class="headline"><i class="fas fa-thumbs-up fa-fw"></i><span>相关推荐</span></div><div class="relatedPosts-list"><a class="pagination-related" href="/posts/7708ceb8/" title="OI集训 Day22"><img class="cover" src="/uploads/image/img2.png" alt="cover" loading='lazy'><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2025-08-07</div><div class="info-item-2">OI集训 Day22</div></div><div class="info-2"><div class="info-item-1">Content：字符串进阶-2 Date：2025.8.7  课堂内容 后缀数组 后缀数组主要指两个数组 sasasa 和 rankrankrank：  saisa_isai​ 表示所有后缀中按字典序大小从小到大排序后排名为 iii 的后缀的起始位置。 rankirank_iranki​ 表示以 iii 为起始位置的后缀的排名。  其中这两个数组有如下性质： saranki=ranksai=isa_{rank_i} = rank_{sa_i} = i saranki​​=ranksai​​=i 可以使用倍增 + 基数排序的方式求解 sasasa 和 rankrankrank 数组，复杂度 O(nlog⁡n)O(n \log n)O(nlogn)。 除此之外，还有一个 heightheightheight 数组表示 saisa_isai​ 和 sai−1sa_{i-1}sai−1​ 两个后缀的 LCP (Longest Common Prefix) 的长度。 模版题：Luogu-P10469 后缀数组 提交记录：Link 例题 Luogu-P3809 后缀排序 题目大意 给定一个长...</div></div></div></a><a class="pagination-related" href="/posts/999d0faf/" title="OI集训 Day1"><img class="cover" src="/uploads/image/img2.png" alt="cover" loading='lazy'><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2025-07-17</div><div class="info-item-2">OI集训 Day1</div></div><div class="info-2"><div class="info-item-1">Content：Data Structs Date：2025.7.17  内容  并查集 ST表 线段树  关于树状数组 一维树状数组 单点修改，区间查询 对于这一类最普通的树状数组，没有什么好说的，直接维护前缀和即可。 struct BIT &#123;  long long tr[N];    static int lowbit(int x) &#123;    return x &amp; (-x);  &#125;    void add(int pos, long long value) &#123;    for (int i = pos; i &lt;= n; i += lowbit(i))      tr[i] += value;  &#125;    long long query(int pos) &#123;    long long retval = 0;    for (int i = pos; i &gt; 0; i -= lowbit(i))      retval += tr[i];    return retval;  &#125;&#125; ...</div></div></div></a><a class="pagination-related" href="/posts/2b22aded/" title="OI集训 Day13"><img class="cover" src="/uploads/image/img6.png" alt="cover" loading='lazy'><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2025-07-29</div><div class="info-item-2">OI集训 Day13</div></div><div class="info-2"><div class="info-item-1">Content：平衡树 Date：2025.7.29  具体内容 Leafy Tree 和 Un-leafy Tree Leafy Tree：表示将所有的数据存放在叶子节点的树形数据结构，类似 线段树 和 WBLT 平衡树。 Un-leafy Tree：与 Leafy Tree 相反，将数据存放在每个树节点的数据结构。 替罪羊树 替罪羊树是最简单的平衡树，也是 Un-leafy 的，其核心思想是定义一个常数 α\alphaα，对于树上任意节点 uuu，若 max⁡(sizlsu,sizrsu)≥α×sizu\max(siz_{ls_{u}}, siz_{rs_{u}}) \ge \alpha \times siz_umax(sizlsu​​,sizrsu​​)≥α×sizu​，则将整棵树拍平成数组，对整棵树重构，使其保持平衡性。 替罪羊树的复杂度是 O(nlog⁡n)O(n \log n)O(nlogn) （均摊）的，同时 α\alphaα 的取值对复杂度的影响是直接的，当 α\alphaα 在区间 [0.5,1][0.5,1][0.5,1] 之间时，复杂度时最优的，一般取 α=...</div></div></div></a><a class="pagination-related" href="/posts/b22bfc57/" title="OI集训 Day10"><img class="cover" src="/uploads/image/img1.png" alt="cover" loading='lazy'><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2025-07-26</div><div class="info-item-2">OI集训 Day10</div></div><div class="info-2"><div class="info-item-1">Content：dp优化 Date：2025.7.26  例题 洛谷-P1886 滑动窗口 思路 直接单调队列维护即可，具体操作如下：  每次查看队尾的元素，维护单调性。 对于队头不在当前滑动窗口的元素，弹出。  提交记录：link 洛谷-P2365 任务安排 思路 定义 dpidp_{i}dpi​ 表示第 iii 个任务完成所花费的最小代价。转移如下： dpi=min⁡1≤j≤idpj+(s+Ti−Tj−1)×(Fn−Fj−1)dp_{i} = \min_{1 \le j \le i} dp_{j} + (s + T_i - T_{j-1}) \times (F_{n} - F{j - 1}) dpi​=1≤j≤imin​dpj​+(s+Ti​−Tj−1​)×(Fn​−Fj−1) 对于本题数据范围 n≤3000n \le 3000n≤3000，O(n2)O(n^2)O(n2) 可过。 提交记录：link 洛谷-P10979 任务安排 2 思路 dpdpdp 的方式和定义与前面相同，但是 O(n2)O(n^2)O(n2) 的复杂度无法接受，所以考虑优化。 将 dpdpdp 的式子...</div></div></div></a><a class="pagination-related" href="/posts/5c259d7b/" title="OI集训 Day12"><img class="cover" src="/uploads/image/img2.png" alt="cover" loading='lazy'><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2025-07-28</div><div class="info-item-2">OI集训 Day12</div></div><div class="info-2"><div class="info-item-1">Content：模拟赛 Date：2025.7.28  Problem-A 排序 题目大意 优化程序： #include &lt;algorithm&gt;#include &lt;cmath&gt;#include &lt;iostream&gt;const int N = 3e7 + 5;int n, seed;double a[N];void gen_input(const int n, const int seed) &#123;  double x = (double)(seed);  unsigned int iseed = seed;  for (int i = 0; i &lt; n; ++i) &#123;    iseed = iseed * 1664525 + 1013904223;    x = (std::sin(iseed % 4096) + 1) / 2;    a[i] = std::fabs(x * (iseed &gt;&gt; (iseed % 30))) + 1e-9;  &#125;&#125;int main() &#123;  std...</div></div></div></a><a class="pagination-related" href="/posts/c52cccc1/" title="OI集训 Day11"><img class="cover" src="/uploads/image/img4.png" alt="cover" loading='lazy'><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2025-07-27</div><div class="info-item-2">OI集训 Day11</div></div><div class="info-2"><div class="info-item-1">Content：矩阵 DP Date：2025.7.27  Review 矩阵基本操作：link Example1 - 洛谷-P1962 斐波那契数列 题目描述 给定 nnn，求斐波那契数列的第 nnn 项 fnf_nfn​。 fn={1n=0,1fn−1+fn−2oterwisef_n =   \begin{cases}  1 &amp; n = 0,1 \\  f_{n-1} + f_{n-2} &amp; oterwise  \end{cases} fn​={1fn−1​+fn−2​​n=0,1oterwise​ 数据范围：n&lt;263n &lt; 2^{63}n&lt;263。  思路 首先显然 O(n)O(n)O(n) 的递推是不行的了，我们考虑将递推式转化为矩阵乘法的形式： [fn−1fn−2]×[1101]=[fnfn−1][fn−2fn−3]×[1101]2=[fnfn−1]…[f0f1]×[1101]n−2=[fnfn−1]\begin{aligned} \begin{bmatrix} f_{n - 1} \\ f_{n - 2} \end{bmatrix}...</div></div></div></a></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info text-center"><div class="avatar-img"><img src="/uploads/avatar_circle.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/ loading='lazy'></div><div class="author-info-name">FallenLeaf</div><div class="author-info-description">一个蒟蒻 OIer</div><div class="site-data"><a href="/archives/"><div class="headline">文章</div><div class="length-num">36</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">10</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">3</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/FallenLeaf0327"><i class="fab fa-github"></i><span>Follow Me</span></a><div class="card-info-social-icons"><a class="social-icon" href="https://github.com/FallenLeaf0327" target="_blank" title="Github"><i class="fab fa-github" style="color: #24292e;"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">欢迎来到我的博客喵~</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%86%85%E5%AE%B9"><span class="toc-number">1.</span> <span class="toc-text">内容</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%85%B7%E4%BD%93%E5%86%85%E5%AE%B9"><span class="toc-number">2.</span> <span class="toc-text">具体内容</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%9F%A9%E9%98%B5"><span class="toc-number">2.1.</span> <span class="toc-text">矩阵</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%9F%A9%E9%98%B5%E5%AE%9A%E4%B9%89"><span class="toc-number">2.1.1.</span> <span class="toc-text">矩阵定义</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%AE%9A%E4%B9%89"><span class="toc-number">2.1.2.</span> <span class="toc-text">定义</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%9F%A9%E9%98%B5%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C"><span class="toc-number">2.1.3.</span> <span class="toc-text">矩阵基本操作</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%B3%A8%E6%84%8F"><span class="toc-number">2.1.4.</span> <span class="toc-text">注意</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%B3%A8%E6%84%8F"><span class="toc-number">2.1.5.</span> <span class="toc-text">注意</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%9F%A9%E9%98%B5%E4%B9%98%E6%B3%95%E5%8D%95%E4%BD%8D%E5%85%83"><span class="toc-number">2.1.6.</span> <span class="toc-text">矩阵乘法单位元</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%9F%A9%E9%98%B5%E4%B8%8E%E7%BA%BF%E6%80%A7%E6%96%B9%E7%A8%8B%E7%BB%84"><span class="toc-number">2.2.</span> <span class="toc-text">矩阵与线性方程组</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%A1%8C%E5%88%97%E5%BC%8F"><span class="toc-number">3.</span> <span class="toc-text">行列式</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AE%9A%E4%B9%89"><span class="toc-number">3.1.</span> <span class="toc-text">定义</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%80%A7%E8%B4%A8"><span class="toc-number">3.2.</span> <span class="toc-text">性质</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%B1%82%E8%A7%A3%E8%A1%8C%E5%88%97%E5%BC%8F"><span class="toc-number">3.3.</span> <span class="toc-text">求解行列式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%9F%A9%E9%98%B5%E6%A0%91%E5%AE%9A%E7%90%86-%E6%A0%B9%E6%9C%AC%E5%90%AC%E4%B8%8D%E6%87%82%E5%95%8A"><span class="toc-number">3.4.</span> <span class="toc-text">矩阵树定理 (根本听不懂啊)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%BA%BF%E6%80%A7%E5%9F%BA"><span class="toc-number">3.5.</span> <span class="toc-text">线性基</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%AE%9A%E4%B9%89-2"><span class="toc-number">3.5.1.</span> <span class="toc-text">定义</span></a></li></ol></li></ol></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/posts/70650aa1/" title="OI集训 Day26"><img src="/uploads/image/img5.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="OI集训 Day26"/ loading='lazy'></a><div class="content"><a class="title" href="/posts/70650aa1/" title="OI集训 Day26">OI集训 Day26</a><time datetime="2025-08-11T13:37:12.000Z" title="发表于 2025-08-11 21:37:12">2025-08-11</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/posts/e96c5b1b/" title="OI集训 Day25"><img src="/uploads/image/img6.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="OI集训 Day25"/ loading='lazy'></a><div class="content"><a class="title" href="/posts/e96c5b1b/" title="OI集训 Day25">OI集训 Day25</a><time datetime="2025-08-10T13:45:20.000Z" title="发表于 2025-08-10 21:45:20">2025-08-10</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/posts/9e6b6b8d/" title="OI集训 Day24"><img src="/uploads/image/img4.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="OI集训 Day24"/ loading='lazy'></a><div class="content"><a class="title" href="/posts/9e6b6b8d/" title="OI集训 Day24">OI集训 Day24</a><time datetime="2025-08-08T16:00:00.000Z" title="发表于 2025-08-09 00:00:00">2025-08-09</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/posts/3a2599d0/" title="斐波那契数列与黄金分割比的关系"><img src="/uploads/image/img7.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="斐波那契数列与黄金分割比的关系"/ loading='lazy'></a><div class="content"><a class="title" href="/posts/3a2599d0/" title="斐波那契数列与黄金分割比的关系">斐波那契数列与黄金分割比的关系</a><time datetime="2025-08-08T13:46:59.000Z" title="发表于 2025-08-08 21:46:59">2025-08-08</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/posts/7708ceb8/" title="OI集训 Day23"><img src="/uploads/image/img5.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="OI集训 Day23"/ loading='lazy'></a><div class="content"><a class="title" href="/posts/7708ceb8/" title="OI集训 Day23">OI集训 Day23</a><time datetime="2025-08-07T16:00:00.000Z" title="发表于 2025-08-08 00:00:00">2025-08-08</time></div></div></div></div></div></div></main><footer id="footer" style="background-image: url(/uploads/image/img8.png);"><div class="footer-other"><div class="footer-copyright"><span class="copyright">&copy;&nbsp;2025 By FallenLeaf</span><span class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo 7.3.0</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly 5.4.3</a></span></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="日间和夜间模式切换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/instant.page/instantpage.min.js" type="module"></script><script src="https://cdn.jsdelivr.net/npm/node-snackbar/dist/snackbar.min.js"></script><div class="js-pjax"><script>(async () => {
+  const showKatex = () => {
+    document.querySelectorAll('#article-container .katex').forEach(el => el.classList.add('katex-show'))
+  }
 
-                
-              </div>
-            
-            <hr/>
-            <div>
-              <div class="post-metas my-3">
-  
-    <div class="post-meta mr-3 d-flex align-items-center">
-      <i class="iconfont icon-category"></i>
-      
+  if (!window.katex_js_css) {
+    window.katex_js_css = true
+    await btf.getCSS('https://cdn.jsdelivr.net/npm/katex/dist/katex.min.css')
+    if (false) {
+      await btf.getScript('https://cdn.jsdelivr.net/npm/katex/dist/contrib/copy-tex.min.js')
+    }
+  }
 
-<span class="category-chains">
-  
-  
-    
-      <span class="category-chain">
-        
-  <a href="/categories/%E9%9B%86%E8%AE%AD%E6%80%BB%E7%BB%93%EF%BC%882025%E6%9A%91%EF%BC%89/" class="category-chain-item">集训总结（2025暑）</a>
-  
-  
+  showKatex()
+})()</script><script>(() => {
+  const runMermaid = ele => {
+    window.loadMermaid = true
+    const theme = document.documentElement.getAttribute('data-theme') === 'dark' ? 'dark' : 'default'
 
-      </span>
-    
-  
-</span>
+    ele.forEach((item, index) => {
+      const mermaidSrc = item.firstElementChild
+      const mermaidThemeConfig = `%%{init:{ 'theme':'${theme}'}}%%\n`
+      const mermaidID = `mermaid-${index}`
+      const mermaidDefinition = mermaidThemeConfig + mermaidSrc.textContent
 
-    </div>
-  
-  
-    <div class="post-meta">
-      <i class="iconfont icon-tags"></i>
-      
-        <a href="/tags/%E9%9B%86%E8%AE%AD/" class="print-no-link">#集训</a>
-      
-    </div>
-  
-</div>
+      const renderFn = mermaid.render(mermaidID, mermaidDefinition)
+      const renderMermaid = svg => {
+        mermaidSrc.insertAdjacentHTML('afterend', svg)
+      }
 
-
-              
-  
-
-  <div class="license-box my-3">
-    <div class="license-title">
-      <div>OI集训 Day4</div>
-      <div>https://fallenleaf0327.github.io/# hexo-abbrlink/posts/e9f7fb20/</div>
-    </div>
-    <div class="license-meta">
-      
-        <div class="license-meta-item">
-          <div>作者</div>
-          <div>FallenLeaf</div>
-        </div>
-      
-      
-        <div class="license-meta-item license-meta-date">
-          <div>发布于</div>
-          <div>2025年7月20日</div>
-        </div>
-      
-      
-      
-        <div class="license-meta-item">
-          <div>许可协议</div>
-          <div>
-            
-              
-              
-                <a class="print-no-link" target="_blank" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">
-                  <span class="hint--top hint--rounded" aria-label="BY - 署名">
-                    <i class="iconfont icon-cc-by"></i>
-                  </span>
-                </a>
-              
-                <a class="print-no-link" target="_blank" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">
-                  <span class="hint--top hint--rounded" aria-label="NC - 非商业性使用">
-                    <i class="iconfont icon-cc-nc"></i>
-                  </span>
-                </a>
-              
-                <a class="print-no-link" target="_blank" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">
-                  <span class="hint--top hint--rounded" aria-label="SA - 相同方式共享">
-                    <i class="iconfont icon-cc-sa"></i>
-                  </span>
-                </a>
-              
-            
-          </div>
-        </div>
-      
-    </div>
-    <div class="license-icon iconfont"></div>
-  </div>
-
-
-
-              
-                <div class="post-prevnext my-3">
-                  <article class="post-prev col-6">
-                    
-                    
-                      <a href="/posts/9ef0cbb6/" title="OI集训 Day5">
-                        <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">OI集训 Day5</span>
-                        <span class="visible-mobile">上一篇</span>
-                      </a>
-                    
-                  </article>
-                  <article class="post-next col-6">
-                    
-                    
-                      <a href="/posts/77936e83/" title="OI集训 Day3">
-                        <span class="hidden-mobile">OI集训 Day3</span>
-                        <span class="visible-mobile">下一篇</span>
-                        <i class="iconfont icon-arrowright"></i>
-                      </a>
-                    
-                  </article>
-                </div>
-              
-            </div>
-
-            
-          </article>
-        </div>
-      </div>
-    </div>
-
-    <div class="side-col d-none d-lg-block col-lg-2">
-      
-  <aside class="sidebar" style="margin-left: -1rem">
-    <div id="toc">
-  <p class="toc-header">
-    <i class="iconfont icon-list"></i>
-    <span>目录</span>
-  </p>
-  <div class="toc-body" id="toc-body"></div>
-</div>
-
-
-
-  </aside>
-
-
-    </div>
-  </div>
-</div>
-
-
-
-
-
-  
-
-
-
-  
-
-
-
-  
-
-
-
-  
-
-
-
-  
-
-
-  
-  
-
-
-
-
-
-
-
-
-    
-
-    
-      <a id="scroll-top-button" aria-label="TOP" href="#" role="button">
-        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
-      </a>
-    
-
-    
-      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
-     aria-hidden="true">
-  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
-    <div class="modal-content">
-      <div class="modal-header text-center">
-        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
-        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body mx-3">
-        <div class="md-form mb-5">
-          <input type="text" id="local-search-input" class="form-control validate">
-          <label data-error="x" data-success="v" for="local-search-input">关键词</label>
-        </div>
-        <div class="list-group" id="local-search-result"></div>
-      </div>
-    </div>
-  </div>
-</div>
-
-    
-
-    
-  </main>
-
-  <footer>
-    <div class="footer-inner">
-  
-    <div class="footer-content">
-      <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> <div style="font-size: 0.85rem"> <span id="timeDate">载入天数...</span> <span id="times">载入时分秒...</span> <script src="/js/duration.js"></script> </div>
-    </div>
-  
-  
-    <div class="statistics">
-  
-  
-
-  
-    
-      <span id="busuanzi_container_site_pv" style="display: none">
-        总访问量 
-        <span id="busuanzi_value_site_pv"></span>
-         次
-      </span>
-    
-    
-      <span id="busuanzi_container_site_uv" style="display: none">
-        总访客数 
-        <span id="busuanzi_value_site_uv"></span>
-         人
-      </span>
-    
-    
-
-  
-
-</div>
-
-  
-  
-</div>
-
-  </footer>
-
-  <!-- Scripts -->
-  
-  <script  src="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.js" ></script>
-  <link  rel="stylesheet" href="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.css" />
-
-  <script>
-    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
-    NProgress.start()
-    window.addEventListener('load', function() {
-      NProgress.done();
+      // mermaid v9 and v10 compatibility
+      typeof renderFn === 'string' ? renderMermaid(renderFn) : renderFn.then(({ svg }) => renderMermaid(svg))
     })
-  </script>
+  }
 
+  const codeToMermaid = () => {
+    const codeMermaidEle = document.querySelectorAll('pre > code.mermaid')
+    if (codeMermaidEle.length === 0) return
 
-<script  src="https://lib.baomitu.com/jquery/3.6.4/jquery.min.js" ></script>
-<script  src="https://lib.baomitu.com/twitter-bootstrap/4.6.1/js/bootstrap.min.js" ></script>
-<script  src="/js/events.js" ></script>
-<script  src="/js/plugins.js" ></script>
+    codeMermaidEle.forEach(ele => {
+      const preEle = document.createElement('pre')
+      preEle.className = 'mermaid-src'
+      preEle.hidden = true
+      preEle.textContent = ele.textContent
+      const newEle = document.createElement('div')
+      newEle.className = 'mermaid-wrap'
+      newEle.appendChild(preEle)
+      ele.parentNode.replaceWith(newEle)
+    })
+  }
 
+  const loadMermaid = () => {
+    if (true) codeToMermaid()
+    const $mermaid = document.querySelectorAll('#article-container .mermaid-wrap')
+    if ($mermaid.length === 0) return
 
-  <script  src="https://lib.baomitu.com/typed.js/2.0.12/typed.min.js" ></script>
-  <script>
-    (function (window, document) {
-      var typing = Fluid.plugins.typing;
-      var subtitle = document.getElementById('subtitle');
-      if (!subtitle || !typing) {
-        return;
-      }
-      var text = subtitle.getAttribute('data-typed-text');
-      
-        typing(text);
-      
-    })(window, document);
-  </script>
+    const runMermaidFn = () => runMermaid($mermaid)
+    btf.addGlobalFn('themeChange', runMermaidFn, 'mermaid')
+    window.loadMermaid ? runMermaidFn() : btf.getScript('https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js').then(runMermaidFn)
+  }
 
-
-
-
-  
-    <script  src="/js/img-lazyload.js" ></script>
-  
-
-
-
-
-  
-<script>
-  Fluid.utils.createScript('https://lib.baomitu.com/tocbot/4.20.1/tocbot.min.js', function() {
-    var toc = jQuery('#toc');
-    if (toc.length === 0 || !window.tocbot) { return; }
-    var boardCtn = jQuery('#board-ctn');
-    var boardTop = boardCtn.offset().top;
-
-    window.tocbot.init(Object.assign({
-      tocSelector     : '#toc-body',
-      contentSelector : '.markdown-body',
-      linkClass       : 'tocbot-link',
-      activeLinkClass : 'tocbot-active-link',
-      listClass       : 'tocbot-list',
-      isCollapsedClass: 'tocbot-is-collapsed',
-      collapsibleClass: 'tocbot-is-collapsible',
-      scrollSmooth    : true,
-      includeTitleTags: true,
-      headingsOffset  : -boardTop,
-    }, CONFIG.toc));
-    if (toc.find('.toc-list-item').length > 0) {
-      toc.css('visibility', 'visible');
-    }
-
-    Fluid.events.registerRefreshCallback(function() {
-      if ('tocbot' in window) {
-        tocbot.refresh();
-        var toc = jQuery('#toc');
-        if (toc.length === 0 || !tocbot) {
-          return;
-        }
-        if (toc.find('.toc-list-item').length > 0) {
-          toc.css('visibility', 'visible');
-        }
-      }
-    });
-  });
-</script>
-
-
-  <script src=https://lib.baomitu.com/clipboard.js/2.0.11/clipboard.min.js></script>
-
-  <script>Fluid.plugins.codeWidget();</script>
-
-
-  
-<script>
-  Fluid.utils.createScript('https://lib.baomitu.com/anchor-js/5.0.0/anchor.min.js', function() {
-    window.anchors.options = {
-      placement: CONFIG.anchorjs.placement,
-      visible  : CONFIG.anchorjs.visible
-    };
-    if (CONFIG.anchorjs.icon) {
-      window.anchors.options.icon = CONFIG.anchorjs.icon;
-    }
-    var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
-    var res = [];
-    for (var item of el) {
-      res.push('.markdown-body > ' + item.trim());
-    }
-    if (CONFIG.anchorjs.placement === 'left') {
-      window.anchors.options.class = 'anchorjs-link-left';
-    }
-    window.anchors.add(res.join(', '));
-
-    Fluid.events.registerRefreshCallback(function() {
-      if ('anchors' in window) {
-        anchors.removeAll();
-        var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
-        var res = [];
-        for (var item of el) {
-          res.push('.markdown-body > ' + item.trim());
-        }
-        if (CONFIG.anchorjs.placement === 'left') {
-          anchors.options.class = 'anchorjs-link-left';
-        }
-        anchors.add(res.join(', '));
-      }
-    });
-  });
-</script>
-
-
-  
-<script>
-  Fluid.utils.createScript('https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.js', function() {
-    Fluid.plugins.fancyBox();
-  });
-</script>
-
-
-  <script>Fluid.plugins.imageCaption();</script>
-
-  <script  src="/js/local-search.js" ></script>
-
-  <script defer src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" ></script>
-
-
-
-
-
-<!-- 主题的启动项，将它保持在最底部 -->
-<!-- the boot of the theme, keep it at the bottom -->
-<script  src="/js/boot.js" ></script>
-
-
-  
-
-  <noscript>
-    <div class="noscript-warning">博客在允许 JavaScript 运行的环境下浏览效果更佳</div>
-  </noscript>
-</body>
-</html>
+  btf.addGlobalFn('encrypt', loadMermaid, 'mermaid')
+  window.pjax ? loadMermaid() : document.addEventListener('DOMContentLoaded', loadMermaid)
+})()</script></div><script id="click-heart" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/dist/click-heart.min.js" async="async" mobile="true"></script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><div id="local-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">搜索</span><span id="loading-status"></span><button class="search-close-button"><i class="fas fa-times"></i></button></nav><div class="text-center" id="loading-database"><i class="fas fa-spinner fa-pulse"></i><span>  数据加载中</span></div><div class="search-wrap"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="Waiting..." type="text"/></div></div><hr/><div id="local-search-results"></div><div id="local-search-stats-wrap"></div></div></div><div id="search-mask"></div><script src="/js/search/local-search.js"></script></div></div></body></html>
